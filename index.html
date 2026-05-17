@@ -47,8 +47,8 @@
   body { background-color: #0A0C10; color: #e2e2e8; overflow-x: hidden; font-family: 'Inter', sans-serif; }
   .glass { backdrop-filter: blur(20px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease; }
   .glass:hover { border-color: rgba(78,222,163,0.35); box-shadow: 0 0 30px rgba(78,222,163,0.1); transform: translateY(-6px); }
-  .gradient-text { background: linear-gradient(135deg, #4edea3 0%, #0566d9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .btn-primary { background: linear-gradient(135deg, #10b981, #0566d9); color: #fff; border-radius: 9999px; padding: 1rem 2.5rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 14px; transition: all 0.3s; }
+  .gradient-text { background: linear-gradient(135deg, #4edea3 0%, #10b981 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .btn-primary { background: linear-gradient(135deg, #4edea3, #10b981); color: #0A0C10; border-radius: 9999px; padding: 1rem 2.5rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 14px; transition: all 0.3s; }
   .btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(78,222,163,0.4); }
   .btn-glass { border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); backdrop-filter: blur(12px); border-radius: 9999px; padding: 1rem 2.5rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 14px; transition: all 0.3s; }
   .btn-glass:hover { background: rgba(255,255,255,0.1); }
@@ -107,24 +107,38 @@
 
 <!-- HERO -->
 <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 md:px-20 pt-24 overflow-hidden">
-  <canvas id="networkCanvas"></canvas>
-  <div class="glow-orb w-[500px] h-[500px] bg-primary/8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-  <div class="relative z-10 max-w-4xl mx-auto">
-    <span class="section-label mb-6 block">India's Premier Student Consultancy</span>
-    <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-6">
+  <!-- Dynamic Image Carousel Background -->
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    <!-- Slide 1 -->
+    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-all duration-[1200ms] ease-in-out opacity-100 scale-100" style="background-image: url('frontpageimages/WhatsApp Image 2026-05-17 at 11.12.14 PM.jpeg');"></div>
+    <!-- Slide 2 -->
+    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-all duration-[1200ms] ease-in-out opacity-0 scale-105" style="background-image: url('frontpageimages/IMG_20221217_140830-1.jpg.jpeg');"></div>
+    <!-- Slide 3 -->
+    <div class="hero-slide absolute inset-0 bg-cover bg-center transition-all duration-[1200ms] ease-in-out opacity-0 scale-105" style="background-image: url('frontpageimages/IMG_20210531_182850.jpg.jpeg');"></div>
+    
+    <!-- Dark Cinematic Overlay - Made lighter to make background images pop and stand out beautifully -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/35 to-[#0A0C10] z-10"></div>
+  </div>
+
+  <canvas id="networkCanvas" class="z-20"></canvas>
+  <div class="glow-orb w-[500px] h-[500px] bg-primary/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+  
+  <div class="relative z-30 max-w-4xl mx-auto">
+    <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-6 text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.7)]">
       Consulting That<br><span class="gradient-text">Creates Change</span>
     </h1>
-    <p class="text-lg text-on-surface-variant mb-12 max-w-2xl mx-auto leading-relaxed">
-      Pro-bono strategy consulting for NGOs, startups, and social enterprises — powered by the brightest minds at Visvesvaraya National Institute of Technology, Nagpur.
+    <!-- Streamlined description paragraph to keep the hero interface clean and allow the background to be fully visible -->
+    <p class="text-xl md:text-2xl text-white mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_3px_12px_rgba(0,0,0,0.85)] font-bold">
+      Pro-bono strategy consulting for NGOs, startups, and social enterprises.
     </p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
       <a href="join-us.html" class="btn-primary">Partner With Us</a>
-      <a href="projects.html" class="btn-glass text-on-surface">Explore Our Work</a>
+      <a href="projects.html" class="btn-glass text-white border-white/30 hover:border-white/60">Explore Our Work</a>
     </div>
   </div>
-  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-40">
-    <span class="text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Scroll</span>
-    <span class="material-symbols-outlined animate-bounce-scroll">expand_more</span>
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-70 z-30">
+    <span class="text-[10px] font-bold uppercase tracking-[0.3em] mb-2 text-white/80">Scroll</span>
+    <span class="material-symbols-outlined animate-bounce-scroll text-primary text-2xl">expand_more</span>
   </div>
 </section>
 
@@ -518,6 +532,18 @@
   }
   window.addEventListener('resize', initCanvas);
   initCanvas(); draw();
+
+  // Hero Image Carousel Slider
+  const slides = document.querySelectorAll('.hero-slide');
+  let currentSlide = 0;
+  function nextSlide() {
+    slides[currentSlide].classList.remove('opacity-100', 'scale-100');
+    slides[currentSlide].classList.add('opacity-0', 'scale-105');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.remove('opacity-0', 'scale-105');
+    slides[currentSlide].classList.add('opacity-100', 'scale-100');
+  }
+  setInterval(nextSlide, 5000); // Crossfade transition every 5 seconds
 </script>
 </body>
 </html>
