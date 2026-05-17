@@ -106,7 +106,7 @@
 <main>
 
 <!-- HERO -->
-<section class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 md:px-20 pt-24 overflow-hidden">
+<section id="home" class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 md:px-20 pt-24 overflow-hidden">
   <!-- Dynamic Image Carousel Background -->
   <div class="absolute inset-0 z-0 overflow-hidden">
     <!-- Slide 1 -->
@@ -544,6 +544,48 @@
     slides[currentSlide].classList.add('opacity-100', 'scale-100');
   }
   setInterval(nextSlide, 5000); // Crossfade transition every 5 seconds
+
+  // ScrollSpy - Dynamic Active Navigation Header Links based on user scroll position
+  const spySections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  const spyOptions = {
+    root: null,
+    rootMargin: '-30% 0px -60% 0px', // Active when section occupies the central focal area
+    threshold: 0
+  };
+
+  const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          const href = link.getAttribute('href');
+          if (href === `#${id}` || (id === 'home' && href === 'index.html')) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, spyOptions);
+
+  spySections.forEach(section => {
+    spyObserver.observe(section);
+  });
+
+  // Fallback for top scroll edge to always highlight 'Home'
+  window.addEventListener('scroll', () => {
+    if (window.scrollY < 120) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href === 'index.html' || href === '#home') {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
 </script>
 </body>
 </html>
