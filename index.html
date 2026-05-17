@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>180DC | SRCC — Consulting That Creates Change</title>
-<meta name="description" content="180 Degrees Consulting SRCC — The premier student-led pro-bono consulting organization at Shri Ram College of Commerce, delivering McKinsey-tier strategy for NGOs and social enterprises."/>
+<title>180DC | VNIT Nagpur — Consulting That Creates Change</title>
+<meta name="description" content="180 Degrees Consulting VNIT Nagpur — The premier student-led pro-bono consulting organization at Visvesvaraya National Institute of Technology, Nagpur, delivering premium strategy for NGOs and social enterprises."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -73,10 +73,14 @@
 
 <!-- NAV -->
 <header class="fixed top-0 w-full z-50 bg-[#111318]/70 backdrop-blur-[20px] border-b border-white/10">
-  <nav class="flex justify-between items-center px-6 md:px-20 py-4 max-w-[1280px] mx-auto">
-    <a href="index.html" class="font-display text-xl font-bold text-on-surface tracking-tight">180DC | SRCC</a>
+  <nav class="flex justify-between items-center px-6 md:px-20 py-2.5 max-w-[1280px] mx-auto">
+    <a href="index.html" class="flex items-center group py-1">
+      <img src="logo.png" alt="180 Degrees Consulting VNIT Nagpur Logo" class="h-9 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+    </a>
     <div class="hidden md:flex items-center gap-8">
       <a href="index.html" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
       <a href="projects.html" class="nav-link">Projects</a>
       <a href="insights.html" class="nav-link">Insights</a>
       <a href="events.html" class="nav-link">Events</a>
@@ -89,6 +93,8 @@
   </nav>
   <div class="mobile-menu md:hidden" id="mobileMenu">
     <a href="index.html" class="nav-link active">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#services" class="nav-link">Services</a>
     <a href="projects.html" class="nav-link">Projects</a>
     <a href="insights.html" class="nav-link">Insights</a>
     <a href="events.html" class="nav-link">Events</a>
@@ -109,7 +115,7 @@
       Consulting That<br><span class="gradient-text">Creates Change</span>
     </h1>
     <p class="text-lg text-on-surface-variant mb-12 max-w-2xl mx-auto leading-relaxed">
-      Pro-bono strategy consulting for NGOs, startups, and social enterprises — powered by the brightest minds at Shri Ram College of Commerce.
+      Pro-bono strategy consulting for NGOs, startups, and social enterprises — powered by the brightest minds at Visvesvaraya National Institute of Technology, Nagpur.
     </p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
       <a href="join-us.html" class="btn-primary">Partner With Us</a>
@@ -122,83 +128,252 @@
   </div>
 </section>
 
-<!-- STATS -->
-<section class="py-24 px-6 md:px-20 max-w-[1280px] mx-auto relative">
-  <div class="glow-orb w-[600px] h-[600px] bg-primary/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-  <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-20">
-    <div class="glass rounded-2xl p-8 md:p-10 text-center">
-      <div class="font-display text-4xl md:text-5xl font-bold text-primary mb-2">50+</div>
-      <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Projects</p>
+<!-- ABOUT & IDENTITY -->
+<section id="about" class="py-24 px-6 md:px-20 max-w-[1280px] mx-auto relative z-10 border-t border-white/5">
+  <div class="glow-orb w-[500px] h-[500px] bg-secondary/5 top-1/4 right-0 pointer-events-none"></div>
+  
+  <div class="text-center mb-16">
+    <span class="section-label mb-3 block">Who We Are</span>
+    <h2 class="font-display text-3xl md:text-5xl font-bold">Driving Strategic Excellence</h2>
+    <p class="text-on-surface-variant text-sm mt-3 max-w-xl mx-auto leading-relaxed">Connecting premier technical intellect with global social impact initiatives to deliver unmatched strategy.</p>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+    <!-- 180DC Card -->
+    <div class="glass rounded-2xl p-8 md:p-12 hover:border-primary/30 transition-all duration-500 group relative overflow-hidden flex flex-col justify-between">
+      <div class="absolute -right-16 -top-16 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all duration-500"></div>
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="material-symbols-outlined text-primary text-3xl bg-primary/10 p-3 rounded-xl">corporate_fare</span>
+          <h3 class="font-display text-2xl font-bold">180 Degrees Consulting</h3>
+        </div>
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+          <p class="text-on-surface-variant text-sm md:text-base leading-relaxed md:flex-1">
+            180 Degrees Consulting is the world’s largest university based consultancy for non-profits and social enterprises. We connect ambitious, socially conscious university students with organizations that are creating positive impact across the globe. By combining fresh perspectives, analytical thinking, and a passion for social change, we help organizations overcome challenges, strengthen their strategies, and maximize their impact, all while making high quality consulting more accessible.
+          </p>
+          <div class="w-24 md:w-28 lg:w-32 flex-shrink-0 flex items-center justify-center p-2 rounded-2xl glass border-white/5 relative overflow-hidden group-hover:border-primary/20 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+            <img src="unnamed.png" alt="180 Degrees Consulting Globe Logo" class="w-full h-auto object-contain relative z-10 filter drop-shadow-[0_0_15px_rgba(78,222,163,0.15)] group-hover:scale-110 group-hover:rotate-6 transition-all duration-700" />
+          </div>
+        </div>
+      </div>
+      <a href="https://180dc.org/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest mt-8 group/btn w-fit hover:opacity-80 transition-opacity">
+        <span>Global Network</span>
+        <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+      </a>
     </div>
-    <div class="glass rounded-2xl p-8 md:p-10 text-center">
-      <div class="font-display text-4xl md:text-5xl font-bold text-primary mb-2">10K+</div>
-      <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Lives Impacted</p>
-    </div>
-    <div class="glass rounded-2xl p-8 md:p-10 text-center">
-      <div class="font-display text-4xl md:text-5xl font-bold text-primary mb-2">200+</div>
-      <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Consultants</p>
-    </div>
-    <div class="glass rounded-2xl p-8 md:p-10 text-center">
-      <div class="font-display text-4xl md:text-5xl font-bold text-primary mb-2">6+</div>
-      <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Years</p>
+
+    <!-- VNIT Card -->
+    <div class="glass rounded-2xl p-8 md:p-12 hover:border-secondary/30 transition-all duration-500 group relative overflow-hidden flex flex-col justify-between" style="border-color:rgba(173,198,255,.1)">
+      <div class="absolute -right-16 -top-16 w-32 h-32 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-all duration-500"></div>
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="material-symbols-outlined text-secondary text-3xl bg-secondary/10 p-3 rounded-xl">school</span>
+          <h3 class="font-display text-2xl font-bold">VNIT Nagpur</h3>
+        </div>
+        <p class="text-on-surface-variant text-sm md:text-base leading-relaxed mb-6">
+          Established in 1960, Visvesvaraya National Institute of Technology (VNIT), Nagpur is one of India’s premier engineering and research institutions, recognized for its academic excellence, innovation, and dynamic student community. With a strong culture of leadership, collaboration, and problem-solving, VNIT empowers students to create meaningful impact both within and beyond the campus.
+        </p>
+      </div>
+      <a href="https://vnit.ac.in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-widest mt-4 group/btn w-fit hover:opacity-80 transition-opacity">
+        <span>Academic Legacy</span>
+        <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+      </a>
     </div>
   </div>
-  <div class="max-w-3xl mx-auto text-center">
-    <div class="relative">
-      <span class="material-symbols-outlined absolute -top-10 left-0 text-primary opacity-15 text-8xl select-none">format_quote</span>
-      <blockquote class="font-display text-2xl md:text-3xl font-semibold text-on-surface italic leading-relaxed">
-        "Our mission is to bridge the gap between social impact and professional excellence, empowering organizations with rigorous analytical frameworks and visionary strategies."
-      </blockquote>
-    </div>
+
+  <!-- Founder Quote Card -->
+  <div class="glass rounded-2xl p-8 md:p-12 relative overflow-hidden text-center max-w-4xl mx-auto border-white/5 hover:border-primary/20 transition-all duration-500">
+    <div class="absolute -left-20 -bottom-20 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -right-20 -top-20 w-48 h-48 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+    
+    <span class="material-symbols-outlined text-primary text-5xl opacity-40 mb-4 block">format_quote</span>
+    
+    <blockquote class="font-display text-lg md:text-2xl italic leading-relaxed mb-6 text-on-surface">
+      "Why are we called 180 Degrees? Because we work to turn good organizations into great organizations."
+    </blockquote>
+    
+    <cite class="not-italic block">
+      <span class="text-on-surface font-bold text-base md:text-lg block">Nat Ware</span>
+      <span class="text-primary text-xs md:text-sm font-semibold uppercase tracking-wider">Founder, 180 Degrees Consulting</span>
+    </cite>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section class="relative py-24 bg-surface-container-low overflow-hidden">
+<section id="services" class="relative py-24 bg-surface-container-low overflow-hidden">
   <div class="px-6 md:px-20 max-w-[1280px] mx-auto relative z-10">
     <div class="flex flex-col md:flex-row justify-between items-end mb-14 gap-6">
       <div>
         <span class="section-label mb-3 block">Capabilities</span>
-        <h2 class="font-display text-4xl md:text-5xl font-bold">What We Do</h2>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-primary">Our Services</h2>
       </div>
-      <p class="text-on-surface-variant max-w-sm text-base leading-relaxed">We deploy student-led teams to solve complex problems through five core consulting pillars.</p>
+      <p class="text-on-surface-variant max-w-sm text-base leading-relaxed">We deploy student-led teams to solve complex problems through six core consulting pillars.</p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Market Research -->
       <div class="service-card glass rounded-2xl p-7 h-72 flex flex-col justify-between cursor-default overflow-hidden">
         <div>
           <span class="material-symbols-outlined text-primary text-4xl mb-4 block">query_stats</span>
           <h3 class="font-display text-xl font-semibold mb-2">Market Research</h3>
         </div>
-        <p class="desc text-on-surface-variant text-sm leading-relaxed">Deep-dive analytics to understand target demographics and landscape trends.</p>
+        <p class="desc text-on-surface-variant text-sm leading-relaxed">Deep-dive competitor analytics, benchmarking, and demographic studies to identify landscape opportunities.</p>
       </div>
+      <!-- Fund Raising Strategy -->
       <div class="service-card glass rounded-2xl p-7 h-72 flex flex-col justify-between cursor-default overflow-hidden">
         <div>
-          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">account_balance_wallet</span>
-          <h3 class="font-display text-xl font-semibold mb-2">Financial Planning</h3>
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">volunteer_activism</span>
+          <h3 class="font-display text-xl font-semibold mb-2">Fund Raising Strategy</h3>
         </div>
-        <p class="desc text-on-surface-variant text-sm leading-relaxed">Rigorous budgeting and forecasting for sustainable social growth.</p>
+        <p class="desc text-on-surface-variant text-sm leading-relaxed">Designing robust pitch decks, donor engagement plans, and grants frameworks for sustainable growth.</p>
       </div>
+      <!-- Marketing Strategy -->
       <div class="service-card glass rounded-2xl p-7 h-72 flex flex-col justify-between cursor-default overflow-hidden">
         <div>
-          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">branding_watermark</span>
-          <h3 class="font-display text-xl font-semibold mb-2">Branding</h3>
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">campaign</span>
+          <h3 class="font-display text-xl font-semibold mb-2">Marketing Strategy</h3>
         </div>
-        <p class="desc text-on-surface-variant text-sm leading-relaxed">Developing powerful identities that resonate with donors and beneficiaries.</p>
+        <p class="desc text-on-surface-variant text-sm leading-relaxed">Developing innovative digital campaigns, brand storytelling, and outreach systems to maximize social reach.</p>
       </div>
+      <!-- Business & Expansion Strategy -->
       <div class="service-card glass rounded-2xl p-7 h-72 flex flex-col justify-between cursor-default overflow-hidden">
         <div>
-          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">groups</span>
-          <h3 class="font-display text-xl font-semibold mb-2">HR Management</h3>
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">trending_up</span>
+          <h3 class="font-display text-xl font-semibold mb-2">Business & Expansion Strategy</h3>
         </div>
-        <p class="desc text-on-surface-variant text-sm leading-relaxed">Optimizing talent management and organizational culture for impact.</p>
+        <p class="desc text-on-surface-variant text-sm leading-relaxed">Formulating long-term roadmaps, geographical entry models, and partnership strategies for scale.</p>
       </div>
+      <!-- Operational Efficiency -->
       <div class="service-card glass rounded-2xl p-7 h-72 flex flex-col justify-between cursor-default overflow-hidden">
         <div>
           <span class="material-symbols-outlined text-primary text-4xl mb-4 block">settings_suggest</span>
-          <h3 class="font-display text-xl font-semibold mb-2">Process Optimization</h3>
+          <h3 class="font-display text-xl font-semibold mb-2">Operational Efficiency</h3>
         </div>
-        <p class="desc text-on-surface-variant text-sm leading-relaxed">Streamlining operations to maximize efficiency and resource allocation.</p>
+        <p class="desc text-on-surface-variant text-sm leading-relaxed">Optimizing business processes, defining KPIs, and streamlining internal workflows to scale productivity.</p>
       </div>
+      <!-- Revenue Generation -->
+      <div class="service-card glass rounded-2xl p-7 h-72 flex flex-col justify-between cursor-default overflow-hidden">
+        <div>
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">account_balance_wallet</span>
+          <h3 class="font-display text-xl font-semibold mb-2">Revenue Generation</h3>
+        </div>
+        <p class="desc text-on-surface-variant text-sm leading-relaxed">Devising diverse funding pipelines, monetization plans, and cost-cutting to ensure financial sustainability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS & IMPACT STATS -->
+<section id="impact" class="py-24 px-6 md:px-20 max-w-[1280px] mx-auto relative z-10">
+  <div class="glow-orb w-[600px] h-[600px] bg-primary/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+  
+  <div class="text-center mb-16">
+    <span class="section-label mb-3 block">Our Impact</span>
+    <h2 class="font-display text-3xl md:text-5xl font-bold">Making a Tangible Difference</h2>
+    <p class="text-on-surface-variant text-sm mt-3 max-w-xl mx-auto leading-relaxed">Through analytical excellence and student leadership, we deliver measurable social value.</p>
+  </div>
+
+  <!-- Top Grid of 4 Stats -->
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-10">
+    <!-- Stat 1: #7 Branch -->
+    <div class="glass rounded-2xl p-6 md:p-8 text-center hover:border-primary/20 transition-all duration-300 group">
+      <div class="font-display text-4xl md:text-5xl font-bold text-primary mb-3 group-hover:scale-105 transition-transform duration-300">#7</div>
+      <p class="text-xs md:text-sm font-semibold text-on-surface-variant leading-relaxed">Branch to operate<br>in India</p>
+    </div>
+
+    <!-- Stat 2: Client NPS -->
+    <div class="glass rounded-2xl p-6 md:p-8 text-center hover:border-primary/20 transition-all duration-300 group">
+      <div class="font-display text-4xl md:text-5xl font-bold text-primary mb-3 group-hover:scale-105 transition-transform duration-300">9+</div>
+      <p class="text-xs md:text-sm font-semibold text-on-surface-variant leading-relaxed">Client NPS</p>
+    </div>
+
+    <!-- Stat 3: Organisations Helped -->
+    <div class="glass rounded-2xl p-6 md:p-8 text-center hover:border-primary/20 transition-all duration-300 group">
+      <div class="font-display text-4xl md:text-5xl font-bold text-primary mb-3 group-hover:scale-105 transition-transform duration-300">10+</div>
+      <p class="text-xs md:text-sm font-semibold text-on-surface-variant leading-relaxed">Organisations<br>helped</p>
+    </div>
+
+    <!-- Stat 4: Consultants Trained -->
+    <div class="glass rounded-2xl p-6 md:p-8 text-center hover:border-primary/20 transition-all duration-300 group">
+      <div class="font-display text-4xl md:text-5xl font-bold text-primary mb-3 group-hover:scale-105 transition-transform duration-300">80+</div>
+      <p class="text-xs md:text-sm font-semibold text-on-surface-variant leading-relaxed">Consultants trained</p>
+    </div>
+  </div>
+
+  <!-- Big Featured Center Bottom Stat: ₹10 Lakhs + -->
+  <div class="glass rounded-2xl p-8 md:p-12 text-center max-w-2xl mx-auto border-primary/10 hover:border-primary/30 transition-all duration-500 relative overflow-hidden group">
+    <div class="absolute -right-24 -top-24 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none group-hover:bg-primary/15 transition-all duration-500"></div>
+    <div class="absolute -left-24 -bottom-24 w-48 h-48 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="relative z-10">
+      <div class="font-display text-4xl md:text-6xl font-bold text-primary mb-3 group-hover:scale-[1.02] transition-transform duration-300">₹10 Lakhs +</div>
+      <p class="text-xs md:text-sm font-bold uppercase tracking-widest text-on-surface-variant">Worth of Consulting Services provided</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUR CLIENTS -->
+<section class="py-24 px-6 md:px-20 max-w-[1280px] mx-auto relative">
+  <div class="text-center mb-16 relative z-10">
+    <span class="section-label mb-3 block">Who We Work With</span>
+    <h2 class="font-display text-4xl md:text-5xl font-bold">Our Clients</h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+    <div class="glass rounded-2xl p-10 flex flex-col items-center justify-center text-center group cursor-pointer">
+      <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+        <span class="material-symbols-outlined text-primary text-4xl">public</span>
+      </div>
+      <h3 class="font-display text-2xl font-bold mb-2">Impact</h3>
+      <p class="text-on-surface-variant text-sm">Non-profits and social enterprises driving change.</p>
+    </div>
+    <div class="glass rounded-2xl p-10 flex flex-col items-center justify-center text-center group cursor-pointer">
+      <div class="w-20 h-20 rounded-full bg-secondary-container/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+        <span class="material-symbols-outlined text-secondary text-4xl">domain</span>
+      </div>
+      <h3 class="font-display text-2xl font-bold mb-2">Corporate</h3>
+      <p class="text-on-surface-variant text-sm">Businesses committed to sustainable growth.</p>
+    </div>
+    <div class="glass rounded-2xl p-10 flex flex-col items-center justify-center text-center group cursor-pointer">
+      <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+        <span class="material-symbols-outlined text-primary text-4xl">language</span>
+      </div>
+      <h3 class="font-display text-2xl font-bold mb-2">International</h3>
+      <p class="text-on-surface-variant text-sm">Global organizations making worldwide impact.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED INSIGHTS -->
+<section class="relative py-24 bg-surface-container-low overflow-hidden">
+  <div class="px-6 md:px-20 max-w-[1280px] mx-auto relative z-10">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-14 gap-6">
+      <div>
+        <span class="section-label mb-3 block">180 Pulse</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold">Featured Articles</h2>
+      </div>
+      <a href="insights.html" class="btn-glass text-on-surface flex items-center gap-2">View All <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Article 1 -->
+      <a href="insights.html" class="glass rounded-2xl p-8 flex flex-col h-full group">
+        <span class="text-primary text-xs font-bold uppercase tracking-widest mb-4">Jul 22, 2025</span>
+        <h3 class="font-display text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Asymptote of Enough</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6 flex-grow">What if the real burnout isn’t just in our bodies but in our idea of success? This article explores how the modern rat race is taking a toll on our well-being.</p>
+        <span class="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 mt-auto">Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
+      </a>
+      <!-- Article 2 -->
+      <a href="insights.html" class="glass rounded-2xl p-8 flex flex-col h-full group">
+        <span class="text-primary text-xs font-bold uppercase tracking-widest mb-4">Jul 8, 2025</span>
+        <h3 class="font-display text-2xl font-bold mb-4 group-hover:text-primary transition-colors">The Price of Protectionism</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6 flex-grow">An in-depth analysis of the 2025 US-China trade war, where both nations have reignited tariff battles targeting critical sectors, disrupting global supply chains.</p>
+        <span class="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 mt-auto">Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
+      </a>
+      <!-- Article 3 -->
+      <a href="insights.html" class="glass rounded-2xl p-8 flex flex-col h-full group">
+        <span class="text-primary text-xs font-bold uppercase tracking-widest mb-4">Jul 2, 2025</span>
+        <h3 class="font-display text-2xl font-bold mb-4 group-hover:text-primary transition-colors">The Business of Freebies</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6 flex-grow">Free electricity, loan waivers, direct cash transfers — are these enablers of social justice or tactical vote banks? Diving deep into the economics and political incentives.</p>
+        <span class="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 mt-auto">Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
+      </a>
     </div>
   </div>
 </section>
@@ -256,7 +431,7 @@
 <footer class="bg-surface-container-lowest border-t border-white/5">
   <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 md:px-20 py-16 max-w-[1280px] mx-auto">
     <div>
-      <div class="font-display text-xl font-bold text-on-surface mb-4">180DC | SRCC</div>
+      <div class="font-display text-xl font-bold text-on-surface mb-4">180DC | VNIT Nagpur</div>
       <p class="text-on-surface-variant text-sm leading-relaxed">The world's largest university-based consultancy for social enterprises.</p>
     </div>
     <div>
@@ -271,19 +446,20 @@
     <div>
       <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Follow Us</h4>
       <div class="flex flex-col gap-3">
-        <a href="#" class="text-on-surface-variant text-sm hover:text-primary transition-colors">LinkedIn</a>
-        <a href="#" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Instagram</a>
-        <a href="#" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Twitter / X</a>
+        <a href="https://www.linkedin.com/company/180dc-vnit-nagpur" class="text-on-surface-variant text-sm hover:text-primary transition-colors">LinkedIn</a>
+        <a href="https://instagram.com/180dc_vnitnagpur" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Instagram</a>
+        <a href="https://www.facebook.com/180dcvnitnagpur" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Facebook</a>
       </div>
     </div>
     <div>
       <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Contact</h4>
-      <p class="text-on-surface-variant text-sm leading-relaxed mb-2">Shri Ram College of Commerce,<br>University of Delhi</p>
-      <a href="mailto:srcc@180dc.org" class="text-primary text-sm hover:underline">srcc@180dc.org</a>
+      <p class="text-on-surface-variant text-sm leading-relaxed mb-2">Visvesvaraya National Institute of Technology,<br>South Ambazari Road, Nagpur, Maharashtra – 440010, India</p>
+      <a href="mailto:vnitnagpur@180dc.org" class="text-primary text-sm hover:underline">vnitnagpur@180dc.org</a>
     </div>
   </div>
-  <div class="px-6 md:px-20 py-6 border-t border-white/5 max-w-[1280px] mx-auto">
-    <p class="text-on-surface-variant text-xs opacity-60">© 2024 180 Degrees Consulting SRCC. All rights reserved.</p>
+  <div class="px-6 md:px-20 py-6 border-t border-white/5 max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="text-on-surface-variant text-xs opacity-60">© 2026 180 Degrees Consulting VNIT Nagpur. All rights reserved.</p>
+    <p class="text-on-surface-variant text-xs opacity-60">Originally Developed By: <span class="text-primary">Suchir Bajaj</span></p>
   </div>
 </footer>
 
