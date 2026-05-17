@@ -1,40 +1,426 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
+
 <head>
-<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
-<title>Events &amp; Initiatives | 180DC VNIT Nagpur</title>
-<meta name="description" content="Explore Case 180, national consulting competitions and other flagship events by 180DC VNIT Nagpur."/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script>
-tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#4edea3","primary-container":"#10b981","on-primary":"#003824","secondary":"#adc6ff","secondary-container":"#0566d9","surface":"#111318","surface-container-low":"#1a1c20","surface-container":"#1e2024","surface-container-high":"#282a2e","surface-container-highest":"#333539","surface-container-lowest":"#0c0e12","on-surface":"#e2e2e8","on-surface-variant":"#bbcabf","background":"#111318"},fontFamily:{"display":["Playfair Display","serif"]}}}}
-</script>
-<style>
-body{background-color:#0A0C10;color:#e2e2e8;overflow-x:hidden;font-family:'Inter',sans-serif}
-.glass{backdrop-filter:blur(20px);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);transition:all .4s ease}
-.glass-hover:hover{border-color:rgba(78,222,163,.4);box-shadow:0 0 40px rgba(78,222,163,.15);transform:translateY(-4px)}
-.gradient-text{background:linear-gradient(135deg,#4edea3,#0566d9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.btn-gradient{background:linear-gradient(135deg,#10b981,#0566d9);color:#fff;border-radius:9999px;padding:.875rem 2.25rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13px;transition:all .3s;display:inline-block}
-.btn-gradient:hover{transform:scale(1.05);box-shadow:0 0 30px rgba(78,222,163,.4)}
-.nav-link{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e2e2e8;transition:color .3s}
-.nav-link:hover,.nav-link.active{color:#4edea3}
-.nav-link.active{border-bottom:2px solid #ffffff;padding-bottom:4px}
-.section-label{font-size:12px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:#4edea3}
-.timeline-dot{width:16px;height:16px;border-radius:50%;background:#4edea3;box-shadow:0 0 20px rgba(78,222,163,.8);position:absolute;left:50%;transform:translateX(-50%);z-index:10}
-.timeline-line{position:relative}
-.timeline-line::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(78,222,163,.5),transparent);transform:translateX(-50%)}
-.mobile-menu{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(17,19,24,.97);backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,.1);padding:1.5rem 2rem;gap:1.25rem}
-.mobile-menu.open{display:flex}
-</style>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <title>Events &amp; Initiatives | 180DC VNIT Nagpur</title>
+  <meta name="description"
+    content="Explore Case 180, national consulting competitions and other flagship events by 180DC VNIT Nagpur." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#4edea3", "primary-container": "#10b981", "on-primary": "#003824", "secondary": "#adc6ff", "secondary-container": "#0566d9", "surface": "#111318", "surface-container-low": "#1a1c20", "surface-container": "#1e2024", "surface-container-high": "#282a2e", "surface-container-highest": "#333539", "surface-container-lowest": "#0c0e12", "on-surface": "#e2e2e8", "on-surface-variant": "#bbcabf", "background": "#111318" }, fontFamily: { "display": ["Playfair Display", "serif"] } } } }
+  </script>
+  <style>
+    body {
+      background-color: #0A0C10;
+      color: #e2e2e8;
+      overflow-x: hidden;
+      font-family: 'Inter', sans-serif
+    }
+
+    .glass {
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all .4s ease
+    }
+
+    .glass-hover:hover {
+      border-color: rgba(78, 222, 163, .4);
+      box-shadow: 0 0 40px rgba(78, 222, 163, .15);
+      transform: translateY(-4px)
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #4edea3, #0566d9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .btn-gradient {
+      background: linear-gradient(135deg, #10b981, #0566d9);
+      color: #fff;
+      border-radius: 9999px;
+      padding: .875rem 2.25rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-size: 13px;
+      transition: all .3s;
+      display: inline-block
+    }
+
+    .btn-gradient:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(78, 222, 163, .4)
+    }
+
+    .nav-link {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #e2e2e8;
+      transition: color .3s
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #4edea3
+    }
+
+    .nav-link.active {
+      border-bottom: 2px solid #ffffff;
+      padding-bottom: 4px
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: #4edea3
+    }
+
+    .timeline-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #4edea3;
+      box-shadow: 0 0 20px rgba(78, 222, 163, .8);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10
+    }
+
+    .timeline-line {
+      position: relative
+    }
+
+    .timeline-line::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(78, 222, 163, .5), transparent);
+      transform: translateX(-50%)
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(17, 19, 24, .97);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      padding: 1.5rem 2rem;
+      gap: 1.25rem
+    }
+
+    .mobile-menu.open {
+      display: flex
+    }
+  </style>
+  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <title>Events &amp; Initiatives | 180DC VNIT Nagpur</title>
+  <meta name="description"
+    content="Explore Case 180, national consulting competitions and other flagship events by 180DC VNIT Nagpur." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#4edea3", "primary-container": "#10b981", "on-primary": "#003824", "secondary": "#adc6ff", "secondary-container": "#0566d9", "surface": "#111318", "surface-container-low": "#1a1c20", "surface-container": "#1e2024", "surface-container-high": "#282a2e", "surface-container-highest": "#333539", "surface-container-lowest": "#0c0e12", "on-surface": "#e2e2e8", "on-surface-variant": "#bbcabf", "background": "#111318" }, fontFamily: { "display": ["Playfair Display", "serif"] } } } }
+  </script>
+  <style>
+    body {
+      background-color: #0A0C10;
+      color: #e2e2e8;
+      overflow-x: hidden;
+      font-family: 'Inter', sans-serif
+    }
+
+    .glass {
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all .4s ease
+    }
+
+    .glass-hover:hover {
+      border-color: rgba(78, 222, 163, .4);
+      box-shadow: 0 0 40px rgba(78, 222, 163, .15);
+      transform: translateY(-4px)
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #4edea3, #0566d9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .btn-gradient {
+      background: linear-gradient(135deg, #10b981, #0566d9);
+      color: #fff;
+      border-radius: 9999px;
+      padding: .875rem 2.25rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-size: 13px;
+      transition: all .3s;
+      display: inline-block
+    }
+
+    .btn-gradient:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(78, 222, 163, .4)
+    }
+
+    .nav-link {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #e2e2e8;
+      transition: color .3s
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #4edea3
+    }
+
+    .nav-link.active {
+      border-bottom: 2px solid #ffffff;
+      padding-bottom: 4px
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: #4edea3
+    }
+
+    .timeline-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #4edea3;
+      box-shadow: 0 0 20px rgba(78, 222, 163, .8);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10
+    }
+
+    .timeline-line {
+      position: relative
+    }
+
+    .timeline-line::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(78, 222, 163, .5), transparent);
+      transform: translateX(-50%)
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(17, 19, 24, .97);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      padding: 1.5rem 2rem;
+      gap: 1.25rem
+    }
+
+    .mobile-menu.open {
+      display: flex
+    }
+  </style>
+  =======
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <title>Events &amp; Initiatives | 180DC VNIT Nagpur</title>
+  <meta name="description"
+    content="Explore Case 180, national consulting competitions and other flagship events by 180DC VNIT Nagpur." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#4edea3", "primary-container": "#10b981", "on-primary": "#003824", "secondary": "#adc6ff", "secondary-container": "#0566d9", "surface": "#111318", "surface-container-low": "#1a1c20", "surface-container": "#1e2024", "surface-container-high": "#282a2e", "surface-container-highest": "#333539", "surface-container-lowest": "#0c0e12", "on-surface": "#e2e2e8", "on-surface-variant": "#bbcabf", "background": "#111318" }, fontFamily: { "display": ["Playfair Display", "serif"] } } } }
+  </script>
+  <style>
+    body {
+      background-color: #0A0C10;
+      color: #e2e2e8;
+      overflow-x: hidden;
+      font-family: 'Inter', sans-serif
+    }
+
+    .glass {
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all .4s ease
+    }
+
+    .glass-hover:hover {
+      border-color: rgba(78, 222, 163, .4);
+      box-shadow: 0 0 40px rgba(78, 222, 163, .15);
+      transform: translateY(-4px)
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #4edea3, #0566d9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .btn-gradient {
+      background: linear-gradient(135deg, #10b981, #0566d9);
+      color: #fff;
+      border-radius: 9999px;
+      padding: .875rem 2.25rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-size: 13px;
+      transition: all .3s;
+      display: inline-block
+    }
+
+    .btn-gradient:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(78, 222, 163, .4)
+    }
+
+    .nav-link {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #bbcabf;
+      transition: color .3s
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #4edea3
+    }
+
+    .nav-link.active {
+      border-bottom: 2px solid #4edea3;
+      padding-bottom: 4px
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: #4edea3
+    }
+
+    .timeline-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #4edea3;
+      box-shadow: 0 0 20px rgba(78, 222, 163, .8);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10
+    }
+
+    .timeline-line {
+      position: relative
+    }
+
+    .timeline-line::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(78, 222, 163, .5), transparent);
+      transform: translateX(-50%)
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(17, 19, 24, .97);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      padding: 1.5rem 2rem;
+      gap: 1.25rem
+    }
+
+    .mobile-menu.open {
+      display: flex
+    }
+  </style>
+  >>>>>>> 6509e7f (Updated events page with new event and logo)
 </head>
+
 <body>
-<header class="fixed top-0 w-full z-50 bg-[#111318]/70 backdrop-blur-[20px] border-b border-white/10">
-  <nav class="flex justify-between items-center px-6 md:px-20 py-2.5 max-w-[1280px] mx-auto">
-    <a href="index.html" class="flex items-center group py-1">
-      <img src="logo.png" alt="180 Degrees Consulting VNIT Nagpur Logo" class="h-9 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
-    </a>
-    <div class="hidden md:flex items-center gap-8">
+  <header class="fixed top-0 w-full z-50 bg-[#111318]/70 backdrop-blur-[20px] border-b border-white/10">
+    <nav class="flex justify-between items-center px-6 md:px-20 py-2.5 max-w-[1280px] mx-auto">
+      <a href="index.html" class="flex items-center group py-1">
+        <img src="logo.png" alt="180 Degrees Consulting VNIT Nagpur Logo"
+          class="h-9 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="insights.html" class="nav-link">Insights</a>
+        <a href="events.html" class="nav-link active">Events</a>
+        <a href="join-us.html" class="nav-link">Join Us</a>
+      </div>
+      <a href="join-us.html" class="hidden md:block btn-gradient">Work With Us</a>
+      <button id="menuToggle" class="md:hidden"><span class="material-symbols-outlined text-3xl">menu</span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
       <a href="index.html" class="nav-link">Home</a>
       <a href="index.html#about" class="nav-link">About</a>
       <a href="index.html#services" class="nav-link">Services</a>
@@ -42,216 +428,133 @@ body{background-color:#0A0C10;color:#e2e2e8;overflow-x:hidden;font-family:'Inter
       <a href="insights.html" class="nav-link">Insights</a>
       <a href="events.html" class="nav-link active">Events</a>
       <a href="join-us.html" class="nav-link">Join Us</a>
+      <a href="join-us.html" class="btn-gradient text-center mt-2">Work With Us</a>
     </div>
-    <a href="join-us.html" class="hidden md:block btn-gradient">Work With Us</a>
-    <button id="menuToggle" class="md:hidden"><span class="material-symbols-outlined text-3xl">menu</span></button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="index.html#about" class="nav-link">About</a>
-    <a href="index.html#services" class="nav-link">Services</a>
-    <a href="projects.html" class="nav-link">Projects</a>
-    <a href="insights.html" class="nav-link">Insights</a>
-    <a href="events.html" class="nav-link active">Events</a>
-    <a href="join-us.html" class="nav-link">Join Us</a>
-    <a href="join-us.html" class="btn-gradient text-center mt-2">Work With Us</a>
-  </div>
-</header>
+  </header>
 
-<main>
-<!-- HERO STRIP -->
-<section class="relative h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden pt-16">
-  <div class="absolute inset-0 bg-gradient-to-br from-[#0A0C10] via-[#0d1a14] to-[#0A0C10]"></div>
-  <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-    <div class="w-[600px] h-[600px] rounded-full" style="background:radial-gradient(circle,rgba(78,222,163,0.12) 0%,transparent 65%);filter:blur(60px)"></div>
-  </div>
-  <div class="relative z-10 text-center px-6">
-    <span class="section-label mb-5 block">Events &amp; Outreach</span>
-    <h1 class="font-display text-4xl md:text-6xl font-bold mb-5">Events &amp; <span class="gradient-text">Outreach</span></h1>
-    <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">Cultivating excellence through high-impact summits, case competitions, and industry-leading workshops.</p>
-  </div>
-</section>
+  <main>
+    <!-- HERO STRIP -->
+    <section class="relative h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden pt-16">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#0A0C10] via-[#0d1a14] to-[#0A0C10]"></div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="w-[600px] h-[600px] rounded-full"
+          style="background:radial-gradient(circle,rgba(78,222,163,0.12) 0%,transparent 65%);filter:blur(60px)"></div>
+      </div>
+      <div class="relative z-10 text-center px-6">
+        <span class="section-label mb-5 block">Events &amp; Outreach</span>
+        <h1 class="font-display text-4xl md:text-6xl font-bold mb-5">Events &amp; <span
+            class="gradient-text">Outreach</span></h1>
+        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">Cultivating excellence through
+          high-impact summits, case competitions, and industry-leading workshops.</p>
+      </div>
+    </section>
 
-<!-- CASE 180 -->
-<section class="py-20 px-6 md:px-20 max-w-[1280px] mx-auto">
-  <div class="glass rounded-2xl overflow-hidden">
-    <div class="grid md:grid-cols-2 gap-0">
-      <div class="p-10 md:p-14 flex flex-col justify-center">
-        <span class="section-label mb-4 block">Flagship Initiative</span>
-        <h2 class="font-display text-3xl md:text-5xl font-bold mb-4">Case 180</h2>
-        <p class="text-on-surface-variant text-base leading-relaxed mb-8">The premier pan-India strategy case competition. Solve real-world social impact challenges presented by global NGOs and social enterprises.</p>
-        <div class="flex gap-10 mb-10">
-          <div>
-            <p class="font-display text-3xl font-bold text-primary">5,000+</p>
-            <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-1">Participants</p>
+    <!-- VISHLESHAn -->
+    <section class="py-20 px-6 md:px-20 max-w-[1280px] mx-auto">
+      <div class="glass rounded-2xl overflow-hidden">
+        <div class="grid md:grid-cols-2 gap-0">
+          <div class="p-10 md:p-14 flex flex-col justify-center">
+            <span class="section-label mb-4 block">Flagship Initiative</span>
+            <h2 class="font-display text-3xl md:text-5xl font-bold mb-4">VISHLESHAN</h2>
+            <p class="text-on-surface-variant text-base leading-relaxed mb-8">Vishleshan is our flagship case
+              competition — the one event on campus where business problems don't come with textbook answers.
+              Participants get a real-world case, a limited window to work through it, and a panel of judges who won't
+              let vague reasoning slide. It's competitive, fast, and a solid indicator of who can actually think on
+              their feet. Now in its second edition at VNIT, Vishleshan has grown into one of the institute's go-to
+              consulting events, drawing participants from across campus who want to test their problem solving against
+              peers.</p>
+            <div class="flex gap-10 mb-10">
+              <div>
+                <p class="font-display text-3xl font-bold text-primary">500+</p>
+                <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-1">Participants</p>
+              </div>
+              <div class="border-l border-white/10 pl-10">
+                <p class="font-display text-3xl font-bold text-primary">VNIT Nagpur</p>
+                <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-1">Location</p>
+              </div>
+            </div>
+
           </div>
-          <div class="border-l border-white/10 pl-10">
-            <p class="font-display text-3xl font-bold text-primary">₹2.5L</p>
-            <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-1">Prize Pool</p>
-          </div>
-        </div>
-        <a href="#" class="btn-gradient w-fit">Register Now</a>
-      </div>
-      <div class="bg-surface-container-high flex items-center justify-center min-h-[280px] relative overflow-hidden">
-        <div class="text-center p-10">
-          <div class="font-display text-7xl font-bold gradient-text">180</div>
-          <div class="text-on-surface-variant text-sm uppercase tracking-widest mt-2">Case Competition</div>
-          <div class="mt-4 flex justify-center gap-2">
-            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">Annual</span>
-            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">Pan-India</span>
-            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">Social Impact</span>
-          </div>
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-r from-surface-container to-transparent pointer-events-none md:block hidden"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECONDARY EVENTS -->
-<section class="py-4 px-6 md:px-20 max-w-[1280px] mx-auto mb-16">
-  <div class="grid md:grid-cols-2 gap-7">
-    <div class="glass glass-hover rounded-2xl p-10">
-      <div class="flex justify-between items-start mb-6">
-        <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings:'FILL' 1">workspace_premium</span>
-        <div class="flex gap-3 opacity-70">
-          <span class="text-xs text-on-surface-variant">Partners:</span>
-          <span class="text-xs font-bold text-on-surface">EY | BCG | Mastercard</span>
-        </div>
-      </div>
-      <h3 class="font-display text-2xl font-semibold mb-3">Shri Ram Consulting Olympiad</h3>
-      <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Testing the frontiers of logical reasoning, business acumen, and social impact strategy through a multi-stage rigorous evaluation process.</p>
-      <a href="#" class="text-primary text-xs font-bold uppercase tracking-widest flex items-center group hover:gap-3 gap-2 transition-all">Learn More<span class="material-symbols-outlined text-sm group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-    </div>
-    <div class="glass glass-hover rounded-2xl p-10">
-      <div class="flex justify-between items-start mb-6">
-        <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings:'FILL' 1">school</span>
-        <div class="flex gap-3 opacity-70">
-          <span class="text-xs text-on-surface-variant">Featuring:</span>
-          <span class="text-xs font-bold text-on-surface">Microsoft | Google | EY</span>
-        </div>
-      </div>
-      <h3 class="font-display text-2xl font-semibold mb-3">Strategic Master Classes</h3>
-      <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Exclusive deep-dive sessions led by top-tier consultants on data-driven decision making, organizational design, and consulting methodology.</p>
-      <a href="#" class="text-primary text-xs font-bold uppercase tracking-widest flex items-center group hover:gap-3 gap-2 transition-all">View Schedule<span class="material-symbols-outlined text-sm group-hover:translate-x-2 transition-transform">arrow_forward</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- COUNTDOWN -->
-<section class="py-16 px-6 md:px-20 max-w-[1280px] mx-auto">
-  <div class="glass rounded-2xl py-14 px-8 text-center relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary-container"></div>
-    <span class="section-label mb-6 block">Next Event Commencing In</span>
-    <div class="flex justify-center gap-5 md:gap-14" id="countdown">
-      <div class="flex flex-col items-center"><span class="font-display text-5xl md:text-7xl font-bold tabular-nums" id="days">00</span><span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-2">Days</span></div>
-      <span class="font-display text-5xl md:text-7xl font-bold opacity-20">:</span>
-      <div class="flex flex-col items-center"><span class="font-display text-5xl md:text-7xl font-bold tabular-nums" id="hours">00</span><span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-2">Hours</span></div>
-      <span class="font-display text-5xl md:text-7xl font-bold opacity-20">:</span>
-      <div class="flex flex-col items-center"><span class="font-display text-5xl md:text-7xl font-bold tabular-nums" id="minutes">00</span><span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-2">Mins</span></div>
-      <span class="font-display text-5xl md:text-7xl font-bold opacity-20">:</span>
-      <div class="flex flex-col items-center"><span class="font-display text-5xl md:text-7xl font-bold tabular-nums text-primary" id="seconds">00</span><span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-2">Secs</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- TIMELINE -->
-<section class="py-20 px-6 md:px-20 max-w-[1280px] mx-auto">
-  <div class="text-center mb-16">
-    <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Our Legacy of Impact</h2>
-    <p class="text-on-surface-variant">A retrospective of our major milestones and community engagement.</p>
-  </div>
-  <div class="relative timeline-line space-y-20">
-    <!-- Item 1 -->
-    <div class="flex flex-col md:flex-row items-center justify-center relative">
-      <div class="w-full md:w-5/12 md:pr-12 mb-6 md:mb-0 md:text-right">
-        <div class="glass glass-hover rounded-2xl p-8">
-          <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2 block">February 2024</span>
-          <h4 class="font-display text-xl font-semibold mb-3">Social Impact Summit</h4>
-          <p class="text-on-surface-variant text-sm leading-relaxed mb-4">Hosted over 20+ social enterprises and NGOs to discuss the future of sustainable consulting in India.</p>
-          <div class="flex md:justify-end gap-3 flex-wrap">
-            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">1,200 Attendees</span>
-            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">15 Experts</span>
+          <div
+            class="bg-surface-container-high flex items-center justify-center min-h-[280px] relative overflow-hidden p-8">
+            <img src="vishleshan-logo.png" alt="VISHLESHAN — VNIT Flagship Case Competition"
+              class="max-w-[90%] max-h-[300px] object-contain relative z-10" />
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-surface-container to-transparent pointer-events-none md:block hidden">
+            </div>
           </div>
         </div>
       </div>
-      <div class="timeline-dot hidden md:block"></div>
-      <div class="w-full md:w-5/12 md:pl-12">
-        <div class="bg-surface-container-high rounded-2xl h-48 flex items-center justify-center">
-          <div class="text-center"><span class="material-symbols-outlined text-primary text-5xl">groups</span><p class="text-on-surface-variant text-sm mt-2">Social Impact Summit 2024</p></div>
-        </div>
-      </div>
-    </div>
-    <!-- Item 2 -->
-    <div class="flex flex-col md:flex-row-reverse items-center justify-center relative">
-      <div class="w-full md:w-5/12 md:pl-12 mb-6 md:mb-0">
-        <div class="glass glass-hover rounded-2xl p-8">
-          <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2 block">November 2023</span>
-          <h4 class="font-display text-xl font-semibold mb-3">Global Network Connect</h4>
-          <p class="text-on-surface-variant text-sm leading-relaxed mb-4">Collaborative workshop series with 180DC branches from London, New York, and Sydney.</p>
-          <div class="flex gap-3 flex-wrap">
-            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">Global Collab</span>
-            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">Digital Bridge</span>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-dot hidden md:block"></div>
-      <div class="w-full md:w-5/12 md:pr-12">
-        <div class="bg-surface-container-high rounded-2xl h-48 flex items-center justify-center">
-          <div class="text-center"><span class="material-symbols-outlined text-secondary text-5xl">public</span><p class="text-on-surface-variant text-sm mt-2">Global Network Connect 2023</p></div>
-        </div>
-      </div>
-    </div>
-    <!-- Item 3 -->
-    <div class="flex flex-col md:flex-row items-center justify-center relative">
-      <div class="w-full md:w-5/12 md:pr-12 mb-6 md:mb-0 md:text-right">
-        <div class="glass glass-hover rounded-2xl p-8">
-          <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2 block">March 2023</span>
-          <h4 class="font-display text-xl font-semibold mb-3">Case 180 — Season 5</h4>
-          <p class="text-on-surface-variant text-sm leading-relaxed mb-4">Record-breaking edition with 5,000+ participants across 15 countries solving climate and healthcare challenges.</p>
-          <div class="flex md:justify-end gap-3 flex-wrap">
-            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">5,000+ Teams</span>
-            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">15 Countries</span>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-dot hidden md:block"></div>
-      <div class="w-full md:w-5/12 md:pl-12">
-        <div class="bg-surface-container-high rounded-2xl h-48 flex items-center justify-center">
-          <div class="text-center"><span class="material-symbols-outlined text-primary text-5xl">emoji_events</span><p class="text-on-surface-variant text-sm mt-2">Case 180 — Season 5</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
+    </section>
 
-<footer class="bg-surface-container-lowest border-t border-white/5">
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 md:px-20 py-16 max-w-[1280px] mx-auto">
-    <div><div class="font-display text-xl font-bold mb-4">180DC | VNIT Nagpur</div><p class="text-on-surface-variant text-sm leading-relaxed">Leading the way in social impact consulting. Excellence, empathy, and innovation.</p></div>
-    <div><h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Quick Links</h4><div class="flex flex-col gap-3"><a href="projects.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Our Projects</a><a href="insights.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Insights &amp; Research</a><a href="join-us.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Join Us</a></div></div>
-    <div><h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Global Network</h4><div class="flex flex-col gap-3"><a href="#" class="text-on-surface-variant text-sm hover:text-primary transition-colors">180DC Global</a><a href="#" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Alumni</a></div></div>
-    <div><h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Contact</h4><p class="text-on-surface-variant text-sm mb-1 flex items-center gap-2"><span class="material-symbols-outlined text-base">mail</span>vnitnagpur@180dc.org</p><p class="text-on-surface-variant text-sm flex items-center gap-2"><span class="material-symbols-outlined text-base">location_on</span>Nagpur, Maharashtra, India</p></div>
-  </div>
-  <div class="px-6 md:px-20 py-5 border-t border-white/5 max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-    <p class="text-on-surface-variant text-xs opacity-60">© 2026 180 Degrees Consulting VNIT Nagpur. All rights reserved.</p>
-    <div class="flex gap-6 text-[11px] text-on-surface-variant uppercase tracking-widest"><a href="#" class="hover:text-primary">Privacy Policy</a><a href="#" class="hover:text-primary">Terms of Service</a></div>
-  </div>
-</footer>
+    <!-- SECONDARY EVENTS -->
+    <section class="py-4 px-6 md:px-20 max-w-[1280px] mx-auto mb-16">
+      <div class="grid md:grid-cols-2 gap-7">
+        <div class="glass glass-hover rounded-2xl p-10">
+          <div class="flex justify-between items-start mb-6">
+            <img src="escape-room-logo.png" alt="Escape Room Logo" class="h-20 w-20 object-contain" />
+          </div>
+          <h3 class="font-display text-2xl font-semibold mb-3">ESCAPE ROOM - Product Hackathon</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Escape Room was built around a simple idea —
+            if you can't diagnose a problem correctly, your solution won't matter. The event ran across three
+            elimination rounds: guesstimates, root cause analysis, and product design based on identified root causes.
+            It was one of our more unconventional events, and one that people came out of talking about.</p>
+        </div>
+        <div class="glass glass-hover rounded-2xl p-10">
+          <h3 class="font-display text-2xl font-semibold mb-3">ISB Session</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed mb-6">We brought in a speaker from the Indian School
+            of Business for a campus session focused on one thing: what it actually takes to build a competitive
+            profile. Students heard directly about how ISB evaluates candidates, what distinguishes strong applicants,
+            and what the Young Leaders programme looks like from the inside. It was a candid conversation — no vague
+            advice, just practical guidance on how to position yourself well.</p>
 
-<script>
-document.getElementById('menuToggle').addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('open'));
-// Countdown to next event (set target date)
-const target = new Date(); target.setDate(target.getDate()+45);
-function tick(){
-  const now=new Date(), diff=target-now;
-  if(diff<0) return;
-  const d=Math.floor(diff/86400000), h=Math.floor((diff%86400000)/3600000), m=Math.floor((diff%3600000)/60000), s=Math.floor((diff%60000)/1000);
-  document.getElementById('days').textContent=String(d).padStart(2,'0');
-  document.getElementById('hours').textContent=String(h).padStart(2,'0');
-  document.getElementById('minutes').textContent=String(m).padStart(2,'0');
-  document.getElementById('seconds').textContent=String(s).padStart(2,'0');
-}
-tick(); setInterval(tick,1000);
-</script>
-</body></html>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-surface-container-lowest border-t border-white/5">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 md:px-20 py-16 max-w-[1280px] mx-auto">
+      <div>
+        <div class="font-display text-xl font-bold mb-4">180DC | VNIT Nagpur</div>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Leading the way in social impact consulting.
+          Excellence, empathy, and innovation.</p>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Quick Links</h4>
+        <div class="flex flex-col gap-3"><a href="projects.html"
+            class="text-on-surface-variant text-sm hover:text-primary transition-colors">Our Projects</a><a
+            href="insights.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Insights
+            &amp; Research</a><a href="join-us.html"
+            class="text-on-surface-variant text-sm hover:text-primary transition-colors">Join Us</a></div>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Global Network</h4>
+        <div class="flex flex-col gap-3"><a href="#"
+            class="text-on-surface-variant text-sm hover:text-primary transition-colors">180DC Global</a><a href="#"
+            class="text-on-surface-variant text-sm hover:text-primary transition-colors">Alumni</a></div>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Contact</h4>
+        <p class="text-on-surface-variant text-sm mb-1 flex items-center gap-2"><span
+            class="material-symbols-outlined text-base">mail</span>vnitnagpur@180dc.org</p>
+        <p class="text-on-surface-variant text-sm flex items-center gap-2"><span
+            class="material-symbols-outlined text-base">location_on</span>Nagpur, Maharashtra, India</p>
+      </div>
+    </div>
+    <div
+      class="px-6 md:px-20 py-5 border-t border-white/5 max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-on-surface-variant text-xs opacity-60">© 2026 180 Degrees Consulting VNIT Nagpur. All rights
+        reserved.</p>
+      <div class="flex gap-6 text-[11px] text-on-surface-variant uppercase tracking-widest"><a href="#"
+          class="hover:text-primary">Privacy Policy</a><a href="#" class="hover:text-primary">Terms of Service</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'));
+  </script>
+</body>
+
+</html>
