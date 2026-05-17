@@ -193,8 +193,10 @@ body{background-color:#0A0C10;color:#e2e2e8;overflow-x:hidden;font-family:'Inter
     <div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
     <h2 class="font-display text-3xl font-bold mb-4">Stay Ahead of the Curve</h2>
     <p class="text-on-surface-variant text-base max-w-md mx-auto mb-8 leading-relaxed">Get bi-weekly insights, research summaries, and club updates delivered directly to your inbox.</p>
-    <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto relative z-10" onsubmit="event.preventDefault();alert('Subscribed! Thank you.')">
-      <input class="flex-grow bg-surface-container-high border border-white/10 focus:border-primary text-on-surface px-5 py-3.5 rounded-xl placeholder:text-on-surface-variant/50 transition-colors outline-none" placeholder="your@email.com" type="email" required/>
+    <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto relative z-10">
+      <input type="hidden" name="access_key" value="4dabc3b0-df9b-4c98-a93c-f554b1e3b431">
+      <input type="hidden" name="subject" value="New Newsletter Subscription - 180DC VNIT">
+      <input class="flex-grow bg-surface-container-high border border-white/10 focus:border-primary text-on-surface px-5 py-3.5 rounded-xl placeholder:text-on-surface-variant/50 transition-colors outline-none" name="email" placeholder="your@email.com" type="email" required/>
       <button class="btn-primary whitespace-nowrap" type="submit">Subscribe</button>
     </form>
   </div>

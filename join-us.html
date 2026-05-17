@@ -158,23 +158,25 @@ label.floating{position:absolute;left:0;top:.75rem;color:#e2e2e8;font-size:14px;
       <h2 class="font-display text-3xl font-bold mb-2">Connect With Us</h2>
       <p class="text-on-surface-variant text-sm">Whether you're looking to partner or have a query, our team is ready.</p>
     </div>
-    <form class="space-y-8" onsubmit="handleSubmit(event)">
+    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-8">
+      <input type="hidden" name="access_key" value="4dabc3b0-df9b-4c98-a93c-f554b1e3b431">
+      <input type="hidden" name="subject" value="New Contact Form Submission - 180DC VNIT">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="relative"><input class="input-field" id="name" type="text" placeholder=" "/><label class="floating" for="name">Full Name</label></div>
-        <div class="relative"><input class="input-field" id="org" type="text" placeholder=" "/><label class="floating" for="org">Organization</label></div>
+        <div class="relative"><input class="input-field" id="name" name="name" type="text" placeholder=" " required/><label class="floating" for="name">Full Name</label></div>
+        <div class="relative"><input class="input-field" id="org" name="organization" type="text" placeholder=" "/><label class="floating" for="org">Organization</label></div>
       </div>
-      <div class="relative"><input class="input-field" id="email" type="email" placeholder=" "/><label class="floating" for="email">Email Address</label></div>
+      <div class="relative"><input class="input-field" id="email" name="email" type="email" placeholder=" " required/><label class="floating" for="email">Email Address</label></div>
       <div class="relative">
-        <select class="input-field" id="type" style="appearance:none">
+        <select class="input-field" id="type" name="type" style="appearance:none" required>
           <option value="" disabled selected style="background:#1e2024">I am a...</option>
-          <option style="background:#1e2024">Student / Prospective Consultant</option>
-          <option style="background:#1e2024">NGO / Non-profit seeking consulting</option>
-          <option style="background:#1e2024">Startup / Social Enterprise</option>
-          <option style="background:#1e2024">Corporate / Partner</option>
-          <option style="background:#1e2024">Other</option>
+          <option value="Student" style="background:#1e2024">Student / Prospective Consultant</option>
+          <option value="NGO" style="background:#1e2024">NGO / Non-profit seeking consulting</option>
+          <option value="Startup" style="background:#1e2024">Startup / Social Enterprise</option>
+          <option value="Corporate" style="background:#1e2024">Corporate / Partner</option>
+          <option value="Other" style="background:#1e2024">Other</option>
         </select>
       </div>
-      <div class="relative"><textarea class="input-field resize-none" id="message" rows="4" placeholder=" "></textarea><label class="floating" for="message">How can we help?</label></div>
+      <div class="relative"><textarea class="input-field resize-none" id="message" name="message" rows="4" placeholder=" " required></textarea><label class="floating" for="message">How can we help?</label></div>
       <div class="pt-2 text-center">
         <button class="btn-primary px-12 inline-flex items-center gap-3" type="submit">Send Message<span class="material-symbols-outlined text-sm">send</span></button>
       </div>
