@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>180DC | SRCC — Consulting That Creates Change</title>
+<meta name="description" content="180 Degrees Consulting SRCC — The premier student-led pro-bono consulting organization at Shri Ram College of Commerce, delivering McKinsey-tier strategy for NGOs and social enterprises."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#4edea3",
+          "primary-container": "#10b981",
+          "on-primary": "#003824",
+          "on-primary-container": "#00422b",
+          "secondary": "#adc6ff",
+          "secondary-container": "#0566d9",
+          "on-secondary": "#002e6a",
+          "surface": "#111318",
+          "surface-container-low": "#1a1c20",
+          "surface-container": "#1e2024",
+          "surface-container-high": "#282a2e",
+          "surface-container-highest": "#333539",
+          "surface-container-lowest": "#0c0e12",
+          "on-surface": "#e2e2e8",
+          "on-surface-variant": "#bbcabf",
+          "background": "#111318",
+          "on-background": "#e2e2e8",
+          "outline": "#86948a",
+          "outline-variant": "#3c4a42",
+          "error": "#ffb4ab",
+        },
+        fontFamily: {
+          "display": ["Playfair Display", "serif"],
+          "body": ["Inter", "sans-serif"],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { background-color: #0A0C10; color: #e2e2e8; overflow-x: hidden; font-family: 'Inter', sans-serif; }
+  .glass { backdrop-filter: blur(20px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease; }
+  .glass:hover { border-color: rgba(78,222,163,0.35); box-shadow: 0 0 30px rgba(78,222,163,0.1); transform: translateY(-6px); }
+  .gradient-text { background: linear-gradient(135deg, #4edea3 0%, #0566d9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .btn-primary { background: linear-gradient(135deg, #10b981, #0566d9); color: #fff; border-radius: 9999px; padding: 1rem 2.5rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 14px; transition: all 0.3s; }
+  .btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(78,222,163,0.4); }
+  .btn-glass { border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); backdrop-filter: blur(12px); border-radius: 9999px; padding: 1rem 2.5rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 14px; transition: all 0.3s; }
+  .btn-glass:hover { background: rgba(255,255,255,0.1); }
+  .nav-link { font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #bbcabf; transition: color 0.3s; }
+  .nav-link:hover, .nav-link.active { color: #4edea3; }
+  .nav-link.active { border-bottom: 2px solid #4edea3; padding-bottom: 4px; }
+  canvas#networkCanvas { position: absolute; top:0; left:0; width:100%; height:100%; opacity:0.12; pointer-events:none; }
+  .glow-orb { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+  @keyframes bounce-scroll { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  .animate-float { animation: float 4s ease-in-out infinite; }
+  .animate-bounce-scroll { animation: bounce-scroll 2s ease-in-out infinite; }
+  .section-label { font-size: 13px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: #4edea3; }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent); }
+  .service-card .desc { transform: translateY(40px); opacity: 0; transition: all 0.5s ease; }
+  .service-card:hover .desc { transform: translateY(0); opacity: 1; }
+  .mobile-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(17,19,24,0.97); backdrop-filter: blur(20px); border-top: 1px solid rgba(255,255,255,0.1); padding: 1.5rem 2rem; gap: 1.25rem; }
+  .mobile-menu.open { display: flex; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="fixed top-0 w-full z-50 bg-[#111318]/70 backdrop-blur-[20px] border-b border-white/10">
+  <nav class="flex justify-between items-center px-6 md:px-20 py-4 max-w-[1280px] mx-auto">
+    <a href="index.html" class="font-display text-xl font-bold text-on-surface tracking-tight">180DC | SRCC</a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="insights.html" class="nav-link">Insights</a>
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="join-us.html" class="nav-link">Join Us</a>
+    </div>
+    <a href="join-us.html" class="hidden md:block btn-primary text-sm">Work With Us</a>
+    <button id="menuToggle" class="md:hidden text-on-surface" aria-label="Menu">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+  </nav>
+  <div class="mobile-menu md:hidden" id="mobileMenu">
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="projects.html" class="nav-link">Projects</a>
+    <a href="insights.html" class="nav-link">Insights</a>
+    <a href="events.html" class="nav-link">Events</a>
+    <a href="join-us.html" class="nav-link">Join Us</a>
+    <a href="join-us.html" class="btn-primary text-center mt-2">Work With Us</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 md:px-20 pt-24 overflow-hidden">
+  <canvas id="networkCanvas"></canvas>
+  <div class="glow-orb w-[500px] h-[500px] bg-primary/8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+  <div class="relative z-10 max-w-4xl mx-auto">
+    <span class="section-label mb-6 block">India's Premier Student Consultancy</span>
+    <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-6">
+      Consulting That<br><span class="gradient-text">Creates Change</span>
+    </h1>
+    <p class="text-lg text-on-surface-variant mb-12 max-w-2xl mx-auto leading-relaxed">
+      Pro-bono strategy consulting for NGOs, startups, and social enterprises — powered by the brightest minds at Shri Ram College of Commerce.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+      <a href="join-us.html" class="btn-primary">Partner With Us</a>
+      <a href="projects.html" class="btn-glass text-on-surface">Explore Our Work</a>
+    </div>
+  </div>
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-40">
+    <span class="text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Scroll</span>
+    <span class="material-symbols-outlined animate-bounce-scroll">expand_more</span>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="py-24 px-6 md:px-20 max-w-[1280px] mx-auto relative">
+  <div class="glow-orb w-[600px] h-[600px] bg-primary/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-20">
+    <div class="glass rounded-2xl p-8 md:p-10 text-center">
+      <div class="font-display text-4xl md:text-5xl font-bold text-primary mb-2">50+</div>
+      <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Projects</p>
+    </div>
+    <div class="glass rounded-2xl p-8 md:p-10 text-center">
+      <div class="font-display text-4xl md:text-5xl font-bold text-primary mb-2">10K+</div>
+      <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Lives Impacted</p>
+    </div>
+    <div class="glass rounded-2xl p-8 md:p-10 text-center">
+      <div class="font-display text-4xl md:text-5xl font-bold text-primary mb-2">200+</div>
+      <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Consultants</p>
+    </div>
+    <div class="glass rounded-2xl p-8 md:p-10 text-center">
+      <div class="font-display text-4xl md:text-5xl font-bold text-primary mb-2">6+</div>
+      <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Years</p>
+    </div>
+  </div>
+  <div class="max-w-3xl mx-auto text-center">
+    <div class="relative">
+      <span class="material-symbols-outlined absolute -top-10 left-0 text-primary opacity-15 text-8xl select-none">format_quote</span>
+      <blockquote class="font-display text-2xl md:text-3xl font-semibold text-on-surface italic leading-relaxed">
+        "Our mission is to bridge the gap between social impact and professional excellence, empowering organizations with rigorous analytical frameworks and visionary strategies."
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="relative py-24 bg-surface-container-low overflow-hidden">
+  <div class="px-6 md:px-20 max-w-[1280px] mx-auto relative z-10">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-14 gap-6">
+      <div>
+        <span class="section-label mb-3 block">Capabilities</span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold">What We Do</h2>
+      </div>
+      <p class="text-on-surface-variant max-w-sm text-base leading-relaxed">We deploy student-led teams to solve complex problems through five core consulting pillars.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+      <div class="service-card glass rounded-2xl p-7 h-72 flex flex-col justify-between cursor-default overflow-hidden">
+        <div>
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">query_stats</span>
+          <h3 class="font-display text-xl font-semibold mb-2">Market Research</h3>
+        </div>
+        <p class="desc text-on-surface-variant text-sm leading-relaxed">Deep-dive analytics to understand target demographics and landscape trends.</p>
+      </div>
+      <div class="service-card glass rounded-2xl p-7 h-72 flex flex-col justify-between cursor-default overflow-hidden">
+        <div>
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">account_balance_wallet</span>
+          <h3 class="font-display text-xl font-semibold mb-2">Financial Planning</h3>
+        </div>
+        <p class="desc text-on-surface-variant text-sm leading-relaxed">Rigorous budgeting and forecasting for sustainable social growth.</p>
+      </div>
+      <div class="service-card glass rounded-2xl p-7 h-72 flex flex-col justify-between cursor-default overflow-hidden">
+        <div>
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">branding_watermark</span>
+          <h3 class="font-display text-xl font-semibold mb-2">Branding</h3>
+        </div>
+        <p class="desc text-on-surface-variant text-sm leading-relaxed">Developing powerful identities that resonate with donors and beneficiaries.</p>
+      </div>
+      <div class="service-card glass rounded-2xl p-7 h-72 flex flex-col justify-between cursor-default overflow-hidden">
+        <div>
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">groups</span>
+          <h3 class="font-display text-xl font-semibold mb-2">HR Management</h3>
+        </div>
+        <p class="desc text-on-surface-variant text-sm leading-relaxed">Optimizing talent management and organizational culture for impact.</p>
+      </div>
+      <div class="service-card glass rounded-2xl p-7 h-72 flex flex-col justify-between cursor-default overflow-hidden">
+        <div>
+          <span class="material-symbols-outlined text-primary text-4xl mb-4 block">settings_suggest</span>
+          <h3 class="font-display text-xl font-semibold mb-2">Process Optimization</h3>
+        </div>
+        <p class="desc text-on-surface-variant text-sm leading-relaxed">Streamlining operations to maximize efficiency and resource allocation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BENTO -->
+<section class="py-24 px-6 md:px-20 max-w-[1280px] mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+    <div class="md:col-span-8 glass rounded-2xl p-10 md:p-14 flex flex-col justify-center relative overflow-hidden group">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px] -mr-32 -mt-32 pointer-events-none"></div>
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-5 relative z-10">Join our global network of consultants.</h2>
+      <p class="text-on-surface-variant mb-8 max-w-xl text-base leading-relaxed relative z-10">We look for curious minds from across disciplines who are ready to tackle the world's most pressing challenges.</p>
+      <a href="join-us.html" class="btn-primary w-fit relative z-10">Join Us</a>
+    </div>
+    <div class="md:col-span-4 bg-primary rounded-2xl p-10 md:p-12 flex flex-col justify-center text-on-primary group hover:shadow-[0_0_40px_rgba(78,222,163,0.3)] transition-all duration-500 cursor-pointer">
+      <h3 class="font-display text-2xl font-bold mb-4">Work With Us</h3>
+      <p class="text-sm opacity-80 mb-8 leading-relaxed">Are you an NGO or social enterprise looking for strategic guidance? Let's talk.</p>
+      <a href="join-us.html" class="flex items-center gap-2 font-bold text-sm group-hover:gap-4 transition-all">
+        Get Started <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- GLOBAL NETWORK STRIP -->
+<section class="py-16 px-6 md:px-20 max-w-[1280px] mx-auto">
+  <div class="divider mb-12"></div>
+  <div class="text-center mb-10">
+    <span class="section-label mb-3 block">Global Footprint</span>
+    <h2 class="font-display text-3xl md:text-4xl font-bold">Part of the World's Largest University Consultancy</h2>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="text-center glass rounded-xl p-6">
+      <div class="font-display text-2xl font-bold text-primary mb-1">2000+</div>
+      <p class="text-xs uppercase tracking-widest text-on-surface-variant">Global Chapters</p>
+    </div>
+    <div class="text-center glass rounded-xl p-6">
+      <div class="font-display text-2xl font-bold text-secondary mb-1">70+</div>
+      <p class="text-xs uppercase tracking-widest text-on-surface-variant">Countries</p>
+    </div>
+    <div class="text-center glass rounded-xl p-6">
+      <div class="font-display text-2xl font-bold text-primary mb-1">40K+</div>
+      <p class="text-xs uppercase tracking-widest text-on-surface-variant">Alumni Network</p>
+    </div>
+    <div class="text-center glass rounded-xl p-6">
+      <div class="font-display text-2xl font-bold text-secondary mb-1">Pro-Bono</div>
+      <p class="text-xs uppercase tracking-widest text-on-surface-variant">Always Free</p>
+    </div>
+  </div>
+  <div class="divider mt-12"></div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-surface-container-lowest border-t border-white/5">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 md:px-20 py-16 max-w-[1280px] mx-auto">
+    <div>
+      <div class="font-display text-xl font-bold text-on-surface mb-4">180DC | SRCC</div>
+      <p class="text-on-surface-variant text-sm leading-relaxed">The world's largest university-based consultancy for social enterprises.</p>
+    </div>
+    <div>
+      <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Quick Links</h4>
+      <div class="flex flex-col gap-3">
+        <a href="index.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Home</a>
+        <a href="projects.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Projects</a>
+        <a href="insights.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Insights</a>
+        <a href="events.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Events</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Follow Us</h4>
+      <div class="flex flex-col gap-3">
+        <a href="#" class="text-on-surface-variant text-sm hover:text-primary transition-colors">LinkedIn</a>
+        <a href="#" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Instagram</a>
+        <a href="#" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Twitter / X</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Contact</h4>
+      <p class="text-on-surface-variant text-sm leading-relaxed mb-2">Shri Ram College of Commerce,<br>University of Delhi</p>
+      <a href="mailto:srcc@180dc.org" class="text-primary text-sm hover:underline">srcc@180dc.org</a>
+    </div>
+  </div>
+  <div class="px-6 md:px-20 py-6 border-t border-white/5 max-w-[1280px] mx-auto">
+    <p class="text-on-surface-variant text-xs opacity-60">© 2024 180 Degrees Consulting SRCC. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  document.getElementById('menuToggle').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
+  // Network canvas
+  const canvas = document.getElementById('networkCanvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  function initCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    particles = [];
+    for (let i = 0; i < 55; i++) {
+      particles.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random()-0.5)*0.5, vy: (Math.random()-0.5)*0.5, size: Math.random()*2 });
+    }
+  }
+  function draw() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle = '#4edea3'; ctx.strokeStyle = '#4edea3'; ctx.lineWidth = 0.5;
+    particles.forEach((p,i) => {
+      p.x += p.vx; p.y += p.vy;
+      if(p.x<0||p.x>canvas.width) p.vx*=-1;
+      if(p.y<0||p.y>canvas.height) p.vy*=-1;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.size,0,Math.PI*2); ctx.fill();
+      for(let j=i+1;j<particles.length;j++){
+        const p2=particles[j]; const d=Math.hypot(p.x-p2.x,p.y-p2.y);
+        if(d<150){ ctx.globalAlpha=1-(d/150); ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(p2.x,p2.y); ctx.stroke(); }
+      }
+      ctx.globalAlpha=1;
+    });
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize', initCanvas);
+  initCanvas(); draw();
+</script>
+</body>
+</html>

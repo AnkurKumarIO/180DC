@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consulting Projects | 180DC SRCC</title>
+<meta name="description" content="Explore 180DC SRCC's portfolio of strategic consulting engagements for NGOs, startups and social enterprises across India and beyond."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode:"class",
+    theme:{ extend:{ colors:{
+      "primary":"#4edea3","primary-container":"#10b981","on-primary":"#003824","on-primary-container":"#00422b",
+      "secondary":"#adc6ff","secondary-container":"#0566d9","on-secondary":"#002e6a",
+      "surface":"#111318","surface-container-low":"#1a1c20","surface-container":"#1e2024",
+      "surface-container-high":"#282a2e","surface-container-highest":"#333539","surface-container-lowest":"#0c0e12",
+      "on-surface":"#e2e2e8","on-surface-variant":"#bbcabf","background":"#111318","error":"#ffb4ab",
+    }, fontFamily:{"display":["Playfair Display","serif"],"body":["Inter","sans-serif"]} }}
+  }
+</script>
+<style>
+  body { background-color:#0A0C10; color:#e2e2e8; overflow-x:hidden; font-family:'Inter',sans-serif; }
+  .glass { backdrop-filter:blur(20px); background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); }
+  .gradient-text { background:linear-gradient(135deg,#4edea3 0%,#0566d9 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .btn-primary { background:linear-gradient(135deg,#10b981,#0566d9); color:#fff; border-radius:9999px; padding:0.875rem 2rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; font-size:13px; transition:all 0.3s; display:inline-block; }
+  .btn-primary:hover { transform:scale(1.05); box-shadow:0 0 30px rgba(78,222,163,0.4); }
+  .nav-link { font-size:13px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#bbcabf; transition:color 0.3s; }
+  .nav-link:hover,.nav-link.active { color:#4edea3; }
+  .nav-link.active { border-bottom:2px solid #4edea3; padding-bottom:4px; }
+  .section-label { font-size:12px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:#4edea3; }
+  .divider { height:1px; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.12),transparent); }
+  .flip-card { perspective:1000px; height:460px; }
+  .flip-card-inner { position:relative; width:100%; height:100%; transition:transform 0.8s cubic-bezier(0.4,0,0.2,1); transform-style:preserve-3d; }
+  .flip-card:hover .flip-card-inner { transform:rotateY(180deg); }
+  .flip-card-front,.flip-card-back { position:absolute; width:100%; height:100%; -webkit-backface-visibility:hidden; backface-visibility:hidden; border-radius:1rem; }
+  .flip-card-back { transform:rotateY(180deg); }
+  .atmospheric-glow { position:fixed; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle,rgba(78,222,163,0.07) 0%,transparent 70%); z-index:-1; filter:blur(80px); }
+  .filter-btn.active { background:linear-gradient(135deg,#10b981,#0566d9); color:#fff; }
+  .mobile-menu { display:none; flex-direction:column; position:absolute; top:100%; left:0; right:0; background:rgba(17,19,24,0.97); backdrop-filter:blur(20px); border-top:1px solid rgba(255,255,255,0.1); padding:1.5rem 2rem; gap:1.25rem; }
+  .mobile-menu.open { display:flex; }
+</style>
+</head>
+<body>
+<div class="atmospheric-glow -top-48 -left-48"></div>
+<div class="atmospheric-glow bottom-0 right-0" style="background:radial-gradient(circle,rgba(5,102,217,0.07) 0%,transparent 70%)"></div>
+
+<!-- NAV -->
+<header class="fixed top-0 w-full z-50 bg-[#111318]/70 backdrop-blur-[20px] border-b border-white/10">
+  <nav class="flex justify-between items-center px-6 md:px-20 py-4 max-w-[1280px] mx-auto">
+    <a href="index.html" class="font-display text-xl font-bold text-on-surface tracking-tight">180DC | SRCC</a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="insights.html" class="nav-link">Insights</a>
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="join-us.html" class="nav-link">Join Us</a>
+    </div>
+    <a href="join-us.html" class="hidden md:block btn-primary">Work With Us</a>
+    <button id="menuToggle" class="md:hidden text-on-surface"><span class="material-symbols-outlined text-3xl">menu</span></button>
+  </nav>
+  <div class="mobile-menu md:hidden" id="mobileMenu">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="projects.html" class="nav-link active">Projects</a>
+    <a href="insights.html" class="nav-link">Insights</a>
+    <a href="events.html" class="nav-link">Events</a>
+    <a href="join-us.html" class="nav-link">Join Us</a>
+    <a href="join-us.html" class="btn-primary text-center mt-2">Work With Us</a>
+  </div>
+</header>
+
+<main>
+<!-- HEADER -->
+<header class="pt-40 pb-24 px-6 md:px-20 max-w-[1280px] mx-auto">
+  <div class="max-w-3xl">
+    <span class="section-label mb-4 block">Our Portfolio</span>
+    <h1 class="font-display text-4xl md:text-6xl font-bold mb-6">Strategic Consulting<br>for <span class="gradient-text">Social Good.</span></h1>
+    <p class="text-on-surface-variant text-lg leading-relaxed">We bridge the gap between high-level management consulting and the world's most impactful social ventures. Explore our past engagements and the measurable impact we've delivered across global sectors.</p>
+  </div>
+</header>
+
+<!-- FILTER -->
+<section class="px-6 md:px-20 max-w-[1280px] mx-auto mb-12">
+  <div class="flex flex-wrap gap-3 items-center">
+    <span class="text-on-surface-variant text-xs font-bold uppercase tracking-wider mr-2">Filter by Sector:</span>
+    <button onclick="filterCards('all')" class="filter-btn active px-5 py-2 rounded-full glass text-sm font-semibold transition-all" data-filter="all">All Projects</button>
+    <button onclick="filterCards('ngo')" class="filter-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="ngo">NGO</button>
+    <button onclick="filterCards('startup')" class="filter-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="startup">Startup</button>
+    <button onclick="filterCards('social')" class="filter-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="social">Social Enterprise</button>
+    <button onclick="filterCards('international')" class="filter-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="international">International</button>
+  </div>
+</section>
+
+<!-- PROJECT GRID -->
+<section class="px-6 md:px-20 max-w-[1280px] mx-auto mb-32">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectGrid">
+
+    <!-- Care4Parents -->
+    <div class="flip-card" data-category="ngo">
+      <div class="flip-card-inner">
+        <div class="flip-card-front glass p-10 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-primary">health_metrics</span>
+            </div>
+            <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2 block">Healthcare NGO</span>
+            <h3 class="font-display text-2xl font-semibold mb-4">Care4Parents</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Strategic expansion and operations optimization for elderly care services in tier-1 cities.</p>
+          </div>
+          <div class="flex items-center gap-2 text-primary">
+            <span class="text-xs font-bold uppercase tracking-widest">View Case Study</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </div>
+        </div>
+        <div class="flip-card-back glass p-10 flex flex-col" style="background:rgba(78,222,163,0.06); border-color:rgba(78,222,163,0.25)">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-6">Engagement Outcomes</h4>
+          <ul class="space-y-4 mb-auto">
+            <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary text-base flex-shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span><span>35% reduction in customer acquisition cost via digital optimization.</span></li>
+            <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary text-base flex-shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span><span>Scalable remote monitoring framework for 10,000+ users.</span></li>
+            <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary text-base flex-shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span><span>Secured 3 strategic partnerships with hospital chains.</span></li>
+          </ul>
+          <div class="pt-5 border-t border-white/10 grid grid-cols-2 gap-4 mt-4">
+            <div><p class="text-primary font-bold text-2xl font-display">10K+</p><p class="text-xs uppercase text-on-surface-variant">Reach</p></div>
+            <div><p class="text-primary font-bold text-2xl font-display">35%</p><p class="text-xs uppercase text-on-surface-variant">Efficiency Gain</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Prabhav -->
+    <div class="flip-card" data-category="social">
+      <div class="flip-card-inner">
+        <div class="flip-card-front glass p-10 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-secondary">eco</span>
+            </div>
+            <span class="text-secondary text-xs font-bold uppercase tracking-widest mb-2 block">Social Enterprise</span>
+            <h3 class="font-display text-2xl font-semibold mb-4">Project Prabhav</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Impact assessment and branding strategy for rural education empowerment initiatives.</p>
+          </div>
+          <div class="flex items-center gap-2 text-secondary">
+            <span class="text-xs font-bold uppercase tracking-widest">View Case Study</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </div>
+        </div>
+        <div class="flip-card-back glass p-10 flex flex-col" style="background:rgba(173,198,255,0.06); border-color:rgba(173,198,255,0.25)">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-secondary mb-6">Engagement Outcomes</h4>
+          <ul class="space-y-4 mb-auto">
+            <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-secondary text-base flex-shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span><span>Standardized impact metrics across 50+ rural learning centers.</span></li>
+            <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-secondary text-base flex-shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span><span>Developed 5-year roadmap for pan-India scalability.</span></li>
+          </ul>
+          <div class="pt-5 border-t border-white/10 grid grid-cols-2 gap-4 mt-4">
+            <div><p class="text-secondary font-bold text-2xl font-display">50+</p><p class="text-xs uppercase text-on-surface-variant">Centers</p></div>
+            <div><p class="text-secondary font-bold text-2xl font-display">5YR</p><p class="text-xs uppercase text-on-surface-variant">Roadmap</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project UBlood -->
+    <div class="flip-card" data-category="startup">
+      <div class="flip-card-inner">
+        <div class="flip-card-front glass p-10 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 bg-error/10 rounded-xl flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-error">bloodtype</span>
+            </div>
+            <span class="text-error text-xs font-bold uppercase tracking-widest mb-2 block">Tech Startup</span>
+            <h3 class="font-display text-2xl font-semibold mb-4">Project UBlood</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Market entry strategy and user experience redesign for a blood donation platform.</p>
+          </div>
+          <div class="flex items-center gap-2 text-error">
+            <span class="text-xs font-bold uppercase tracking-widest">View Case Study</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </div>
+        </div>
+        <div class="flip-card-back glass p-10 flex flex-col" style="background:rgba(255,180,171,0.06); border-color:rgba(255,180,171,0.25)">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-error mb-6">Engagement Outcomes</h4>
+          <ul class="space-y-4 mb-auto">
+            <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-error text-base flex-shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span><span>Redesigned UI/UX increasing user retention by 45%.</span></li>
+            <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-error text-base flex-shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span><span>Market entry data synthesized for 4 metropolitan regions.</span></li>
+          </ul>
+          <div class="pt-5 border-t border-white/10 grid grid-cols-2 gap-4 mt-4">
+            <div><p class="text-error font-bold text-2xl font-display">45%</p><p class="text-xs uppercase text-on-surface-variant">Retention↑</p></div>
+            <div><p class="text-error font-bold text-2xl font-display">4</p><p class="text-xs uppercase text-on-surface-variant">New Cities</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Global Green -->
+    <div class="flip-card" data-category="international">
+      <div class="flip-card-inner">
+        <div class="flip-card-front glass p-10 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-primary">forest</span>
+            </div>
+            <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2 block">International NGO</span>
+            <h3 class="font-display text-2xl font-semibold mb-4">Global Green</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Supply chain sustainability analysis and ESG reporting for international operations.</p>
+          </div>
+          <div class="flex items-center gap-2 text-primary">
+            <span class="text-xs font-bold uppercase tracking-widest">View Case Study</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </div>
+        </div>
+        <div class="flip-card-back glass p-10 flex flex-col" style="background:rgba(78,222,163,0.06); border-color:rgba(78,222,163,0.25)">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-6">Engagement Outcomes</h4>
+          <p class="text-on-surface-variant italic text-sm mb-5">Confidential Sustainability Protocol</p>
+          <ul class="space-y-4">
+            <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary text-base flex-shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span><span>Identified 20% carbon reduction potential in logistics chain.</span></li>
+            <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-primary text-base flex-shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span><span>Created comprehensive ESG framework for board reporting.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Price of Protectionism -->
+    <div class="flip-card" data-category="international">
+      <div class="flip-card-inner">
+        <div class="flip-card-front glass p-10 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-secondary">public</span>
+            </div>
+            <span class="text-secondary text-xs font-bold uppercase tracking-widest mb-2 block">Policy Analysis</span>
+            <h3 class="font-display text-2xl font-semibold mb-4">The Price of Protectionism</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">International expansion strategy analysis examining protectionist trade policies and their social impact.</p>
+          </div>
+          <div class="flex items-center gap-2 text-secondary">
+            <span class="text-xs font-bold uppercase tracking-widest">View Case Study</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </div>
+        </div>
+        <div class="flip-card-back glass p-10 flex flex-col" style="background:rgba(173,198,255,0.06); border-color:rgba(173,198,255,0.25)">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-secondary mb-6">Research Outcomes</h4>
+          <ul class="space-y-4 mb-auto">
+            <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-secondary text-base flex-shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span><span>Policy brief adopted by 2 state-level trade bodies.</span></li>
+            <li class="flex gap-3 text-sm"><span class="material-symbols-outlined text-secondary text-base flex-shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span><span>Published in PRATYAKSH 2023 — 3,000+ downloads.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confidential Slot -->
+    <div class="flip-card hidden md:block" data-category="all">
+      <div class="flip-card-inner">
+        <div class="flip-card-front glass p-10 flex flex-col justify-center items-center text-center">
+          <span class="material-symbols-outlined text-on-surface-variant/40 text-5xl mb-4">lock</span>
+          <p class="text-on-surface-variant font-semibold text-xs uppercase tracking-widest">More Engagements Available Upon Request</p>
+        </div>
+        <div class="flip-card-back glass p-10 flex items-center justify-center text-center">
+          <p class="text-on-surface-variant text-sm leading-relaxed">We maintain strict confidentiality for several of our high-impact international consulting engagements.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="px-6 md:px-20 py-24 relative overflow-hidden">
+  <div class="max-w-[1280px] mx-auto glass rounded-2xl p-12 md:p-20 text-center relative z-10">
+    <h2 class="font-display text-3xl md:text-4xl font-bold mb-5">Have a Problem Statement?</h2>
+    <p class="text-on-surface-variant text-lg mb-10 max-w-xl mx-auto leading-relaxed">Our team of dedicated consultants is ready to bring McKinsey-tier rigor to your social enterprise. Let's solve it together.</p>
+    <a href="join-us.html" class="btn-primary">Submit Your Brief</a>
+  </div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/4 rounded-full blur-[120px] -z-0 pointer-events-none"></div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-surface-container-lowest border-t border-white/5">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 md:px-20 py-16 max-w-[1280px] mx-auto">
+    <div><div class="font-display text-xl font-bold mb-4">180DC | SRCC</div><p class="text-on-surface-variant text-sm leading-relaxed">The premier student-led social impact consultancy at SRCC.</p></div>
+    <div><h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Quick Links</h4><div class="flex flex-col gap-3"><a href="index.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Home</a><a href="insights.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Insights</a><a href="events.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Events</a></div></div>
+    <div><h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Global Network</h4><div class="flex flex-col gap-3"><a href="#" class="text-on-surface-variant text-sm hover:text-primary transition-colors">180 Degrees Global</a><a href="#" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Chapters</a></div></div>
+    <div><h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Contact</h4><p class="text-on-surface-variant text-sm mb-2">SRCC, University of Delhi</p><a href="mailto:srcc@180dc.org" class="text-primary text-sm">srcc@180dc.org</a></div>
+  </div>
+  <div class="px-6 md:px-20 py-5 border-t border-white/5 max-w-[1280px] mx-auto"><p class="text-on-surface-variant text-xs opacity-60">© 2024 180 Degrees Consulting SRCC. All rights reserved.</p></div>
+</footer>
+
+<script>
+  document.getElementById('menuToggle').addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('open'));
+  function filterCards(filter) {
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.classList.remove('active');
+      btn.style.background=''; btn.style.color='#bbcabf';
+    });
+    event.target.classList.add('active');
+    event.target.style.background='linear-gradient(135deg,#10b981,#0566d9)';
+    event.target.style.color='#fff';
+    document.querySelectorAll('.flip-card').forEach(card => {
+      const cat = card.dataset.category;
+      card.style.display = (filter==='all'||cat===filter||cat==='all') ? 'block' : 'none';
+    });
+  }
+  document.addEventListener('mousemove',(e)=>{
+    document.querySelectorAll('.atmospheric-glow').forEach((g,i)=>{
+      const x=(e.clientX/window.innerWidth-0.5)*(i+1)*25;
+      const y=(e.clientY/window.innerHeight-0.5)*(i+1)*25;
+      g.style.transform=`translate(${x}px,${y}px)`;
+    });
+  });
+</script>
+</body>
+</html>
