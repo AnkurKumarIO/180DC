@@ -8,6 +8,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script id="tailwind-config">
   tailwind.config = {
     darkMode: "class",
@@ -48,11 +49,11 @@
   .glass { backdrop-filter: blur(20px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease; }
   .glass:hover { border-color: rgba(78,222,163,0.35); box-shadow: 0 0 30px rgba(78,222,163,0.1); transform: translateY(-6px); }
   .gradient-text { background: linear-gradient(135deg, #ffffff 0%, #4edea3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .btn-primary { background: linear-gradient(135deg, #4edea3, #10b981); color: #0A0C10; border-radius: 9999px; padding: 1rem 2.5rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 14px; transition: all 0.3s; }
+  .btn-primary { background: linear-gradient(135deg, #4edea3, #10b981); color: #0A0C10; border-radius: 9999px; padding: 0.875rem 2rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 13px; transition: all 0.3s; display: inline-block; white-space: nowrap; }
   .btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(78,222,163,0.4); }
-  .btn-glass { border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); backdrop-filter: blur(12px); border-radius: 9999px; padding: 1rem 2.5rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 14px; transition: all 0.3s; }
+  .btn-glass { border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); backdrop-filter: blur(12px); border-radius: 9999px; padding: 0.875rem 2rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 13px; transition: all 0.3s; white-space: nowrap; }
   .btn-glass:hover { background: rgba(255,255,255,0.1); }
-  .nav-link { font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #e2e2e8; transition: color 0.3s; }
+  .nav-link { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #e2e2e8; transition: color 0.3s; white-space: nowrap; }
   .nav-link:hover, .nav-link.active { color: #ffffff; }
   .nav-link.active { border-bottom: 2px solid #ffffff; padding-bottom: 4px; }
   canvas#networkCanvas { position: absolute; top:0; left:0; width:100%; height:100%; opacity:0.12; pointer-events:none; }
@@ -67,9 +68,35 @@
   .service-card:hover .desc { transform: translateY(0); opacity: 1; }
   .mobile-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(17,19,24,0.97); backdrop-filter: blur(20px); border-top: 1px solid rgba(255,255,255,0.1); padding: 1.5rem 2rem; gap: 1.25rem; }
   .mobile-menu.open { display: flex; }
+  body.intro-active > header,
+  body.intro-active > main,
+  body.intro-active > footer {
+    opacity: 0 !important;
+    transform: translateY(30px) !important;
+    pointer-events: none !important;
+  }
+  body > header,
+  body > main,
+  body > footer {
+    transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), transform 1.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+  #cinematicIntro.intro-white #introBranding h2 {
+    color: #111318 !important;
+  }
+  #cinematicIntro.intro-white #introBranding span {
+    color: #0b9b5a !important;
+  }
 </style>
 </head>
 <body>
+
+<!-- Cinematic 3D Hero Intro Overlay -->
+<div id="cinematicIntro" class="fixed inset-0 z-[100] flex items-center justify-center bg-black overflow-hidden transition-all duration-[300ms] ease-in-out">
+  <canvas id="introCanvas" class="w-full h-full absolute inset-0"></canvas>
+  <button id="skipIntroBtn" class="absolute bottom-8 right-8 z-[110] px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-xs font-bold uppercase tracking-widest text-[#bbcabf] hover:text-[#4edea3] hover:border-[#4edea3]/40 transition-all">
+    Skip Intro
+  </button>
+</div>
 
 <!-- NAV -->
 <header class="fixed top-0 w-full z-50 bg-[#111318]/70 backdrop-blur-[20px] border-b border-white/10">
@@ -87,7 +114,7 @@
       <a href="team.html" class="nav-link">Team</a>
       <a href="join-us.html" class="nav-link">Join Us</a>
     </div>
-    <a href="join-us.html" class="hidden md:block btn-primary text-sm">Work With Us</a>
+    <a href="join-us.html" class="hidden md:block btn-primary">Work With Us</a>
     <button id="menuToggle" class="md:hidden text-on-surface" aria-label="Menu">
       <span class="material-symbols-outlined text-3xl">menu</span>
     </button>
@@ -587,6 +614,271 @@
           link.classList.add('active');
         }
       });
+    }
+  });
+
+  // ==========================================
+  // Cinematic 3D Intro Animation (Three.js)
+  // ==========================================
+
+  function initIntro() {
+    const introDiv = document.getElementById('cinematicIntro');
+    const skipBtn = document.getElementById('skipIntroBtn');
+    const canvas = document.getElementById('introCanvas');
+
+    // Skip/Bypass function
+    function skipIntro() {
+      sessionStorage.setItem('introPlayed', 'true');
+      introDiv.style.opacity = '0';
+      setTimeout(() => {
+        introDiv.style.display = 'none';
+        document.body.classList.remove('intro-active');
+      }, 300);
+    }
+
+    skipBtn.addEventListener('click', skipIntro);
+
+    // Three.js Scene Setup
+    const scene = new THREE.Scene();
+    
+    // Create pure black color space to perfectly merge with the logo's JPEG background
+    scene.background = new THREE.Color(0x000000);
+
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+    camera.position.z = 18;
+
+    const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    
+    // High-quality cinematic render output settings
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.15;
+
+    // Ambient Lighting
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+    scene.add(ambientLight);
+
+    // Directional Glass Specular Highlight Light
+    const dirLight1 = new THREE.DirectionalLight(0xffffff, 0.7);
+    dirLight1.position.set(5, 10, 7);
+    scene.add(dirLight1);
+
+    const dirLight2 = new THREE.DirectionalLight(0x4edea3, 0.5);
+    dirLight2.position.set(-5, -5, 5);
+    scene.add(dirLight2);
+
+    // Central pulsing emerald point light
+    const pointLight = new THREE.PointLight(0x4edea3, 1, 30);
+    pointLight.position.set(0, 0, 0);
+    scene.add(pointLight);
+
+    // Volumetric pulsing light core representation
+    const coreGeom = new THREE.SphereGeometry(0.5, 32, 32);
+    const coreMat = new THREE.MeshBasicMaterial({
+      color: 0x4edea3,
+      transparent: true,
+      opacity: 0.8
+    });
+    const coreMesh = new THREE.Mesh(coreGeom, coreMat);
+    scene.add(coreMesh);
+
+    // Dynamic 3D Original Naked Logo Group (No box or circular card backing - flat print on paper look)
+    const logoGroup = new THREE.Group();
+    scene.add(logoGroup);
+
+    // Load original 180logo.jpeg (exact square 640x640)
+    const logoTexture = new THREE.TextureLoader().load('180logo.jpeg');
+    logoTexture.encoding = THREE.sRGBEncoding; // Ensures vibrant, accurate logo colors
+    const logoGeom = new THREE.PlaneGeometry(7.5, 7.5);
+    
+    // Transparent mesh basic material to display the naked logo exactly as-is
+    const logoMat = new THREE.MeshBasicMaterial({
+      map: logoTexture,
+      transparent: true,
+      opacity: 0, // starts invisible, fades in as shards merge
+      side: THREE.DoubleSide
+    });
+    const logoMesh = new THREE.Mesh(logoGeom, logoMat);
+    logoGroup.add(logoMesh);
+
+    // Glass shards creation
+    const shards = [];
+    const shardGroup = new THREE.Group();
+    scene.add(shardGroup);
+
+    const easeInOutCubic = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    for (let i = 0; i < 80; i++) {
+      // Sleek, randomized crystal splinter geometries
+      const w = 0.04 + Math.random() * 0.08;
+      const h = 0.15 + Math.random() * 0.35;
+      const d = 0.02 + Math.random() * 0.06;
+      const geom = new THREE.BoxGeometry(w, h, d);
+      
+      // Premium refractive crystal glass material
+      const mat = new THREE.MeshPhysicalMaterial({
+        color: 0xffffff,
+        metalness: 0.1,
+        roughness: 0.15,
+        transmission: 0.9, // gorgeous glass refraction
+        thickness: 0.5,
+        transparent: true,
+        opacity: 0.85,
+        side: THREE.DoubleSide
+      });
+      
+      const mesh = new THREE.Mesh(geom, mat);
+
+      // Distribute randomly in a chaotic spherical cloud
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.acos((Math.random() * 2) - 1);
+      const dist = 5.5 + Math.random() * 5.0; // shell radius from 5.5 to 10.5
+      
+      mesh.position.x = dist * Math.sin(phi) * Math.cos(theta);
+      mesh.position.y = dist * Math.sin(phi) * Math.sin(theta);
+      mesh.position.z = dist * Math.cos(phi);
+
+      // Set random orientations
+      mesh.rotation.set(Math.random()*10, Math.random()*10, Math.random()*10);
+
+      // Target mapping onto the 7.5x7.5 flat Plane (naked logo coordinates)
+      const tx = (Math.random() - 0.5) * 7.5;
+      const ty = (Math.random() - 0.5) * 7.5;
+      const tz = (Math.random() - 0.5) * 0.05;
+
+      mesh.userData = {
+        initialPos: mesh.position.clone(),
+        initialRot: mesh.rotation.clone(),
+        targetPos: new THREE.Vector3(tx, ty, tz),
+        targetRot: new THREE.Euler(0, 0, (Math.random() - 0.5) * 0.3),
+        rotSpeed: new THREE.Vector3(
+          (Math.random() - 0.5) * 0.02,
+          (Math.random() - 0.5) * 0.02,
+          (Math.random() - 0.5) * 0.02
+        )
+      };
+
+      shardGroup.add(mesh);
+      shards.push(mesh);
+    }
+
+    // Animation variables
+    const clock = new THREE.Clock();
+    let animationId;
+
+    // Timeline durations
+    const phase1End = 1.2; // Swarm chaotic floating and light pulse (Faster!)
+    const phase2End = 3.0; // Lerp positioning (alignment / fusion)
+    const phase3End = 4.0; // Swift sweeping 180-deg rotation
+    const phase4End = 5.2; // Settle fade out in center & bg white morph
+
+    const introBranding = document.getElementById('introBranding');
+
+    function animate() {
+      animationId = requestAnimationFrame(animate);
+      const time = clock.getElapsedTime();
+
+      // MUCH faster initial chaotic rotations of the groups
+      if (time < phase2End) {
+        shardGroup.rotation.y += 0.015;
+        shardGroup.rotation.x += 0.005;
+      } else {
+        shardGroup.rotation.y += 0.003;
+        shardGroup.rotation.x += 0.001;
+      }
+
+      // Pulse green PointLight & Core mesh dynamically
+      const pulse = Math.sin(time * 8.0) * 0.5 + 0.5; // Faster light pulse
+      
+      if (time < phase1End) {
+        // Phase 1: Swarm & Green Pulsing Core
+        pointLight.intensity = 2.0 + pulse * 3.0;
+        coreMesh.scale.setScalar(1.0 + pulse * 0.2);
+      } else if (time < phase2End) {
+        // Phase 2: Alignment and Fusion
+        const progress = (time - phase1End) / (phase2End - phase1End);
+        const eased = easeInOutCubic(progress);
+
+        // Intensely increase light pulse
+        pointLight.intensity = 3.5 + eased * 8.0 + pulse * 1.5;
+        coreMesh.scale.setScalar((1.0 - eased) * 1.0); // melt core into ribbons
+
+        // Interpolate (lerp) shards into flat plane logo structure
+        shards.forEach(s => {
+          s.position.lerpVectors(s.userData.initialPos, s.userData.targetPos, eased);
+          
+          // Interpolate rotations to blend into flat circular ribbon sheets
+          s.rotation.x = THREE.MathUtils.lerp(s.userData.initialRot.x, s.userData.targetRot.x, eased);
+          s.rotation.y = THREE.MathUtils.lerp(s.userData.initialRot.y, s.userData.targetRot.y, eased);
+          s.rotation.z = THREE.MathUtils.lerp(s.userData.initialRot.z, s.userData.targetRot.z, eased);
+
+          // Fade out shards as they melt into solid ribbon
+          s.material.opacity = 0.55 * (1.0 - eased);
+        });
+
+        // Fade in original naked logo texture
+        logoMat.opacity = eased;
+
+      } else if (time < phase3End) {
+        // Phase 3: Alignment Complete. Keep logo perfectly still in center (no rotation)
+        const progress = (time - phase2End) / (phase3End - phase2End);
+        const eased = easeInOutCubic(progress);
+
+        logoGroup.rotation.set(0, 0, 0); // Keep perfectly front-facing still
+        pointLight.intensity = 8.5 - eased * 4.5; // Settle light back
+
+      } else if (time < phase4End) {
+        // Phase 4: Fade Out in center (Disappear from center without changing background color to white!)
+        const progress = (time - phase3End) / (phase4End - phase3End);
+        const eased = easeInOutCubic(progress);
+
+        // 1. Disappear from center perfectly still: Scale down slightly and fade out
+        logoGroup.scale.setScalar(1.0 - 0.1 * eased);
+        logoGroup.rotation.set(0, 0, 0); // Keep perfectly front-facing still
+        
+        logoMat.opacity = 1.0 - eased;
+
+        // Reduce light intensity to 0
+        pointLight.intensity = 4.0 * (1.0 - eased);
+        ambientLight.intensity = 0.2 * (1.0 - eased);
+        dirLight1.intensity = 0.7 * (1.0 - eased);
+        dirLight2.intensity = 0.5 * (1.0 - eased);
+
+      } else {
+        // End of cinematic animation loop
+        cancelAnimationFrame(animationId);
+        skipIntro();
+        return;
+      }
+
+      // Camera motion: Lock PERFECTLY static facing logo for the entire animation (No tilts or moving camera body)
+      camera.position.set(0, 0, 18);
+      camera.lookAt(0, 0, 0);
+
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+    // Handle Window Resize
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  }
+
+  // Orchestrate play sequence
+  document.addEventListener('DOMContentLoaded', () => {
+    const introDiv = document.getElementById('cinematicIntro');
+    if (sessionStorage.getItem('introPlayed') === 'true') {
+      introDiv.style.display = 'none';
+      document.body.classList.remove('intro-active');
+    } else {
+      document.body.classList.add('intro-active');
+      initIntro();
     }
   });
 </script>
