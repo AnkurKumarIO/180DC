@@ -46,7 +46,7 @@
       transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .flip-inner.is-flipped {
+    .flip-container:hover .flip-inner {
       transform: rotateY(180deg);
     }
 
@@ -65,11 +65,11 @@
       height: 100%;
     }
 
-    .flip-inner:not(.is-flipped) .flip-back {
+    .flip-container:not(:hover) .flip-back {
       pointer-events: none;
     }
 
-    .flip-inner.is-flipped .flip-front {
+    .flip-container:hover .flip-front {
       pointer-events: none;
     }
 
@@ -246,9 +246,9 @@
                     <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-1">Location</p>
                   </div>
                 </div>
-                <button onclick="flipCard('vishleshan-card')"
-                  class="btn-gradient w-fit flex items-center gap-2 cursor-pointer text-xs font-bold uppercase tracking-widest">View
-                  Description <span class="material-symbols-outlined text-sm">turn_right</span></button>
+                <div
+                  class="btn-gradient w-fit flex items-center gap-2 cursor-default text-xs font-bold uppercase tracking-widest">Hover to View
+                  Description <span class="material-symbols-outlined text-sm">turn_right</span></div>
               </div>
               <div
                 class="bg-surface-container-high flex items-center justify-center min-h-[280px] relative overflow-hidden p-8 md:p-12">
@@ -268,9 +268,7 @@
                   <span class="section-label block mb-1">Key Highlights</span>
                   <h3 class="font-display text-2xl md:text-3xl font-bold text-primary">VISHLESHAN Details</h3>
                 </div>
-                <button onclick="flipCard('vishleshan-card')"
-                  class="bg-white/10 hover:bg-white/20 p-2.5 rounded-full transition-colors flex items-center justify-center cursor-pointer text-white"><span
-                    class="material-symbols-outlined">close</span></button>
+
               </div>
               <div class="max-w-3xl">
                 <h4 class="text-white font-semibold text-lg md:text-xl mb-3">Vishleshan — Flagship Case Competition</h4>
@@ -283,11 +281,7 @@
                   problem solving against peers.</p>
               </div>
             </div>
-            <div class="mt-8">
-              <button onclick="flipCard('vishleshan-card')"
-                class="border border-primary text-primary hover:bg-primary hover:text-[#0A0C10] px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition-all cursor-pointer flex items-center gap-2 w-fit">Flip
-                Back <span class="material-symbols-outlined text-sm">turn_left</span></button>
-            </div>
+
           </div>
         </div>
       </div>
@@ -315,9 +309,9 @@
                   <p class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Location</p>
                 </div>
               </div>
-              <button onclick="flipCard('escape-card')"
-                class="border border-primary/50 text-primary hover:bg-primary hover:text-[#0A0C10] px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition-all cursor-pointer flex items-center gap-2 w-fit mt-4">View
-                Description <span class="material-symbols-outlined text-sm">turn_right</span></button>
+              <div
+                class="border border-primary/50 text-primary hover:bg-primary hover:text-[#0A0C10] px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition-all cursor-default flex items-center gap-2 w-fit mt-4">Hover to View
+                Description <span class="material-symbols-outlined text-sm">turn_right</span></div>
             </div>
             <!-- BACK -->
             <div
@@ -325,9 +319,7 @@
               <div>
                 <div class="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
                   <h3 class="font-display text-xl font-bold text-primary">ESCAPE ROOM Details</h3>
-                  <button onclick="flipCard('escape-card')"
-                    class="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors flex items-center justify-center cursor-pointer text-white"><span
-                      class="material-symbols-outlined text-sm">close</span></button>
+
                 </div>
                 <div class="max-w-2xl">
                   <h4 class="text-white font-semibold text-lg mb-3">Escape Room</h4>
@@ -341,11 +333,7 @@
                     events, and one that people came out of talking about.</p>
                 </div>
               </div>
-              <div class="mt-6">
-                <button onclick="flipCard('escape-card')"
-                  class="border border-primary text-primary hover:bg-primary hover:text-[#0A0C10] px-5 py-2 rounded-full font-bold text-xs uppercase tracking-widest transition-all cursor-pointer flex items-center gap-2 w-fit">Flip
-                  Back <span class="material-symbols-outlined text-sm">turn_left</span></button>
-              </div>
+
             </div>
           </div>
         </div>
@@ -368,9 +356,9 @@
                   <p class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Location</p>
                 </div>
               </div>
-              <button onclick="flipCard('isb-card')"
-                class="border border-primary/50 text-primary hover:bg-primary hover:text-[#0A0C10] px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition-all cursor-pointer flex items-center gap-2 w-fit mt-4">View
-                Description <span class="material-symbols-outlined text-sm">turn_right</span></button>
+              <div
+                class="border border-primary/50 text-primary hover:bg-primary hover:text-[#0A0C10] px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition-all cursor-default flex items-center gap-2 w-fit mt-4">Hover to View
+                Description <span class="material-symbols-outlined text-sm">turn_right</span></div>
             </div>
             <!-- BACK -->
             <div
@@ -378,9 +366,7 @@
               <div>
                 <div class="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
                   <h3 class="font-display text-xl font-bold text-primary">ISB Session Details</h3>
-                  <button onclick="flipCard('isb-card')"
-                    class="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors flex items-center justify-center cursor-pointer text-white"><span
-                      class="material-symbols-outlined text-sm">close</span></button>
+
                 </div>
                 <div class="max-w-2xl">
                   <h4 class="text-white font-semibold text-lg mb-3">ISB Session</h4>
@@ -393,11 +379,7 @@
                     programmes, it was a useful few hours.</p>
                 </div>
               </div>
-              <div class="mt-6">
-                <button onclick="flipCard('isb-card')"
-                  class="border border-primary text-primary hover:bg-primary hover:text-[#0A0C10] px-5 py-2 rounded-full font-bold text-xs uppercase tracking-widest transition-all cursor-pointer flex items-center gap-2 w-fit">Flip
-                  Back <span class="material-symbols-outlined text-sm">turn_left</span></button>
-              </div>
+
             </div>
           </div>
         </div>
@@ -454,12 +436,7 @@
 
   <script>
     document.getElementById('menuToggle').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'));
-    function flipCard(id) {
-      const elem = document.getElementById(id);
-      if (elem) {
-        elem.classList.toggle('is-flipped');
-      }
-    }
+
   </script>
 </body>
 
