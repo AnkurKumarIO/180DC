@@ -174,14 +174,19 @@ app.post('/api/contact', async (req, res) => {
       `,
     };
 
-    // Send Emails asynchronously
-    await transporter.sendMail(adminMailOptions);
-    await transporter.sendMail(userMailOptions);
+    // Send Emails in the background (non-blocking) so that placeholder/invalid email credentials do not crash the database submission
+    transporter.sendMail(adminMailOptions)
+      .then(() => console.log('📨 Admin notification email sent successfully'))
+      .catch(err => console.error('❌ Error sending admin notification email:', err.message));
 
-    res.status(200).json({ success: true, message: 'Message sent and stored successfully!' });
+    transporter.sendMail(userMailOptions)
+      .then(() => console.log('📨 User auto-reply email sent successfully'))
+      .catch(err => console.error('❌ Error sending user auto-reply email:', err.message));
+
+    res.status(200).json({ success: true, message: 'Message stored successfully in the database!' });
   } catch (error) {
     console.error('Contact Form Error:', error);
-    res.status(500).json({ success: false, message: 'Failed to send message.' });
+    res.status(500).json({ success: false, message: 'Failed to save message in database.' });
   }
 });
 
