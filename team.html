@@ -192,17 +192,17 @@
     <header class="px-6 md:px-20 max-w-[1280px] mx-auto mb-16 text-center">
       <span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest mb-6 border border-primary/20">The Cohort</span>
       <h1 class="font-display text-4xl md:text-6xl font-bold mb-5 leading-tight">The Minds Behind The <span class="gradient-text">Change</span></h1>
-      <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">Meet our team of dedicated student consultants, technical managers, and directors bringing strategic analytical rigor to high-impact social sectors.</p>
+      <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">Meet our team of dedicated core team members, advisory and alumni.</p>
     </header>
 
     <!-- FILTER BAR -->
     <section class="px-6 md:px-20 max-w-[1280px] mx-auto mb-12">
       <div class="flex flex-wrap justify-center gap-3 items-center">
         <span class="text-on-surface-variant text-xs font-bold uppercase tracking-wider mr-2">Filter Category:</span>
-        <button onclick="filterTeam('all')" class="filter-btn tab-btn active px-5 py-2 rounded-full glass text-sm font-semibold transition-all" data-filter="all">All Cohort</button>
-        <button onclick="filterTeam('executive')" class="filter-btn tab-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="executive">Executive Committee</button>
-        <button onclick="filterTeam('consulting')" class="filter-btn tab-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="consulting">Consulting Suite</button>
-        <button onclick="filterTeam('operations')" class="filter-btn tab-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="operations">Operations &amp; Tech</button>
+        <button onclick="filterTeam('all')" class="filter-btn tab-btn active px-5 py-2 rounded-full glass text-sm font-semibold transition-all" data-filter="all">All Team</button>
+        <button onclick="filterTeam('core')" class="filter-btn tab-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="core">Core Team</button>
+        <button onclick="filterTeam('advisory')" class="filter-btn tab-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="advisory">Advisory</button>
+        <button onclick="filterTeam('alumni')" class="filter-btn tab-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="alumni">Alumni</button>
       </div>
     </section>
 
@@ -210,157 +210,114 @@
     <section class="px-6 md:px-20 max-w-[1280px] mx-auto mb-32">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="teamGrid">
 
-        <!-- 1. Arjun Mehta -->
-        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="executive">
-          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)]">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80" alt="Arjun Mehta" class="w-full h-full object-cover" />
+        <!-- 1. Aditya Patil -->
+        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="core">
+          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)] bg-gradient-to-br from-primary/20 via-surface-container/50 to-secondary/20 flex items-center justify-center select-none">
+            <span class="text-4xl font-bold tracking-tight text-white font-display opacity-80">AP</span>
           </div>
-          <h3 class="font-display text-2xl font-bold text-white">Arjun Mehta</h3>
-          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">President</p>
-          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-6"></div>
-          
-          <div class="flex gap-4">
-            <a href="https://www.linkedin.com" target="_blank" class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-primary/40 hover:text-primary transition-all flex items-center justify-center text-xs font-semibold gap-1.5" title="LinkedIn Profile">
-              <span class="material-symbols-outlined text-sm">link</span>
-              <span>LinkedIn</span>
-            </a>
-          </div>
+          <h3 class="font-display text-2xl font-bold text-white">Aditya Patil</h3>
+          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Consulting Director</p>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-3"></div>
         </div>
 
-        <!-- 2. Sanya Iyer -->
-        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="executive">
-          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)]">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&h=400&q=80" alt="Sanya Iyer" class="w-full h-full object-cover" />
+        <!-- 2. Aman Chaurasia -->
+        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="core">
+          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)] bg-gradient-to-br from-primary/20 via-surface-container/50 to-secondary/20 flex items-center justify-center select-none">
+            <span class="text-4xl font-bold tracking-tight text-white font-display opacity-80">AC</span>
           </div>
-          <h3 class="font-display text-2xl font-bold text-white">Sanya Iyer</h3>
-          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Co-President</p>
-          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-6"></div>
-          
-          <div class="flex gap-4">
-            <a href="https://www.linkedin.com" target="_blank" class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-primary/40 hover:text-primary transition-all flex items-center justify-center text-xs font-semibold gap-1.5" title="LinkedIn Profile">
-              <span class="material-symbols-outlined text-sm">link</span>
-              <span>LinkedIn</span>
-            </a>
-          </div>
+          <h3 class="font-display text-2xl font-bold text-white">Aman Chaurasia</h3>
+          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Consulting Director</p>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-3"></div>
         </div>
 
-        <!-- 3. Priya Mehta -->
-        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="executive">
-          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)]">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=80" alt="Priya Mehta" class="w-full h-full object-cover" />
+        <!-- 3. Shreya Mishra -->
+        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="core">
+          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)] bg-gradient-to-br from-primary/20 via-surface-container/50 to-secondary/20 flex items-center justify-center select-none">
+            <span class="text-4xl font-bold tracking-tight text-white font-display opacity-80">SM</span>
           </div>
-          <h3 class="font-display text-2xl font-bold text-white">Priya Mehta</h3>
-          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">VP &amp; Research Lead</p>
-          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-6"></div>
-          
-          <div class="flex gap-4">
-            <a href="https://www.linkedin.com" target="_blank" class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-primary/40 hover:text-primary transition-all flex items-center justify-center text-xs font-semibold gap-1.5" title="LinkedIn Profile">
-              <span class="material-symbols-outlined text-sm">link</span>
-              <span>LinkedIn</span>
-            </a>
-          </div>
+          <h3 class="font-display text-2xl font-bold text-white">Shreya Mishra</h3>
+          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Client Acquisition &amp; Partnership Director</p>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-3"></div>
         </div>
 
-        <!-- 4. Rohan Verma -->
-        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="executive operations">
-          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)]">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&h=400&q=80" alt="Rohan Verma" class="w-full h-full object-cover" />
+        <!-- 4. Israel Rodrigues -->
+        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="core">
+          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)] bg-gradient-to-br from-primary/20 via-surface-container/50 to-secondary/20 flex items-center justify-center select-none">
+            <span class="text-4xl font-bold tracking-tight text-white font-display opacity-80">IR</span>
           </div>
-          <h3 class="font-display text-2xl font-bold text-white">Rohan Verma</h3>
-          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">VP Operations</p>
-          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-6"></div>
-          
-          <div class="flex gap-4">
-            <a href="https://www.linkedin.com" target="_blank" class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-primary/40 hover:text-primary transition-all flex items-center justify-center text-xs font-semibold gap-1.5" title="LinkedIn Profile">
-              <span class="material-symbols-outlined text-sm">link</span>
-              <span>LinkedIn</span>
-            </a>
-          </div>
+          <h3 class="font-display text-2xl font-bold text-white">Israel Rodrigues</h3>
+          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Client Acquisition &amp; Partnership Director</p>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-3"></div>
         </div>
 
-        <!-- 5. Rohan Kapoor -->
-        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="consulting">
-          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)]">
-            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400&h=400&q=80" alt="Rohan Kapoor" class="w-full h-full object-cover" />
+        <!-- 5. Himansu Barua -->
+        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="core">
+          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)] bg-gradient-to-br from-primary/20 via-surface-container/50 to-secondary/20 flex items-center justify-center select-none">
+            <span class="text-4xl font-bold tracking-tight text-white font-display opacity-80">HB</span>
           </div>
-          <h3 class="font-display text-2xl font-bold text-white">Rohan Kapoor</h3>
-          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Project Manager</p>
-          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-6"></div>
-          
-          <div class="flex gap-4">
-            <a href="https://www.linkedin.com" target="_blank" class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-primary/40 hover:text-primary transition-all flex items-center justify-center text-xs font-semibold gap-1.5" title="LinkedIn Profile">
-              <span class="material-symbols-outlined text-sm">link</span>
-              <span>LinkedIn</span>
-            </a>
-          </div>
+          <h3 class="font-display text-2xl font-bold text-white">Himansu Barua</h3>
+          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Consulting &amp; Marketing Director</p>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-3"></div>
         </div>
 
-        <!-- 6. Ananya Krishnan -->
-        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="consulting">
-          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)]">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=80" alt="Ananya Krishnan" class="w-full h-full object-cover" />
+        <!-- 6. Devesh Mishra -->
+        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="core">
+          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)] bg-gradient-to-br from-primary/20 via-surface-container/50 to-secondary/20 flex items-center justify-center select-none">
+            <span class="text-4xl font-bold tracking-tight text-white font-display opacity-80">DM</span>
           </div>
-          <h3 class="font-display text-2xl font-bold text-white">Ananya Krishnan</h3>
-          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Engagement Lead</p>
-          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-6"></div>
-          
-          <div class="flex gap-4">
-            <a href="https://www.linkedin.com" target="_blank" class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-primary/40 hover:text-primary transition-all flex items-center justify-center text-xs font-semibold gap-1.5" title="LinkedIn Profile">
-              <span class="material-symbols-outlined text-sm">link</span>
-              <span>LinkedIn</span>
-            </a>
-          </div>
+          <h3 class="font-display text-2xl font-bold text-white">Devesh Mishra</h3>
+          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Finance &amp; Legal Director</p>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-3"></div>
         </div>
 
-        <!-- 7. Arjun Sharma -->
-        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="consulting">
-          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)]">
-            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=400&q=80" alt="Arjun Sharma" class="w-full h-full object-cover" />
+        <!-- 7. Sanket Wandile -->
+        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="advisory">
+          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)] bg-gradient-to-br from-primary/20 via-surface-container/50 to-secondary/20 flex items-center justify-center select-none">
+            <span class="text-4xl font-bold tracking-tight text-white font-display opacity-80">SW</span>
           </div>
-          <h3 class="font-display text-2xl font-bold text-white">Arjun Sharma</h3>
-          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Senior Consultant</p>
-          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-6"></div>
-          
-          <div class="flex gap-4">
-            <a href="https://www.linkedin.com" target="_blank" class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-primary/40 hover:text-primary transition-all flex items-center justify-center text-xs font-semibold gap-1.5" title="LinkedIn Profile">
-              <span class="material-symbols-outlined text-sm">link</span>
-              <span>LinkedIn</span>
-            </a>
-          </div>
+          <h3 class="font-display text-2xl font-bold text-white">Sanket Wandile</h3>
+          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Advisor</p>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-3"></div>
         </div>
 
-        <!-- 8. Vikram Chaudhry -->
-        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="operations">
-          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)]">
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=400&q=80" alt="Vikram Chaudhry" class="w-full h-full object-cover" />
+        <!-- 8. Rugved Targaonkar -->
+        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="advisory">
+          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)] bg-gradient-to-br from-primary/20 via-surface-container/50 to-secondary/20 flex items-center justify-center select-none">
+            <span class="text-4xl font-bold tracking-tight text-white font-display opacity-80">RT</span>
           </div>
-          <h3 class="font-display text-2xl font-bold text-white">Vikram Chaudhry</h3>
-          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Tech Lead</p>
-          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-6"></div>
-          
-          <div class="flex gap-4">
-            <a href="https://www.linkedin.com" target="_blank" class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-primary/40 hover:text-primary transition-all flex items-center justify-center text-xs font-semibold gap-1.5" title="LinkedIn Profile">
-              <span class="material-symbols-outlined text-sm">link</span>
-              <span>LinkedIn</span>
-            </a>
-          </div>
+          <h3 class="font-display text-2xl font-bold text-white">Rugved Targaonkar</h3>
+          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Advisor</p>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-3"></div>
         </div>
 
-        <!-- 9. Siddharth Malhotra -->
-        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="consulting">
-          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)]">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&h=400&q=80" alt="Siddharth Malhotra" class="w-full h-full object-cover" />
+        <!-- 9. Manav Shah -->
+        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="advisory">
+          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)] bg-gradient-to-br from-primary/20 via-surface-container/50 to-secondary/20 flex items-center justify-center select-none">
+            <span class="text-4xl font-bold tracking-tight text-white font-display opacity-80">MS</span>
           </div>
-          <h3 class="font-display text-2xl font-bold text-white">Siddharth Malhotra</h3>
-          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Market Analyst</p>
-          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-6"></div>
-          
-          <div class="flex gap-4">
-            <a href="https://www.linkedin.com" target="_blank" class="px-5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-primary/40 hover:text-primary transition-all flex items-center justify-center text-xs font-semibold gap-1.5" title="LinkedIn Profile">
-              <span class="material-symbols-outlined text-sm">link</span>
-              <span>LinkedIn</span>
-            </a>
+          <h3 class="font-display text-2xl font-bold text-white">Manav Shah</h3>
+          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Advisor</p>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-3"></div>
+        </div>
+
+        <!-- 10. Somya Agrawal -->
+        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="advisory">
+          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)] bg-gradient-to-br from-primary/20 via-surface-container/50 to-secondary/20 flex items-center justify-center select-none">
+            <span class="text-4xl font-bold tracking-tight text-white font-display opacity-80">SA</span>
           </div>
+          <h3 class="font-display text-2xl font-bold text-white">Somya Agrawal</h3>
+          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Advisor</p>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-3"></div>
+        </div>
+
+        <!-- 11. Varad Kulkarni -->
+        <div class="team-card glass glass-hover rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center" data-category="advisory">
+          <div class="relative w-36 h-36 rounded-full overflow-hidden border-2 border-primary/20 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-[0_0_20px_rgba(78,222,163,0.15)] bg-gradient-to-br from-primary/20 via-surface-container/50 to-secondary/20 flex items-center justify-center select-none">
+            <span class="text-4xl font-bold tracking-tight text-white font-display opacity-80">VK</span>
+          </div>
+          <h3 class="font-display text-2xl font-bold text-white">Varad Kulkarni</h3>
+          <p class="text-primary font-bold text-xs uppercase tracking-widest mt-1.5 mb-3">Advisor</p>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-primary to-secondary mb-3"></div>
         </div>
 
       </div>
