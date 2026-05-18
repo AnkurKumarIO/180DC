@@ -199,10 +199,10 @@
     <section class="px-6 md:px-20 max-w-[1280px] mx-auto mb-12">
       <div class="flex flex-wrap justify-center gap-3 items-center">
         <span class="text-on-surface-variant text-xs font-bold uppercase tracking-wider mr-2">Filter Category:</span>
-        <button onclick="filterTeam('all')" class="filter-btn tab-btn active px-5 py-2 rounded-full glass text-sm font-semibold transition-all" data-filter="all">All Team</button>
-        <button onclick="filterTeam('core')" class="filter-btn tab-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="core">Core Team</button>
-        <button onclick="filterTeam('advisory')" class="filter-btn tab-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="advisory">Advisory</button>
-        <button onclick="filterTeam('alumni')" class="filter-btn tab-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="alumni">Alumni</button>
+        <button onclick="filterTeam(this, 'all')" class="filter-btn tab-btn active px-5 py-2 rounded-full glass text-sm font-semibold transition-all" data-filter="all">All Team</button>
+        <button onclick="filterTeam(this, 'core')" class="filter-btn tab-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="core">Core Team</button>
+        <button onclick="filterTeam(this, 'advisory')" class="filter-btn tab-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="advisory">Advisory</button>
+        <button onclick="filterTeam(this, 'alumni')" class="filter-btn tab-btn px-5 py-2 rounded-full glass text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" data-filter="alumni">Alumni</button>
       </div>
     </section>
 
@@ -643,15 +643,18 @@
     });
 
     // Dynamic Team filtering
-    function filterTeam(category) {
+    function filterTeam(btnElement, category) {
       // Manage active tab state
       document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.remove('active');
         btn.classList.remove('text-white');
         btn.classList.add('text-on-surface-variant');
       });
-      event.target.classList.add('active');
-      event.target.classList.remove('text-on-surface-variant');
+      
+      if (btnElement) {
+        btnElement.classList.add('active');
+        btnElement.classList.remove('text-on-surface-variant');
+      }
 
       // Filter sections
       const sections = document.querySelectorAll('.team-section');
@@ -659,12 +662,14 @@
         const group = section.dataset.categoryGroup;
         if (category === 'all' || group === category) {
           section.style.display = 'block';
-          // Trigger subtle fade-in animation
+          
+          // GPU accelerated reflow transition trigger to prevent layout lag
+          section.style.transition = 'none';
           section.style.opacity = '0';
-          setTimeout(() => {
-            section.style.opacity = '1';
-            section.style.transition = 'opacity 0.4s ease-in-out';
-          }, 30);
+          section.offsetHeight; // Forces repaint instantly
+          
+          section.style.transition = 'opacity 0.25s ease-out';
+          section.style.opacity = '1';
         } else {
           section.style.display = 'none';
         }
