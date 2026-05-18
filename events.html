@@ -171,6 +171,35 @@
     .mobile-menu.open {
       display: flex
     }
+
+    @keyframes hero-slideshow {
+
+      0%,
+      25% {
+        background-image: url('event-bg.jpeg');
+      }
+
+      33%,
+      58% {
+        background-image: url('event-bg-2.jpeg');
+      }
+
+      66%,
+      91% {
+        background-image: url('event-bg-3.jpeg');
+      }
+
+      100% {
+        background-image: url('event-bg.jpeg');
+      }
+    }
+
+    .hero-slideshow {
+      animation: hero-slideshow 15s infinite;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+    }
   </style>
 </head>
 
@@ -207,17 +236,19 @@
 
   <main>
     <!-- HERO STRIP -->
-    <section class="relative h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden pt-16">
-      <div class="absolute inset-0 bg-gradient-to-br from-[#0A0C10] via-[#0d1a14] to-[#0A0C10]"></div>
+    <section
+      class="relative h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden pt-16 hero-slideshow">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#0A0C10]/80 via-[#0A0C10]/70 to-[#0A0C10]/90"></div>
       <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div class="w-[600px] h-[600px] rounded-full"
-          style="background:radial-gradient(circle,rgba(78,222,163,0.12) 0%,transparent 65%);filter:blur(60px)"></div>
+          style="background:radial-gradient(circle,rgba(78,222,163,0.15) 0%,transparent 65%);filter:blur(60px)"></div>
       </div>
       <div class="relative z-10 text-center px-6">
-        <span class="section-label mb-5 block">Events &amp; Outreach</span>
-        <h1 class="font-display text-4xl md:text-6xl font-bold mb-5">Events &amp; <span
+        <span class="section-label mb-5 block drop-shadow-lg">Events &amp; Outreach</span>
+        <h1 class="font-display text-4xl md:text-6xl font-bold mb-5 drop-shadow-xl">Events &amp; <span
             class="gradient-text">Outreach</span></h1>
-        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">Cultivating excellence through
+        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed drop-shadow-md">Cultivating
+          excellence through
           high-impact summits, case competitions, and industry-leading workshops.</p>
       </div>
     </section>
@@ -247,7 +278,8 @@
                   </div>
                 </div>
                 <div
-                  class="btn-gradient w-fit flex items-center gap-2 cursor-default text-xs font-bold uppercase tracking-widest">Hover to View
+                  class="btn-gradient w-fit flex items-center gap-2 cursor-default text-xs font-bold uppercase tracking-widest">
+                  Hover to View
                   Description <span class="material-symbols-outlined text-sm">turn_right</span></div>
               </div>
               <div
@@ -310,7 +342,8 @@
                 </div>
               </div>
               <div
-                class="border border-primary/50 text-primary hover:bg-primary hover:text-[#0A0C10] px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition-all cursor-default flex items-center gap-2 w-fit mt-4">Hover to View
+                class="border border-primary/50 text-primary hover:bg-primary hover:text-[#0A0C10] px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition-all cursor-default flex items-center gap-2 w-fit mt-4">
+                Hover to View
                 Description <span class="material-symbols-outlined text-sm">turn_right</span></div>
             </div>
             <!-- BACK -->
@@ -357,7 +390,8 @@
                 </div>
               </div>
               <div
-                class="border border-primary/50 text-primary hover:bg-primary hover:text-[#0A0C10] px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition-all cursor-default flex items-center gap-2 w-fit mt-4">Hover to View
+                class="border border-primary/50 text-primary hover:bg-primary hover:text-[#0A0C10] px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition-all cursor-default flex items-center gap-2 w-fit mt-4">
+                Hover to View
                 Description <span class="material-symbols-outlined text-sm">turn_right</span></div>
             </div>
             <!-- BACK -->
