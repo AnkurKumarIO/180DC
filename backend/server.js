@@ -181,14 +181,20 @@ app.post('/api/contact', async (req, res) => {
       `,
     };
 
-    // Send Emails in the background (non-blocking) so that placeholder/invalid email credentials do not crash the database submission
-    transporter.sendMail(adminMailOptions)
-      .then(() => console.log('📨 Admin notification email sent successfully'))
-      .catch(err => console.error('❌ Error sending admin notification email:', err.message));
+    // Send Emails (Awaited with individual try/catch blocks so that serverless environments like Vercel do not terminate the process prematurely)
+    try {
+      await transporter.sendMail(adminMailOptions);
+      console.log('📨 Admin notification email sent successfully');
+    } catch (err) {
+      console.error('❌ Error sending admin notification email:', err.message);
+    }
 
-    transporter.sendMail(userMailOptions)
-      .then(() => console.log('📨 User auto-reply email sent successfully'))
-      .catch(err => console.error('❌ Error sending user auto-reply email:', err.message));
+    try {
+      await transporter.sendMail(userMailOptions);
+      console.log('📨 User auto-reply email sent successfully');
+    } catch (err) {
+      console.error('❌ Error sending user auto-reply email:', err.message);
+    }
 
     res.status(200).json({ success: true, message: 'Message stored successfully in the database!' });
   } catch (error) {
