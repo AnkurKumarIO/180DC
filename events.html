@@ -67,270 +67,6 @@
       font-weight: 600;
       letter-spacing: .08em;
       text-transform: uppercase;
-      color: #e2e2e8;
-      transition: color .3s
-    }
-
-    .nav-link:hover,
-    .nav-link.active {
-      color: #4edea3
-    }
-
-    .nav-link.active {
-      border-bottom: 2px solid #ffffff;
-      padding-bottom: 4px
-    }
-
-    .section-label {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .25em;
-      text-transform: uppercase;
-      color: #4edea3
-    }
-
-    .timeline-dot {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: #4edea3;
-      box-shadow: 0 0 20px rgba(78, 222, 163, .8);
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10
-    }
-
-    .timeline-line {
-      position: relative
-    }
-
-    .timeline-line::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background: linear-gradient(to bottom, transparent, rgba(78, 222, 163, .5), transparent);
-      transform: translateX(-50%)
-    }
-
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: rgba(17, 19, 24, .97);
-      backdrop-filter: blur(20px);
-      border-top: 1px solid rgba(255, 255, 255, .1);
-      padding: 1.5rem 2rem;
-      gap: 1.25rem
-    }
-
-    .mobile-menu.open {
-      display: flex
-    }
-  </style>
-  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
-  <title>Events &amp; Initiatives | 180DC VNIT Nagpur</title>
-  <meta name="description"
-    content="Explore Case 180, national consulting competitions and other flagship events by 180DC VNIT Nagpur." />
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-    rel="stylesheet" />
-  <script>
-    tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#4edea3", "primary-container": "#10b981", "on-primary": "#003824", "secondary": "#adc6ff", "secondary-container": "#0566d9", "surface": "#111318", "surface-container-low": "#1a1c20", "surface-container": "#1e2024", "surface-container-high": "#282a2e", "surface-container-highest": "#333539", "surface-container-lowest": "#0c0e12", "on-surface": "#e2e2e8", "on-surface-variant": "#bbcabf", "background": "#111318" }, fontFamily: { "display": ["Playfair Display", "serif"] } } } }
-  </script>
-  <style>
-    body {
-      background-color: #0A0C10;
-      color: #e2e2e8;
-      overflow-x: hidden;
-      font-family: 'Inter', sans-serif
-    }
-
-    .glass {
-      backdrop-filter: blur(20px);
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all .4s ease
-    }
-
-    .glass-hover:hover {
-      border-color: rgba(78, 222, 163, .4);
-      box-shadow: 0 0 40px rgba(78, 222, 163, .15);
-      transform: translateY(-4px)
-    }
-
-    .gradient-text {
-      background: linear-gradient(135deg, #4edea3, #0566d9);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text
-    }
-
-    .btn-gradient {
-      background: linear-gradient(135deg, #10b981, #0566d9);
-      color: #fff;
-      border-radius: 9999px;
-      padding: .875rem 2.25rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      font-size: 13px;
-      transition: all .3s;
-      display: inline-block
-    }
-
-    .btn-gradient:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(78, 222, 163, .4)
-    }
-
-    .nav-link {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: #e2e2e8;
-      transition: color .3s
-    }
-
-    .nav-link:hover,
-    .nav-link.active {
-      color: #4edea3
-    }
-
-    .nav-link.active {
-      border-bottom: 2px solid #ffffff;
-      padding-bottom: 4px
-    }
-
-    .section-label {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .25em;
-      text-transform: uppercase;
-      color: #4edea3
-    }
-
-    .timeline-dot {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: #4edea3;
-      box-shadow: 0 0 20px rgba(78, 222, 163, .8);
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10
-    }
-
-    .timeline-line {
-      position: relative
-    }
-
-    .timeline-line::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background: linear-gradient(to bottom, transparent, rgba(78, 222, 163, .5), transparent);
-      transform: translateX(-50%)
-    }
-
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: rgba(17, 19, 24, .97);
-      backdrop-filter: blur(20px);
-      border-top: 1px solid rgba(255, 255, 255, .1);
-      padding: 1.5rem 2rem;
-      gap: 1.25rem
-    }
-
-    .mobile-menu.open {
-      display: flex
-    }
-  </style>
-  =======
-  <meta charset="utf-8" />
-  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
-  <title>Events &amp; Initiatives | 180DC VNIT Nagpur</title>
-  <meta name="description"
-    content="Explore Case 180, national consulting competitions and other flagship events by 180DC VNIT Nagpur." />
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-    rel="stylesheet" />
-  <script>
-    tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#4edea3", "primary-container": "#10b981", "on-primary": "#003824", "secondary": "#adc6ff", "secondary-container": "#0566d9", "surface": "#111318", "surface-container-low": "#1a1c20", "surface-container": "#1e2024", "surface-container-high": "#282a2e", "surface-container-highest": "#333539", "surface-container-lowest": "#0c0e12", "on-surface": "#e2e2e8", "on-surface-variant": "#bbcabf", "background": "#111318" }, fontFamily: { "display": ["Playfair Display", "serif"] } } } }
-  </script>
-  <style>
-    body {
-      background-color: #0A0C10;
-      color: #e2e2e8;
-      overflow-x: hidden;
-      font-family: 'Inter', sans-serif
-    }
-
-    .glass {
-      backdrop-filter: blur(20px);
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all .4s ease
-    }
-
-    .glass-hover:hover {
-      border-color: rgba(78, 222, 163, .4);
-      box-shadow: 0 0 40px rgba(78, 222, 163, .15);
-      transform: translateY(-4px)
-    }
-
-    .gradient-text {
-      background: linear-gradient(135deg, #4edea3, #0566d9);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text
-    }
-
-    .btn-gradient {
-      background: linear-gradient(135deg, #10b981, #0566d9);
-      color: #fff;
-      border-radius: 9999px;
-      padding: .875rem 2.25rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      font-size: 13px;
-      transition: all .3s;
-      display: inline-block
-    }
-
-    .btn-gradient:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(78, 222, 163, .4)
-    }
-
-    .nav-link {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-transform: uppercase;
       color: #bbcabf;
       transition: color .3s
     }
@@ -398,7 +134,6 @@
       display: flex
     }
   </style>
-  >>>>>>> 6509e7f (Updated events page with new event and logo)
 </head>
 
 <body>
@@ -491,10 +226,10 @@
     <section class="py-4 px-6 md:px-20 max-w-[1280px] mx-auto mb-16">
       <div class="grid md:grid-cols-2 gap-7">
         <div class="glass glass-hover rounded-2xl p-10">
-          <div class="flex justify-between items-start mb-6">
+          <div class="flex items-center gap-4 mb-6">
             <img src="escape-room-logo.png" alt="Escape Room Logo" class="h-20 w-20 object-contain" />
+            <h3 class="font-display text-2xl font-semibold">ESCAPE ROOM - Product Hackathon</h3>
           </div>
-          <h3 class="font-display text-2xl font-semibold mb-3">ESCAPE ROOM - Product Hackathon</h3>
           <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Escape Room was built around a simple idea —
             if you can't diagnose a problem correctly, your solution won't matter. The event ran across three
             elimination rounds: guesstimates, root cause analysis, and product design based on identified root causes.
@@ -517,7 +252,7 @@
   <footer class="bg-surface-container-lowest border-t border-white/5">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 md:px-20 py-16 max-w-[1280px] mx-auto">
       <div>
-        <div class="font-display text-xl font-bold mb-4">180DC | VNIT Nagpur</div>
+        <img src="logo.png" alt="180 Degrees Consulting VNIT Nagpur Logo" class="h-10 w-auto object-contain mb-4" />
         <p class="text-on-surface-variant text-sm leading-relaxed">Leading the way in social impact consulting.
           Excellence, empathy, and innovation.</p>
       </div>
@@ -545,8 +280,11 @@
     </div>
     <div
       class="px-6 md:px-20 py-5 border-t border-white/5 max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-on-surface-variant text-xs opacity-60">© 2026 180 Degrees Consulting VNIT Nagpur. All rights
-        reserved.</p>
+      <div class="flex flex-col gap-1">
+        <p class="text-on-surface-variant text-xs opacity-60">© 2026 180 Degrees Consulting VNIT Nagpur. All rights
+          reserved.</p>
+        <p class="text-on-surface-variant text-xs opacity-60">Developed by <a href="https://www.instagram.com/acm_vnit/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">ACM Student Chapter, VNIT</a></p>
+      </div>
       <div class="flex gap-6 text-[11px] text-on-surface-variant uppercase tracking-widest"><a href="#"
           class="hover:text-primary">Privacy Policy</a><a href="#" class="hover:text-primary">Terms of Service</a></div>
     </div>
