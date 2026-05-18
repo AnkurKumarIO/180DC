@@ -21,7 +21,6 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/180dc-vnit'
 
 // Nodemailer Transporter Setup
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
   host: 'smtp.gmail.com',
   port: 465,
   secure: true,
@@ -29,7 +28,8 @@ const transporter = nodemailer.createTransport({
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
-  family: 4 // Force IPv4 resolution on SMTP transporter to prevent Render IPv6 ENETUNREACH errors
+  family: 4, // Force IPv4 resolution on SMTP transporter to prevent Render IPv6 ENETUNREACH errors
+  connectionTimeout: 10000 // 10s connection timeout
 });
 
 // Contact Route
