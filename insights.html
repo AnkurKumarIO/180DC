@@ -196,7 +196,7 @@ body{background-color:#0A0C10;color:#e2e2e8;overflow-x:hidden;font-family:'Inter
     <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto relative z-10">
       <input type="hidden" name="access_key" value="4dabc3b0-df9b-4c98-a93c-f554b1e3b431">
       <input type="hidden" name="subject" value="New Newsletter Subscription - 180DC VNIT">
-      <input class="flex-grow bg-surface-container-high border border-white/10 focus:border-primary text-on-surface px-5 py-3.5 rounded-xl placeholder:text-on-surface-variant/50 transition-colors outline-none" name="email" placeholder="your@email.com" type="email" required/>
+      <input class="flex-grow bg-surface-container-high border border-white/10 focus:border-primary text-on-surface px-5 py-3.5 rounded-xl placeholder:text-on-surface-variant/50 transition-colors outline-none" name="email" placeholder="your@email.com" type="email" style="background-color: #1e2024 !important; box-shadow: none !important;" required/>
       <button class="btn-primary whitespace-nowrap" type="submit">Subscribe</button>
     </form>
   </div>
@@ -207,18 +207,34 @@ body{background-color:#0A0C10;color:#e2e2e8;overflow-x:hidden;font-family:'Inter
   <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 md:px-20 py-16 max-w-[1280px] mx-auto">
     <div>
       <img src="logo.png" alt="180 Degrees Consulting VNIT Nagpur Logo" class="h-10 w-auto object-contain mb-4" />
-      <p class="text-on-surface-variant text-sm leading-relaxed">Premier student-led social impact consultancy driving change through rigorous analysis.</p>
+      <p class="text-on-surface-variant text-sm leading-relaxed">The world's largest university-based consultancy for social enterprises.</p>
     </div>
-    <div><h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Brand Mission</h4><div class="flex flex-col gap-3"><a href="#" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Our Story</a><a href="team.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Team</a><a href="#" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Alumni Network</a></div></div>
-    <div><h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Quick Links</h4><div class="flex flex-col gap-3"><a href="projects.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Projects</a><a href="events.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Events</a><a href="team.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Team</a><a href="contact.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Contact Us</a></div></div>
-    <div><h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Get In Touch</h4><p class="text-on-surface-variant text-sm mb-4">Have a query or a proposal? We'd love to hear from you.</p><a href="contact.html" class="text-primary hover:underline text-sm font-semibold flex items-center gap-1">Contact Us <span class="material-symbols-outlined text-xs">arrow_forward</span></a></div>
+    <div>
+      <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Quick Links</h4>
+      <div class="flex flex-col gap-3">
+        <a href="index.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Home</a>
+        <a href="projects.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Projects</a>
+        <a href="insights.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Insights</a>
+        <a href="events.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Events</a>
+        <a href="team.html" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Team</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Follow Us</h4>
+      <div class="flex flex-col gap-3">
+        <a href="https://www.linkedin.com/company/180-degrees-consulting-vnit-nagpur/" target="_blank" class="text-on-surface-variant text-sm hover:text-primary transition-colors">LinkedIn</a>
+        <a href="https://www.instagram.com/180dc_vnit/" target="_blank" class="text-on-surface-variant text-sm hover:text-primary transition-colors">Instagram</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-5">Get In Touch</h4>
+      <p class="text-on-surface-variant text-sm leading-relaxed mb-4">Have a query or a proposal? We'd love to hear from you.</p>
+      <a href="contact.html" class="text-primary hover:underline text-sm font-semibold flex items-center gap-1">Contact Us <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
+    </div>
   </div>
-  <div class="px-6 md:px-20 py-5 border-t border-white/5 max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-    <div class="flex flex-col gap-1">
-      <p class="text-on-surface-variant text-xs opacity-60">© 2026 180 Degrees Consulting VNIT Nagpur. All rights reserved.</p>
-      <p class="text-on-surface-variant text-xs opacity-60">Developed by <a href="acm-chapter.html" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">ACM Student Chapter, VNIT</a></p>
-    </div>
-    <div class="flex gap-6 text-[11px] text-on-surface-variant uppercase tracking-widest"><a href="#" class="hover:text-primary transition-colors">Privacy Policy</a><a href="#" class="hover:text-primary transition-colors">Terms of Service</a></div>
+  <div class="px-6 md:px-20 py-6 border-t border-white/5 max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="text-on-surface-variant text-xs opacity-60">© 2026 180 Degrees Consulting VNIT Nagpur. All rights reserved.</p>
+    <p class="text-on-surface-variant text-xs opacity-60">Developed by <a href="acm-chapter.html" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">ACM Student Chapter, VNIT</a></p>
   </div>
 </footer>
 
