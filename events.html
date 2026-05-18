@@ -38,7 +38,7 @@
     }
 
     .gradient-text {
-      background: linear-gradient(135deg, #4edea3, #0566d9);
+      background: linear-gradient(135deg, #4edea3, #ffffff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text
@@ -227,8 +227,8 @@
     <section class="py-4 px-6 md:px-20 max-w-[1280px] mx-auto mb-16">
       <div class="grid md:grid-cols-2 gap-7">
         <div class="glass glass-hover rounded-2xl p-10">
-          <div class="flex items-center gap-4 mb-6">
-            <img src="escape-room-logo.png" alt="Escape Room Logo" class="h-20 w-20 object-contain" />
+          <div class="flex items-center gap-4 mb-6 min-h-[80px]">
+            <img src="escape-room-logo.png" alt="Escape Room Logo" class="h-20 w-20 object-contain shrink-0" />
             <h3 class="font-display text-2xl font-semibold">ESCAPE ROOM - Product Hackathon</h3>
           </div>
           <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Escape Room was built around a simple idea —
@@ -237,13 +237,14 @@
             It was one of our more unconventional events, and one that people came out of talking about.</p>
         </div>
         <div class="glass glass-hover rounded-2xl p-10">
-          <h3 class="font-display text-2xl font-semibold mb-3">ISB Session</h3>
+          <div class="flex items-center mb-6 min-h-[80px]">
+            <h3 class="font-display text-2xl font-semibold">ISB Session</h3>
+          </div>
           <p class="text-on-surface-variant text-sm leading-relaxed mb-6">We brought in a speaker from the Indian School
             of Business for a campus session focused on one thing: what it actually takes to build a competitive
             profile. Students heard directly about how ISB evaluates candidates, what distinguishes strong applicants,
             and what the Young Leaders programme looks like from the inside. It was a candid conversation — no vague
             advice, just practical guidance on how to position yourself well.</p>
-
         </div>
       </div>
     </section>
@@ -285,7 +286,9 @@
       <div class="flex flex-col gap-1">
         <p class="text-on-surface-variant text-xs opacity-60">© 2026 180 Degrees Consulting VNIT Nagpur. All rights
           reserved.</p>
-        <p class="text-on-surface-variant text-xs opacity-60">Developed by <a href="https://www.instagram.com/acm_vnit/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">ACM Student Chapter, VNIT</a></p>
+        <p class="text-on-surface-variant text-xs opacity-60">Developed by <a href="https://www.instagram.com/acm_vnit/"
+            target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">ACM Student Chapter, VNIT</a>
+        </p>
       </div>
       <div class="flex gap-6 text-[11px] text-on-surface-variant uppercase tracking-widest"><a href="#"
           class="hover:text-primary">Privacy Policy</a><a href="#" class="hover:text-primary">Terms of Service</a></div>
