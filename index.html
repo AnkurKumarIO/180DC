@@ -66,7 +66,7 @@
   .animate-bounce-scroll { animation: bounce-scroll 2s ease-in-out infinite; }
   .section-label { font-size: 13px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: #80b739; }
   .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent); }
-  @media (hover: hover) {
+  @media (min-width: 1024px) {
     .service-card .desc { transform: translateY(40px); opacity: 0; transition: all 0.5s ease; }
     .service-card:hover .desc { transform: translateY(0); opacity: 1; }
   }
@@ -125,7 +125,7 @@
     <a href="index.html" class="flex items-center group py-1">
       <img src="logo.png" alt="180 Degrees Consulting VNIT Nagpur Logo" class="h-9 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
     </a>
-    <div class="hidden md:flex items-center gap-8">
+    <div class="hidden lg:flex items-center gap-8">
       <a href="index.html" class="nav-link active">Home</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#services" class="nav-link">Services</a>
@@ -135,11 +135,11 @@
       <a href="team.html" class="nav-link">Team</a>
       <a href="contact.html" class="nav-link">Contact Us</a>
     </div>
-    <button id="menuToggle" class="md:hidden text-on-surface" aria-label="Menu">
+    <button id="menuToggle" class="lg:hidden text-on-surface" aria-label="Menu">
       <span class="material-symbols-outlined text-3xl">menu</span>
     </button>
   </nav>
-  <div class="mobile-menu md:hidden" id="mobileMenu">
+  <div class="mobile-menu lg:hidden" id="mobileMenu">
     <a href="index.html" class="nav-link active">Home</a>
     <a href="#about" class="nav-link">About</a>
     <a href="#services" class="nav-link">Services</a>
@@ -287,49 +287,49 @@
       <div class="service-card bg-gradient-to-br from-[#80b739] to-[#608d29] rounded-2xl p-6 lg:p-7 h-auto min-h-[220px] lg:h-72 flex flex-col justify-between cursor-default border border-[#96ce4e]/20 shadow-[0_8px_30px_rgba(128,183,57,0.15)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.35)] lg:hover:-translate-y-2 lg:hover:shadow-[0_20px_40px_rgba(128,183,57,0.35)] active:scale-[0.97] lg:active:scale-100 transition-all duration-300 relative overflow-hidden group">
         <div>
           <img src="service-icons/1.png" alt="Market Research Icon" class="h-12 lg:h-14 w-auto mb-4 block object-contain group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300" />
-          <h3 class="font-display text-lg lg:text-xl font-bold mb-2 text-[#002d16] tracking-wide">Market Research</h3>
+          <h3 class="font-display text-lg lg:text-xl font-bold mb-2 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] tracking-wide">Market Research</h3>
         </div>
-        <p class="desc text-[#002d16]/85 text-xs lg:text-sm leading-relaxed font-medium">Deep-dive competitor analytics, benchmarking, and demographic studies to identify landscape opportunities.</p>
+        <p class="desc text-white/90 text-xs lg:text-sm leading-relaxed font-medium">Deep-dive competitor analytics, benchmarking, and demographic studies to identify landscape opportunities.</p>
       </div>
       <!-- Fund Raising Strategy -->
       <div class="service-card bg-gradient-to-br from-[#80b739] to-[#608d29] rounded-2xl p-6 lg:p-7 h-auto min-h-[220px] lg:h-72 flex flex-col justify-between cursor-default border border-[#96ce4e]/20 shadow-[0_8px_30px_rgba(128,183,57,0.15)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.35)] lg:hover:-translate-y-2 lg:hover:shadow-[0_20px_40px_rgba(128,183,57,0.35)] active:scale-[0.97] lg:active:scale-100 transition-all duration-300 relative overflow-hidden group">
         <div>
           <img src="service-icons/2.png" alt="Fund Raising Strategy Icon" class="h-12 lg:h-14 w-auto mb-4 block object-contain group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300" />
-          <h3 class="font-display text-lg lg:text-xl font-bold mb-2 text-[#002d16] tracking-wide">Fund Raising Strategy</h3>
+          <h3 class="font-display text-lg lg:text-xl font-bold mb-2 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] tracking-wide">Fund Raising Strategy</h3>
         </div>
-        <p class="desc text-[#002d16]/85 text-xs lg:text-sm leading-relaxed font-medium">Designing robust pitch decks, donor engagement plans, and grants frameworks for sustainable growth.</p>
+        <p class="desc text-white/90 text-xs lg:text-sm leading-relaxed font-medium">Designing robust pitch decks, donor engagement plans, and grants frameworks for sustainable growth.</p>
       </div>
       <!-- Marketing Strategy -->
       <div class="service-card bg-gradient-to-br from-[#80b739] to-[#608d29] rounded-2xl p-6 lg:p-7 h-auto min-h-[220px] lg:h-72 flex flex-col justify-between cursor-default border border-[#96ce4e]/20 shadow-[0_8px_30px_rgba(128,183,57,0.15)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.35)] lg:hover:-translate-y-2 lg:hover:shadow-[0_20px_40px_rgba(128,183,57,0.35)] active:scale-[0.97] lg:active:scale-100 transition-all duration-300 relative overflow-hidden group">
         <div>
           <img src="service-icons/3.png" alt="Marketing Strategy Icon" class="h-12 lg:h-14 w-auto mb-4 block object-contain group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300" />
-          <h3 class="font-display text-lg lg:text-xl font-bold mb-2 text-[#002d16] tracking-wide">Marketing Strategy</h3>
+          <h3 class="font-display text-lg lg:text-xl font-bold mb-2 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] tracking-wide">Marketing Strategy</h3>
         </div>
-        <p class="desc text-[#002d16]/85 text-xs lg:text-sm leading-relaxed font-medium">Developing innovative digital campaigns, brand storytelling, and outreach systems to maximize social reach.</p>
+        <p class="desc text-white/90 text-xs lg:text-sm leading-relaxed font-medium">Developing innovative digital campaigns, brand storytelling, and outreach systems to maximize social reach.</p>
       </div>
       <!-- Business & Expansion Strategy -->
       <div class="service-card bg-gradient-to-br from-[#80b739] to-[#608d29] rounded-2xl p-6 lg:p-7 h-auto min-h-[220px] lg:h-72 flex flex-col justify-between cursor-default border border-[#96ce4e]/20 shadow-[0_8px_30px_rgba(128,183,57,0.15)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.35)] lg:hover:-translate-y-2 lg:hover:shadow-[0_20px_40px_rgba(128,183,57,0.35)] active:scale-[0.97] lg:active:scale-100 transition-all duration-300 relative overflow-hidden group">
         <div>
           <img src="service-icons/4.png" alt="Business & Expansion Strategy Icon" class="h-12 lg:h-14 w-auto mb-4 block object-contain group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300" />
-          <h3 class="font-display text-lg lg:text-xl font-bold mb-2 text-[#002d16] tracking-wide">Business & Expansion Strategy</h3>
+          <h3 class="font-display text-lg lg:text-xl font-bold mb-2 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] tracking-wide">Business & Expansion Strategy</h3>
         </div>
-        <p class="desc text-[#002d16]/85 text-xs lg:text-sm leading-relaxed font-medium">Formulating long-term roadmaps, geographical entry models, and partnership strategies for scale.</p>
+        <p class="desc text-white/90 text-xs lg:text-sm leading-relaxed font-medium">Formulating long-term roadmaps, geographical entry models, and partnership strategies for scale.</p>
       </div>
       <!-- Operational Efficiency -->
       <div class="service-card bg-gradient-to-br from-[#80b739] to-[#608d29] rounded-2xl p-6 lg:p-7 h-auto min-h-[220px] lg:h-72 flex flex-col justify-between cursor-default border border-[#96ce4e]/20 shadow-[0_8px_30px_rgba(128,183,57,0.15)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.35)] lg:hover:-translate-y-2 lg:hover:shadow-[0_20px_40px_rgba(128,183,57,0.35)] active:scale-[0.97] lg:active:scale-100 transition-all duration-300 relative overflow-hidden group">
         <div>
           <img src="service-icons/5.png" alt="Operational Efficiency Icon" class="h-12 lg:h-14 w-auto mb-4 block object-contain group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300" />
-          <h3 class="font-display text-lg lg:text-xl font-bold mb-2 text-[#002d16] tracking-wide">Operational Efficiency</h3>
+          <h3 class="font-display text-lg lg:text-xl font-bold mb-2 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] tracking-wide">Operational Efficiency</h3>
         </div>
-        <p class="desc text-[#002d16]/85 text-xs lg:text-sm leading-relaxed font-medium">Optimizing business processes, defining KPIs, and streamlining internal workflows to scale productivity.</p>
+        <p class="desc text-white/90 text-xs lg:text-sm leading-relaxed font-medium">Optimizing business processes, defining KPIs, and streamlining internal workflows to scale productivity.</p>
       </div>
       <!-- Revenue Generation -->
       <div class="service-card bg-gradient-to-br from-[#80b739] to-[#608d29] rounded-2xl p-6 lg:p-7 h-auto min-h-[220px] lg:h-72 flex flex-col justify-between cursor-default border border-[#96ce4e]/20 shadow-[0_8px_30px_rgba(128,183,57,0.15)] shadow-[inset_0_1px_2px_rgba(255,255,255,0.35)] lg:hover:-translate-y-2 lg:hover:shadow-[0_20px_40px_rgba(128,183,57,0.35)] active:scale-[0.97] lg:active:scale-100 transition-all duration-300 relative overflow-hidden group">
         <div>
           <img src="service-icons/6.png" alt="Revenue Generation Icon" class="h-12 lg:h-14 w-auto mb-4 block object-contain group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300" />
-          <h3 class="font-display text-lg lg:text-xl font-bold mb-2 text-[#002d16] tracking-wide">Revenue Generation</h3>
+          <h3 class="font-display text-lg lg:text-xl font-bold mb-2 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] tracking-wide">Revenue Generation</h3>
         </div>
-        <p class="desc text-[#002d16]/85 text-xs lg:text-sm leading-relaxed font-medium">Devising diverse funding pipelines, monetization plans, and cost-cutting to ensure financial sustainability.</p>
+        <p class="desc text-white/90 text-xs lg:text-sm leading-relaxed font-medium">Devising diverse funding pipelines, monetization plans, and cost-cutting to ensure financial sustainability.</p>
       </div>
     </div>
   </div>
@@ -575,8 +575,17 @@
 
 <script>
   // Mobile menu
-  document.getElementById('menuToggle').addEventListener('click', () => {
-    document.getElementById('mobileMenu').classList.toggle('open');
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
+  document.querySelectorAll('#mobileMenu .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+    });
   });
 
   // Network canvas
