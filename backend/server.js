@@ -187,7 +187,7 @@ app.post('/api/contact', async (req, res) => {
 
                 <!-- Custom CTA Button -->
                 <div style="text-align: center; margin-bottom: 32px;">
-                  <a href="https://linkedin.com/company/180dc-vnit-nagpur" target="_blank" style="background: linear-gradient(135deg, #10b981 0%, #0566d9 100%); color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 12px; font-size: 14px; font-weight: 700; letter-spacing: 0.03em; display: inline-block; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2); transition: all 0.2s ease;">
+                  <a href="https://www.linkedin.com/company/180-degrees-consulting-vnit-nagpur/" target="_blank" style="background: linear-gradient(135deg, #10b981 0%, #0566d9 100%); color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 12px; font-size: 14px; font-weight: 700; letter-spacing: 0.03em; display: inline-block; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2); transition: all 0.2s ease;">
                     Discover Our Work on LinkedIn
                   </a>
                 </div>
@@ -209,7 +209,7 @@ app.post('/api/contact', async (req, res) => {
                   Part of the world's largest university-based consultancy for social enterprises.
                 </p>
                 <div style="margin-top: 12px;">
-                  <a href="https://linkedin.com/company/180dc-vnit-nagpur" style="color: #10b981; text-decoration: none; font-size: 12px; font-weight: 700; margin: 0 12px;">LinkedIn</a>
+                  <a href="https://www.linkedin.com/company/180-degrees-consulting-vnit-nagpur/" style="color: #10b981; text-decoration: none; font-size: 12px; font-weight: 700; margin: 0 12px;">LinkedIn</a>
                   <span style="color: #cbd5e1;">•</span>
                   <a href="mailto:vnitnagpur@180dc.org" style="color: #10b981; text-decoration: none; font-size: 12px; font-weight: 700; margin: 0 12px;">Email Us</a>
                 </div>
