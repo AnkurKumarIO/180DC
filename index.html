@@ -120,7 +120,7 @@
 </div>
 
 <!-- NAV -->
-<header class="fixed top-0 left-0 right-0 w-full z-50 bg-[#111318]/70 backdrop-blur-[20px] border-b border-white/10">
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#111318]/70 backdrop-blur-[20px] border-b border-white/10">
   <nav class="flex justify-between items-center px-4 md:px-20 py-2.5 max-w-[1280px] mx-auto">
     <a href="index.html" class="flex items-center group py-1 shrink-0 max-w-[70%] md:max-w-full">
       <img src="logo.png" alt="180 Degrees Consulting VNIT Nagpur Logo" class="h-7 sm:h-9 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
@@ -676,8 +676,10 @@
     // Create pure black color space to perfectly merge with the logo's JPEG background
     scene.background = new THREE.Color(0x000000);
 
-    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
-    camera.position.z = 18;
+    const aspect = window.innerWidth / window.innerHeight;
+    const camera = new THREE.PerspectiveCamera(45, aspect, 0.1, 100);
+    let targetZ = aspect < 1 ? 18 / Math.max(aspect, 0.45) : 18;
+    camera.position.z = targetZ;
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -744,7 +746,9 @@
 
     const easeInOutCubic = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
-    for (let i = 0; i < 180; i++) {
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+    const shardCount = isMobileDevice ? 75 : 180;
+    for (let i = 0; i < shardCount; i++) {
       // Sleek, randomized round sphere geometries
       const radius = 0.03 + Math.random() * 0.04;
       const geom = new THREE.SphereGeometry(radius, 8, 8);
@@ -888,7 +892,7 @@
       }
 
       // Camera motion: Lock PERFECTLY static facing logo for the entire animation (No tilts or moving camera body)
-      camera.position.set(0, 0, 18);
+      camera.position.set(0, 0, targetZ);
       camera.lookAt(0, 0, 0);
 
       renderer.render(scene, camera);
@@ -898,9 +902,11 @@
 
     // Handle Window Resize
     window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
+      const newAspect = window.innerWidth / window.innerHeight;
+      camera.aspect = newAspect;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
+      targetZ = newAspect < 1 ? 18 / Math.max(newAspect, 0.45) : 18;
     });
   }
 
