@@ -711,7 +711,8 @@
     const coreMat = new THREE.MeshBasicMaterial({
       color: 0x80b739,
       transparent: true,
-      opacity: 0.8
+      opacity: 0.8,
+      depthWrite: false
     });
     const coreMesh = new THREE.Mesh(coreGeom, coreMat);
     scene.add(coreMesh);
@@ -730,7 +731,8 @@
       map: logoTexture,
       transparent: true,
       opacity: 0, // starts invisible, fades in as shards merge
-      side: THREE.DoubleSide
+      side: THREE.DoubleSide,
+      depthWrite: false
     });
     const logoMesh = new THREE.Mesh(logoGeom, logoMat);
     logoGroup.add(logoMesh);
@@ -742,12 +744,10 @@
 
     const easeInOutCubic = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
-    for (let i = 0; i < 80; i++) {
-      // Sleek, randomized crystal splinter geometries
-      const w = 0.04 + Math.random() * 0.08;
-      const h = 0.15 + Math.random() * 0.35;
-      const d = 0.02 + Math.random() * 0.06;
-      const geom = new THREE.BoxGeometry(w, h, d);
+    for (let i = 0; i < 180; i++) {
+      // Sleek, randomized round sphere geometries
+      const radius = 0.03 + Math.random() * 0.04;
+      const geom = new THREE.SphereGeometry(radius, 8, 8);
       
       // Vibrant glowing crystal splinter material (randomized between emerald green and white)
       const isGreen = Math.random() > 0.4;
@@ -759,7 +759,8 @@
         metalness: 0.1,
         transparent: true,
         opacity: 0.95,
-        side: THREE.DoubleSide
+        side: THREE.DoubleSide,
+        depthWrite: false
       });
       
       const mesh = new THREE.Mesh(geom, mat);
@@ -776,10 +777,10 @@
       // Set random orientations
       mesh.rotation.set(Math.random()*10, Math.random()*10, Math.random()*10);
 
-      // Target mapping onto the 7.5x7.5 flat Plane (naked logo coordinates)
+      // Target mapping strictly behind the flat logo Plane so they merge behind it
       const tx = (Math.random() - 0.5) * 7.5;
       const ty = (Math.random() - 0.5) * 7.5;
-      const tz = (Math.random() - 0.5) * 0.05;
+      const tz = -0.3 - Math.random() * 0.5;
 
       mesh.userData = {
         initialPos: mesh.position.clone(),
@@ -848,7 +849,7 @@
           s.rotation.z = THREE.MathUtils.lerp(s.userData.initialRot.z, s.userData.targetRot.z, eased);
 
           // Fade out shards much earlier so they completely disappear before intersecting/blocking the logo
-          s.material.opacity = 0.95 * Math.max(0, 1.0 - progress * 1.6);
+          s.material.opacity = 0.95 * Math.max(0, 1.0 - progress * 3.2);
         });
 
         // Fade in original naked logo texture
