@@ -211,6 +211,23 @@
       animation: smooth-fade-zoom 15s infinite ease-in-out;
       animation-delay: 10s;
     }
+
+    /* Custom Scrollbars for overflowing containers */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(128, 183, 57, 0.3);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(128, 183, 57, 0.6);
+    }
   </style>
 </head>
 
@@ -273,20 +290,20 @@
           <!-- FRONT -->
           <div class="flip-face flip-front glass glass-hover rounded-2xl overflow-hidden w-full bg-[#111318]">
             <div class="grid md:grid-cols-2 gap-0">
-              <div class="p-10 md:p-14 flex flex-col justify-center">
+              <div class="p-6 sm:p-10 md:p-14 flex flex-col justify-center">
                 <span class="section-label mb-4 block">Flagship Initiative</span>
                 <h2 class="font-display text-3xl md:text-5xl font-bold mb-4">VISHLESHAN</h2>
                 <p class="text-on-surface-variant text-base leading-relaxed mb-8">Vishleshan is our flagship case
                   competition — the one event on campus where business problems don't come with textbook answers. Now in
                   its second edition at VNIT, Vishleshan has grown into one of the institute's go-to consulting events.
                 </p>
-                <div class="flex gap-10 mb-10">
+                <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 mb-10">
                   <div>
-                    <p class="font-display text-3xl font-bold text-primary">500+</p>
+                    <p class="font-display text-2xl sm:text-3xl font-bold text-primary">500+</p>
                     <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-1">Participants</p>
                   </div>
-                  <div class="border-l border-white/10 pl-10">
-                    <p class="font-display text-3xl font-bold text-primary">VNIT Nagpur</p>
+                  <div class="border-t pt-6 sm:border-t-0 sm:pt-0 sm:border-l border-white/10 sm:pl-10">
+                    <p class="font-display text-2xl sm:text-3xl font-bold text-primary">VNIT Nagpur</p>
                     <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-1">Location</p>
                   </div>
                 </div>
@@ -306,7 +323,7 @@
             </div>
           </div>
           <!-- BACK -->
-          <div class="flip-face flip-back glass rounded-2xl p-10 md:p-14 flex flex-col justify-between bg-[#111318]">
+          <div class="flip-face flip-back glass rounded-2xl p-6 sm:p-10 md:p-14 flex flex-col justify-between bg-[#111318] overflow-y-auto max-h-full">
             <div>
               <div class="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
                 <div>
@@ -337,10 +354,10 @@
       <div class="grid md:grid-cols-2 gap-7">
         <!-- ESCAPE ROOM CARD -->
         <div class="flip-container h-full">
-          <div id="escape-card" class="flip-inner relative w-full h-full min-h-[540px]">
+          <div id="escape-card" class="flip-inner relative w-full h-full min-h-[480px] sm:min-h-[540px]">
             <!-- FRONT -->
             <div
-              class="flip-face flip-front relative glass glass-hover rounded-2xl p-10 flex flex-col justify-between h-full w-full bg-[#111318]">
+              class="flip-face flip-front relative glass glass-hover rounded-2xl p-6 sm:p-10 flex flex-col justify-between h-full w-full bg-[#111318]">
               <div>
                 <div class="flex items-center gap-4 mb-6 min-h-[80px]">
                   <img src="escape-room-logo.png" alt="Escape Room Logo" class="h-20 w-20 object-contain shrink-0" />
@@ -361,7 +378,7 @@
             </div>
             <!-- BACK -->
             <div
-              class="flip-face flip-back glass rounded-2xl p-10 flex flex-col justify-between h-full w-full bg-[#1a1c20]">
+              class="flip-face flip-back glass rounded-2xl p-6 sm:p-10 flex flex-col justify-between h-full w-full bg-[#1a1c20] overflow-y-auto max-h-full">
               <div>
                 <div class="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
                   <h3 class="font-display text-xl font-bold text-primary">ESCAPE ROOM Details</h3>
@@ -386,10 +403,10 @@
 
         <!-- ISB SESSION CARD -->
         <div class="flip-container h-full">
-          <div id="isb-card" class="flip-inner relative w-full h-full min-h-[540px]">
+          <div id="isb-card" class="flip-inner relative w-full h-full min-h-[480px] sm:min-h-[540px]">
             <!-- FRONT -->
             <div
-              class="flip-face flip-front relative glass glass-hover rounded-2xl p-10 flex flex-col justify-between h-full w-full bg-[#111318]">
+              class="flip-face flip-front relative glass glass-hover rounded-2xl p-6 sm:p-10 flex flex-col justify-between h-full w-full bg-[#111318]">
               <div>
                 <div class="flex items-center mb-6 min-h-[80px]">
                   <h3 class="font-display text-2xl font-semibold">ISB Session</h3>
@@ -409,7 +426,7 @@
             </div>
             <!-- BACK -->
             <div
-              class="flip-face flip-back glass rounded-2xl p-10 flex flex-col justify-between h-full w-full bg-[#1a1c20]">
+              class="flip-face flip-back glass rounded-2xl p-6 sm:p-10 flex flex-col justify-between h-full w-full bg-[#1a1c20] overflow-y-auto max-h-full">
               <div>
                 <div class="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
                   <h3 class="font-display text-xl font-bold text-primary">ISB Session Details</h3>
