@@ -167,33 +167,49 @@
       display: flex
     }
 
-    @keyframes hero-slideshow {
-
-      0%,
-      25% {
-        background-image: url('event-bg.jpeg');
+    @keyframes smooth-fade-zoom {
+      0% {
+        opacity: 0;
+        transform: scale(1.0) translate(0, 0);
       }
-
-      33%,
-      58% {
-        background-image: url('event-bg-2.jpeg');
+      10% {
+        opacity: 1;
+        transform: scale(1.04) translate(0, 0);
       }
-
-      66%,
-      91% {
-        background-image: url('event-bg-3.jpeg');
+      33.33% {
+        opacity: 1;
+        transform: scale(1.08) translate(-6px, -4px);
       }
-
+      43.33% {
+        opacity: 0;
+        transform: scale(1.11) translate(-8px, -6px);
+      }
       100% {
-        background-image: url('event-bg.jpeg');
+        opacity: 0;
       }
     }
 
-    .hero-slideshow {
-      animation: hero-slideshow 15s infinite;
+    .slide-bg {
+      position: absolute;
+      inset: 0;
       background-size: cover;
       background-position: center;
-      transition: background-image 1s ease-in-out;
+      opacity: 0;
+      transform-origin: center center;
+    }
+
+    .slide-1 {
+      animation: smooth-fade-zoom 15s infinite ease-in-out;
+    }
+
+    .slide-2 {
+      animation: smooth-fade-zoom 15s infinite ease-in-out;
+      animation-delay: 5s;
+    }
+
+    .slide-3 {
+      animation: smooth-fade-zoom 15s infinite ease-in-out;
+      animation-delay: 10s;
     }
   </style>
 </head>
@@ -230,14 +246,19 @@
 
   <main>
     <!-- HERO STRIP -->
-    <section
-      class="relative h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden pt-16 hero-slideshow">
-      <div class="absolute inset-0 bg-gradient-to-br from-[#0A0C10]/80 via-[#0A0C10]/70 to-[#0A0C10]/90"></div>
-      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <section class="relative h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden pt-16">
+      <!-- Background Slideshow Images -->
+      <div class="absolute inset-0 z-0 overflow-hidden">
+        <div class="slide-bg slide-1" style="background-image: url('event-bg.jpeg');"></div>
+        <div class="slide-bg slide-2" style="background-image: url('event-bg-2.jpeg');"></div>
+        <div class="slide-bg slide-3" style="background-image: url('event-bg-3.jpeg');"></div>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-br from-[#0A0C10]/85 via-[#0A0C10]/75 to-[#0A0C10]/90 z-10"></div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
         <div class="w-[600px] h-[600px] rounded-full"
           style="background:radial-gradient(circle,rgba(78,222,163,0.15) 0%,transparent 65%);filter:blur(60px)"></div>
       </div>
-      <div class="relative z-10 text-center px-6">
+      <div class="relative z-20 text-center px-6">
         <h1 class="font-display text-4xl md:text-6xl font-bold mb-5 drop-shadow-xl text-primary">Events &amp; Outreach</h1>
         <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed drop-shadow-md">Cultivating
           excellence through
