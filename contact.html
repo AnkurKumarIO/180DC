@@ -11,7 +11,7 @@
 tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#80b739","primary-container":"#69982f","on-primary":"#003824","secondary":"#adc6ff","secondary-container":"#0566d9","surface":"#111318","surface-container-low":"#1a1c20","surface-container":"#1e2024","surface-container-high":"#282a2e","surface-container-highest":"#333539","surface-container-lowest":"#0c0e12","on-surface":"#e2e2e8","on-surface-variant":"#bbcabf","background":"#111318"},fontFamily:{"display":["Montserrat","sans-serif"],"body":["Poppins","sans-serif"]}}}}
 </script>
 <style>
-body{background-color:#0A0C10;color:#e2e2e8;overflow-x:hidden;font-family:'Poppins',sans-serif}
+html, body { overflow-x: hidden; max-width: 100%; position: relative; } body { background-color: #0A0C10; color: #e2e2e8; font-family: 'Poppins', sans-serif; }
 .glass{backdrop-filter:blur(20px);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);transition:all .4s ease}
 .glass:hover{border-color:rgba(78,222,163,.3);box-shadow:0 0 30px rgba(78,222,163,.1)}
 .gradient-text{background:linear-gradient(135deg,#ffffff,#80b739);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -176,7 +176,7 @@ label.floating{position:absolute;left:0;top:.75rem;color:#e2e2e8;font-size:14px;
   </div>
   <div class="px-4 md:px-20 py-6 border-t border-white/5 max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
     <p class="text-on-surface-variant text-xs opacity-60 w-full md:w-auto">© 2026 180 Degrees Consulting VNIT Nagpur. All rights reserved.</p>
-    <p class="text-on-surface-variant text-sm opacity-80 flex items-center gap-1.5 justify-center md:justify-start">Developed by <img src="acm-logo.png" alt="ACM Logo" class="h-5 w-auto inline-block object-contain" /> <a href="acm-chapter.html" target="_blank" rel="noopener noreferrer" onclick="let u=location.href.split('#')[0]; const a=document.querySelector('.nav-link.active'); if(a){const h=a.getAttribute('href'); if(h) if(h.startsWith('#')) u+=h;} sessionStorage.setItem('portalReferrer', u);" class="text-white hover:underline font-semibold">ACM Student Chapter, VNIT</a></p>
+    <p class="text-on-surface-variant text-sm opacity-80 flex flex-wrap items-center gap-1.5 justify-center md:justify-start w-full md:w-auto leading-relaxed">Developed by <img src="acm-logo.png" alt="ACM Logo" class="h-5 w-auto inline-block object-contain" /> <a href="acm-chapter.html" target="_blank" rel="noopener noreferrer" onclick="let u=location.href.split('#')[0]; const a=document.querySelector('.nav-link.active'); if(a){const h=a.getAttribute('href'); if(h) if(h.startsWith('#')) u+=h;} sessionStorage.setItem('portalReferrer', u);" class="text-white hover:underline font-semibold">ACM Student Chapter, VNIT</a></p>
   </div>
 </footer>
 
