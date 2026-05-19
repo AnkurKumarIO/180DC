@@ -749,15 +749,16 @@
       const d = 0.02 + Math.random() * 0.06;
       const geom = new THREE.BoxGeometry(w, h, d);
       
-      // Premium refractive crystal glass material
-      const mat = new THREE.MeshPhysicalMaterial({
-        color: 0xffffff,
+      // Vibrant glowing crystal splinter material (randomized between emerald green and white)
+      const isGreen = Math.random() > 0.4;
+      const mat = new THREE.MeshStandardMaterial({
+        color: isGreen ? 0x80b739 : 0xffffff,
+        emissive: isGreen ? 0x69982f : 0xffffff,
+        emissiveIntensity: 1.8, // gorgeous emerald/white glow
+        roughness: 0.1,
         metalness: 0.1,
-        roughness: 0.15,
-        transmission: 0.9, // gorgeous glass refraction
-        thickness: 0.5,
         transparent: true,
-        opacity: 0.85,
+        opacity: 0.95,
         side: THREE.DoubleSide
       });
       
@@ -846,8 +847,8 @@
           s.rotation.y = THREE.MathUtils.lerp(s.userData.initialRot.y, s.userData.targetRot.y, eased);
           s.rotation.z = THREE.MathUtils.lerp(s.userData.initialRot.z, s.userData.targetRot.z, eased);
 
-          // Fade out shards as they melt into solid ribbon
-          s.material.opacity = 0.55 * (1.0 - eased);
+          // Fade out shards much earlier so they completely disappear before intersecting/blocking the logo
+          s.material.opacity = 0.95 * Math.max(0, 1.0 - progress * 1.6);
         });
 
         // Fade in original naked logo texture
