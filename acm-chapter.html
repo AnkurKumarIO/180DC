@@ -380,7 +380,7 @@
             class="text-white hover:underline">ACM Student Chapter, VNIT</a></p>
       </div>
       <div class="flex gap-6 text-[11px] text-on-surface-variant uppercase tracking-widest">
-        <a href="#" onclick="if (document.referrer && document.referrer.includes(window.location.hostname)) { window.location.href = document.referrer; } else { window.location.href = 'index.html'; } return false;" class="hover:text-primary">Back To Portal</a>
+        <a href="#" onclick="const ref = sessionStorage.getItem('portalReferrer'); if (ref) { window.location.href = ref; } else if (document.referrer && document.referrer.includes(window.location.hostname)) { window.location.href = document.referrer; } else { window.location.href = 'index.html'; } return false;" class="hover:text-primary">Back To Portal</a>
       </div>
     </div>
   </footer>
