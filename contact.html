@@ -89,7 +89,11 @@ label.floating{position:absolute;left:0;top:.75rem;color:#e2e2e8;font-size:14px;
     <form class="space-y-8" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event)">
       <input type="hidden" name="access_key" value="4dabc3b0-df9b-4c98-a93c-f554b1e3b431" />
       <input type="hidden" name="subject" value="New Contact Form Submission - 180DC VNIT" />
-      <input type="hidden" name="from_name" value="180DC VNIT Contact Form" />
+      <input type="hidden" name="from_name" value="180DC VNIT Nagpur" />
+      <input type="hidden" name="replyto" id="replyto" value="" />
+      <input type="hidden" name="autorespond" value="true" />
+      <input type="hidden" name="autorespond_subject" value="We've received your message — 180DC VNIT Nagpur" />
+      <input type="hidden" name="autorespond_message" value="Hi there,&#10;&#10;Thank you for reaching out to 180 Degrees Consulting, VNIT Nagpur.&#10;&#10;We have received your message and our team will review it shortly. We typically respond within 2–3 business days.&#10;&#10;In the meantime, feel free to explore our work at https://180dcvnit.org&#10;&#10;Warm regards,&#10;Team 180DC VNIT Nagpur" />
       <input type="checkbox" name="botcheck" style="display:none" />
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="relative"><input class="input-field" id="name" name="name" type="text" placeholder=" " required/><label class="floating" for="name">Full Name</label></div>
@@ -192,6 +196,9 @@ async function handleSubmit(e){
   const originalHtml = btn.innerHTML;
   btn.innerHTML = 'Sending...';
   btn.disabled = true;
+
+  // Populate replyto with the submitter's email for auto-reply
+  document.getElementById('replyto').value = document.getElementById('email').value;
 
   const form = e.target;
   const formData = new FormData(form);
