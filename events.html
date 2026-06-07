@@ -170,19 +170,19 @@
     @keyframes smooth-fade-zoom {
       0% {
         opacity: 0;
-        transform: scale(1.0) translate(0, 0);
+        transform: scale(1.0);
       }
       10% {
         opacity: 1;
-        transform: scale(1.04) translate(0, 0);
+        transform: scale(1.0);
       }
       33.33% {
         opacity: 1;
-        transform: scale(1.08) translate(-6px, -4px);
+        transform: scale(1.0);
       }
       43.33% {
         opacity: 0;
-        transform: scale(1.11) translate(-8px, -6px);
+        transform: scale(1.0);
       }
       100% {
         opacity: 0;
@@ -192,10 +192,38 @@
     .slide-bg {
       position: absolute;
       inset: 0;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transform-origin: center center;
+      z-index: 1;
+    }
+
+    .slide-bg-blur {
+      position: absolute;
+      inset: 0;
       background-size: cover;
       background-position: center;
       opacity: 0;
       transform-origin: center center;
+      filter: blur(18px);
+      transform: scale(1.08);
+      z-index: 0;
+    }
+
+    .slide-blur-1 {
+      animation: smooth-fade-zoom 15s infinite ease-in-out;
+    }
+
+    .slide-blur-2 {
+      animation: smooth-fade-zoom 15s infinite ease-in-out;
+      animation-delay: 5s;
+    }
+
+    .slide-blur-3 {
+      animation: smooth-fade-zoom 15s infinite ease-in-out;
+      animation-delay: 10s;
     }
 
     .slide-1 {
@@ -266,6 +294,11 @@
     <section class="relative h-[420px] md:h-[500px] flex items-center justify-center overflow-hidden pt-16">
       <!-- Background Slideshow Images -->
       <div class="absolute inset-0 z-0 overflow-hidden">
+        <!-- Blurred background layers (same image, cover + blur) -->
+        <div class="slide-bg-blur slide-blur-1" style="background-image: url('event-bg.jpeg');"></div>
+        <div class="slide-bg-blur slide-blur-2" style="background-image: url('event-bg-2.jpeg');"></div>
+        <div class="slide-bg-blur slide-blur-3" style="background-image: url('event-bg-3.jpeg');"></div>
+        <!-- Sharp foreground layers (contain, fully visible) -->
         <div class="slide-bg slide-1" style="background-image: url('event-bg.jpeg');"></div>
         <div class="slide-bg slide-2" style="background-image: url('event-bg-2.jpeg');"></div>
         <div class="slide-bg slide-3" style="background-image: url('event-bg-3.jpeg');"></div>
@@ -277,9 +310,7 @@
       </div>
       <div class="relative z-20 text-center px-6">
         <h1 class="font-display text-4xl md:text-6xl font-bold mb-5 drop-shadow-xl text-primary">Events &amp; Outreach</h1>
-        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed drop-shadow-md">Cultivating
-          excellence through
-          high-impact summits, case competitions, and industry-leading workshops.</p>
+        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed drop-shadow-md">Driving consulting awareness and professional growth through case competitions, industry engagements, skill-building workshops, and strategic knowledge-sharing initiatives.</p>
       </div>
     </section>
 
@@ -366,9 +397,15 @@
                 <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Escape Room was built around a simple
                   idea — if you can't diagnose a problem correctly, your solution won't matter. The event ran across
                   three unconventional elimination rounds.</p>
-                <div class="mb-6">
-                  <p class="font-display text-2xl font-bold text-primary">VNIT Nagpur</p>
-                  <p class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Location</p>
+                <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 mb-6">
+                  <div>
+                    <p class="font-display text-2xl font-bold text-primary">100+</p>
+                    <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-1">Participants</p>
+                  </div>
+                  <div class="border-t pt-6 sm:border-t-0 sm:pt-0 sm:border-l border-white/10 sm:pl-10">
+                    <p class="font-display text-2xl font-bold text-primary">VNIT Nagpur</p>
+                    <p class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Location</p>
+                  </div>
                 </div>
               </div>
               <div
@@ -414,9 +451,15 @@
                 <p class="text-on-surface-variant text-sm leading-relaxed mb-6">We brought in a speaker from the Indian
                   School of Business for a campus session focused on one thing: what it actually takes to build a
                   competitive profile and position yourself well.</p>
-                <div class="mb-6">
-                  <p class="font-display text-2xl font-bold text-primary">VNIT Nagpur</p>
-                  <p class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Location</p>
+                <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 mb-6">
+                  <div>
+                    <p class="font-display text-2xl font-bold text-primary">200+</p>
+                    <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mt-1">Attendees</p>
+                  </div>
+                  <div class="border-t pt-6 sm:border-t-0 sm:pt-0 sm:border-l border-white/10 sm:pl-10">
+                    <p class="font-display text-2xl font-bold text-primary">VNIT Nagpur</p>
+                    <p class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Location</p>
+                  </div>
                 </div>
               </div>
               <div
