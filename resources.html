@@ -120,7 +120,7 @@
 
 <body>
   <header class="fixed top-0 left-0 right-0 z-50 bg-[#111318]/70 backdrop-blur-[20px] border-b border-white/10">
-    <nav class="flex items-center justify-between pl-3 pr-4 md:pl-8 md:pr-12 py-2.5 max-w-[1280px] mx-auto w-full">
+    <nav class="flex items-center justify-between pl-4 pr-4 md:pl-8 md:pr-8 py-2.5 w-full">
       <a href="index.html" class="flex items-center group py-1 shrink-0 max-w-[70%] md:max-w-full -ml-3 md:-ml-0">
         <img src="logo.png" alt="180 Degrees Consulting VNIT Nagpur Logo" class="h-7 sm:h-9 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
       </a>
@@ -168,7 +168,6 @@
           onclick="toggleAccordion('caseStudiesList', 'caseStudiesIcon')">
           <div class="flex w-full justify-between items-center mb-5">
             <div class="flex items-center gap-4">
-              <span class="w-10 h-[1px] bg-primary"></span>
               <span class="section-label">Consulting Case Repository</span>
             </div>
             <span class="material-symbols-outlined text-3xl text-primary transition-transform duration-300"
@@ -178,37 +177,12 @@
           <p class="text-on-surface-variant text-base leading-relaxed mb-4">A structured collection of consulting cases, problem-solving frameworks, and interview preparation resources designed to strengthen strategic thinking and business analysis skills.</p>
           
           <div id="caseStudiesList"
-            class="hidden w-full mt-6 bg-surface-container-high rounded-xl p-2 border border-white/5 shadow-xl transition-all duration-300">
-            <a href="public/reports/Case_Study_Operations_Optimization.pdf" target="_blank"
-              class="block w-full p-4 mb-2 bg-surface-container rounded-lg hover:bg-primary/10 hover:border-primary/30 border border-transparent transition-colors group/item">
-              <div class="flex justify-between items-center">
-                <div>
-                  <h3 class="font-bold text-lg text-white group-hover/item:text-primary transition-colors">Non-Profit Operations Optimization Case</h3>
-                  <p class="text-sm text-on-surface-variant mt-1">Operational audit, digital tools integration, and framework implementation for a regional trust.</p>
-                </div>
-                <span class="material-symbols-outlined text-on-surface-variant group-hover/item:text-primary">download</span>
-              </div>
-            </a>
-            <a href="public/reports/Case_Study_Financial_Sustainability.pdf" target="_blank"
-              class="block w-full p-4 mb-2 bg-surface-container rounded-lg hover:bg-primary/10 hover:border-primary/30 border border-transparent transition-colors group/item">
-              <div class="flex justify-between items-center">
-                <div>
-                  <h3 class="font-bold text-lg text-white group-hover/item:text-primary transition-colors">Sustainable Financial Modeling Study</h3>
-                  <p class="text-sm text-on-surface-variant mt-1">5-year micro-finance sustainability and growth forecast modeling for a cooperative dairy enterprise.</p>
-                </div>
-                <span class="material-symbols-outlined text-on-surface-variant group-hover/item:text-primary">download</span>
-              </div>
-            </a>
-            <a href="public/reports/Case_Study_EdTech_Expansion.pdf" target="_blank"
-              class="block w-full p-4 bg-surface-container rounded-lg hover:bg-primary/10 hover:border-primary/30 border border-transparent transition-colors group/item">
-              <div class="flex justify-between items-center">
-                <div>
-                  <h3 class="font-bold text-lg text-white group-hover/item:text-primary transition-colors">Digital Literacy Outreach &amp; Expansion</h3>
-                  <p class="text-sm text-on-surface-variant mt-1">Market entry strategy and viability study for an educational technology non-profit in Tier 2 cities.</p>
-                </div>
-                <span class="material-symbols-outlined text-on-surface-variant group-hover/item:text-primary">download</span>
-              </div>
-            </a>
+            class="hidden w-full mt-6 bg-surface-container-high rounded-xl p-6 border border-white/5 shadow-xl transition-all duration-300">
+            <div class="flex flex-col items-center justify-center py-8 gap-3">
+              <span class="material-symbols-outlined text-4xl text-primary/40">schedule</span>
+              <p class="text-on-surface-variant text-sm font-semibold uppercase tracking-widest">Coming Soon</p>
+              <p class="text-on-surface-variant/60 text-xs text-center max-w-xs">Our consulting casebooks are being compiled and will be available here shortly.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -223,7 +197,6 @@
           onclick="toggleAccordion('industryReportsList', 'industryReportsIcon')">
           <div class="flex w-full justify-between items-center mb-5">
             <div class="flex items-center gap-4">
-              <span class="w-10 h-[1px] bg-primary"></span>
               <span class="section-label">Market Intelligence</span>
             </div>
             <span class="material-symbols-outlined text-3xl text-primary transition-transform duration-300"
@@ -233,37 +206,12 @@
           <p class="text-on-surface-variant text-base leading-relaxed mb-4">Data-driven research publications analyzing emerging industries, market trends, competitive landscapes, and strategic opportunities across high-growth sectors.</p>
           
           <div id="industryReportsList"
-            class="hidden w-full mt-6 bg-surface-container-high rounded-xl p-2 border border-white/5 shadow-xl transition-all duration-300">
-            <a href="public/reports/Industry_Report_Social_Commerce.pdf" target="_blank"
-              class="block w-full p-4 mb-2 bg-surface-container rounded-lg hover:bg-primary/10 hover:border-primary/30 border border-transparent transition-colors group/item">
-              <div class="flex justify-between items-center">
-                <div>
-                  <h3 class="font-bold text-lg text-white group-hover/item:text-primary transition-colors">The Rise of Social Commerce in Tier 2 &amp; 3 Cities</h3>
-                  <p class="text-sm text-on-surface-variant mt-1">Analyzing decentralized retail dynamics, consumer trust shifts, and last-mile logistical models in regional hubs.</p>
-                </div>
-                <span class="material-symbols-outlined text-on-surface-variant group-hover/item:text-primary">download</span>
-              </div>
-            </a>
-            <a href="public/reports/Industry_Report_EdTech_Economics.pdf" target="_blank"
-              class="block w-full p-4 mb-2 bg-surface-container rounded-lg hover:bg-primary/10 hover:border-primary/30 border border-transparent transition-colors group/item">
-              <div class="flex justify-between items-center">
-                <div>
-                  <h3 class="font-bold text-lg text-white group-hover/item:text-primary transition-colors">EdTech Sector Unit Economics Post-2023</h3>
-                  <p class="text-sm text-on-surface-variant mt-1">A macroeconomic analysis tracking the pivot from aggressive customer acquisition to cash-flow sustainability in Indian EdTech.</p>
-                </div>
-                <span class="material-symbols-outlined text-on-surface-variant group-hover/item:text-primary">download</span>
-              </div>
-            </a>
-            <a href="public/reports/Industry_Report_Green_Energy.pdf" target="_blank"
-              class="block w-full p-4 bg-surface-container rounded-lg hover:bg-primary/10 hover:border-primary/30 border border-transparent transition-colors group/item">
-              <div class="flex justify-between items-center">
-                <div>
-                  <h3 class="font-bold text-lg text-white group-hover/item:text-primary transition-colors">Green Energy Funding &amp; Carbon Offsets for Social Ventures</h3>
-                  <p class="text-sm text-on-surface-variant mt-1">A guide to leveraging government subsidies, solar incentives, and voluntary carbon markets for non-profits.</p>
-                </div>
-                <span class="material-symbols-outlined text-on-surface-variant group-hover/item:text-primary">download</span>
-              </div>
-            </a>
+            class="hidden w-full mt-6 bg-surface-container-high rounded-xl p-6 border border-white/5 shadow-xl transition-all duration-300">
+            <div class="flex flex-col items-center justify-center py-8 gap-3">
+              <span class="material-symbols-outlined text-4xl text-primary/40">schedule</span>
+              <p class="text-on-surface-variant text-sm font-semibold uppercase tracking-widest">Coming Soon</p>
+              <p class="text-on-surface-variant/60 text-xs text-center max-w-xs">Industry research publications are being prepared and will be available here shortly.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -278,7 +226,6 @@
           onclick="toggleAccordion('annualReportList', 'annualReportIcon')">
           <div class="flex w-full justify-between items-center mb-5">
             <div class="flex items-center gap-4">
-              <span class="w-10 h-[1px] bg-primary"></span>
               <span class="section-label">Organizational Impact</span>
             </div>
             <span class="material-symbols-outlined text-3xl text-primary transition-transform duration-300"
