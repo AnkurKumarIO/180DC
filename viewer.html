@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+  <title>View Document | 180DC VNIT Nagpur</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = { 
+      darkMode: "class", 
+      theme: { 
+        extend: { 
+          colors: { 
+            "primary": "#80b739", 
+            "surface": "#111318", 
+            "surface-container": "#1e2024", 
+            "on-surface": "#e2e2e8", 
+            "on-surface-variant": "#bbcabf",
+            "background": "#0A0C10"
+          }, 
+          fontFamily: { 
+            "display": ["Montserrat", "sans-serif"], 
+            "body": ["Poppins", "sans-serif"] 
+          } 
+        } 
+      } 
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0A0C10;
+      color: #e2e2e8;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation Header -->
+  <header class="h-16 bg-[#111318]/90 backdrop-blur-[20px] border-b border-white/10 flex items-center justify-between px-4 md:px-8 z-50 shrink-0">
+    <a href="resources.html" class="flex items-center gap-2 text-sm font-semibold text-on-surface hover:text-primary transition-colors group">
+      <span class="material-symbols-outlined text-lg transition-transform group-hover:-translate-x-1">arrow_back</span>
+      <span>Back to Resources</span>
+    </a>
+    
+    <h1 id="reportTitle" class="font-display font-bold text-sm md:text-base text-white truncate max-w-[50%]">Document Viewer</h1>
+    
+    <a href="index.html" class="flex items-center shrink-0">
+      <img src="logo.png" alt="180 Degrees Consulting Logo" class="h-6 md:h-8 w-auto object-contain" />
+    </a>
+  </header>
+
+  <!-- PDF Display Container -->
+  <div class="flex-grow w-full h-full relative">
+    <iframe id="pdfViewer" src="" class="w-full h-full border-none" allow="autoplay"></iframe>
+    <div id="loadingOverlay" class="absolute inset-0 bg-[#0A0C10] flex flex-col items-center justify-center gap-3">
+      <div class="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+      <p class="text-sm text-on-surface-variant">Loading Document...</p>
+    </div>
+  </div>
+
+  <script>
+    // Extract parameters from URL
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    const file = getQueryParam('file');
+    const title = getQueryParam('title');
+
+    if (file) {
+      const viewer = document.getElementById('pdfViewer');
+      const loading = document.getElementById('loadingOverlay');
+      
+      // Load the file in the iframe
+      viewer.src = file + '#toolbar=1';
+      
+      viewer.onload = () => {
+        loading.style.display = 'none';
+      };
+      
+      // Fallback in case onload doesn't fire (common with direct PDFs inside iframes)
+      setTimeout(() => {
+        loading.style.display = 'none';
+      }, 2000);
+    } else {
+      document.getElementById('loadingOverlay').innerHTML = `
+        <span class="material-symbols-outlined text-4xl text-[#ffb4ab] mb-2">error</span>
+        <p class="text-sm text-on-surface-variant">Document not found.</p>
+        <a href="resources.html" class="mt-4 px-4 py-2 bg-primary text-[#0A0C10] font-bold text-xs uppercase tracking-widest rounded-full hover:scale-105 transition-all">Back to Resources</a>
+      `;
+    }
+
+    if (title) {
+      document.getElementById('reportTitle').textContent = decodeURIComponent(title);
+      document.title = decodeURIComponent(title) + ' | 180DC VNIT Nagpur';
+    }
+  </script>
+</body>
+</html>
