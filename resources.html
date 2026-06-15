@@ -149,6 +149,13 @@
   </header>
 
   <main class="pt-32">
+    <!-- Back Navigation Link -->
+    <div class="px-6 md:px-20 max-w-[1280px] mx-auto mb-6">
+      <a href="index.html" onclick="if(document.referrer && document.referrer.includes(window.location.host)){event.preventDefault(); window.history.back();}" class="inline-flex items-center gap-2 text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors group">
+        <span class="material-symbols-outlined text-lg transition-transform group-hover:-translate-x-1">arrow_back</span>
+        Back
+      </a>
+    </div>
     <!-- HERO -->
     <header class="px-6 md:px-20 max-w-[1280px] mx-auto mb-16 text-center">
       <span
@@ -177,12 +184,17 @@
           <p class="text-on-surface-variant text-base leading-relaxed mb-4">A structured collection of consulting cases, problem solving frameworks, and interview preparation resources designed to strengthen strategic thinking and business analysis skills.</p>
           
           <div id="caseStudiesList"
-            class="hidden w-full mt-6 bg-surface-container-high rounded-xl p-6 border border-white/5 shadow-xl transition-all duration-300">
-            <div class="flex flex-col items-center justify-center py-8 gap-3">
-              <span class="material-symbols-outlined text-4xl text-primary/40">schedule</span>
-              <p class="text-on-surface-variant text-sm font-semibold uppercase tracking-widest">Coming Soon</p>
-              <p class="text-on-surface-variant/60 text-xs text-center max-w-xs">Our consulting casebooks are being compiled and will be available here shortly.</p>
-            </div>
+            class="hidden w-full mt-6 bg-surface-container-high rounded-xl p-2 border border-white/5 shadow-xl transition-all duration-300">
+            <a href="public/reports/Casebook%201.0.pdf" target="_blank"
+              class="block w-full p-4 bg-surface-container rounded-lg hover:bg-primary/10 hover:border-primary/30 border border-transparent transition-colors group/item">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h3 class="font-bold text-lg text-white group-hover/item:text-primary transition-colors">Casebook 1.0</h3>
+                  <p class="text-sm text-on-surface-variant mt-1">Download the 180DC VNIT Nagpur Consulting Casebook 1.0 featuring structured frameworks, interview prep resources, and solved case studies.</p>
+                </div>
+                <span class="material-symbols-outlined text-on-surface-variant group-hover/item:text-primary">download</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -207,22 +219,22 @@
           
           <div id="industryReportsList"
             class="hidden w-full mt-6 bg-surface-container-high rounded-xl p-2 border border-white/5 shadow-xl transition-all duration-300">
-            <a href="public/reports/Industry%20Report%202025-26.pdf" target="_blank"
+            <a href="public/reports/Artificial%20Intelligence%20Report%202025-26.pdf" target="_blank"
               class="block w-full p-4 mb-2 bg-surface-container rounded-lg hover:bg-primary/10 hover:border-primary/30 border border-transparent transition-colors group/item">
               <div class="flex justify-between items-center">
                 <div>
-                  <h3 class="font-bold text-lg text-white group-hover/item:text-primary transition-colors">Industry Report 2025–26</h3>
-                  <p class="text-sm text-on-surface-variant mt-1">Download the comprehensive Industry Report for the academic year 2025–26.</p>
+                  <h3 class="font-bold text-lg text-white group-hover/item:text-primary transition-colors">Artificial Intelligence Report 2025–26</h3>
+                  <p class="text-sm text-on-surface-variant mt-1">Download our specialized Artificial Intelligence Report analyzing market insights and future trends for 2025–26.</p>
                 </div>
                 <span class="material-symbols-outlined text-on-surface-variant group-hover/item:text-primary">download</span>
               </div>
             </a>
-            <a href="public/reports/Industry%20Report%202024-25.pdf" target="_blank"
+            <a href="public/reports/Quick%20Commerce%20Report%202024-25.pdf" target="_blank"
               class="block w-full p-4 bg-surface-container rounded-lg hover:bg-primary/10 hover:border-primary/30 border border-transparent transition-colors group/item">
               <div class="flex justify-between items-center">
                 <div>
-                  <h3 class="font-bold text-lg text-white group-hover/item:text-primary transition-colors">Industry Report 2024–25</h3>
-                  <p class="text-sm text-on-surface-variant mt-1">Download the comprehensive Industry Report for the academic year 2024–25.</p>
+                  <h3 class="font-bold text-lg text-white group-hover/item:text-primary transition-colors">Quick Commerce Report 2024–25</h3>
+                  <p class="text-sm text-on-surface-variant mt-1">Download our detailed research report on the logistics, growth, and landscape of Quick Commerce in 2024–25.</p>
                 </div>
                 <span class="material-symbols-outlined text-on-surface-variant group-hover/item:text-primary">download</span>
               </div>
