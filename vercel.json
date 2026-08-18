@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "cleanUrls": true,
   "trailingSlash": false,
   "builds": [
     {
@@ -20,6 +19,70 @@
     {
       "src": "/googleb8a0bd3b76081038.html",
       "dest": "/googleb8a0bd3b76081038.html"
+    },
+    {
+      "src": "/index.html",
+      "status": 308,
+      "headers": { "Location": "/" }
+    },
+    {
+      "src": "/projects.html",
+      "status": 308,
+      "headers": { "Location": "/projects" }
+    },
+    {
+      "src": "/team.html",
+      "status": 308,
+      "headers": { "Location": "/team" }
+    },
+    {
+      "src": "/contact.html",
+      "status": 308,
+      "headers": { "Location": "/contact" }
+    },
+    {
+      "src": "/events.html",
+      "status": 308,
+      "headers": { "Location": "/events" }
+    },
+    {
+      "src": "/resources.html",
+      "status": 308,
+      "headers": { "Location": "/resources" }
+    },
+    {
+      "src": "/acm-chapter.html",
+      "status": 308,
+      "headers": { "Location": "/acm-chapter" }
+    },
+    {
+      "src": "/(.*)\\.html",
+      "status": 308,
+      "headers": { "Location": "/$1" }
+    },
+    {
+      "src": "/projects",
+      "dest": "/projects.html"
+    },
+    {
+      "src": "/team",
+      "dest": "/team.html"
+    },
+    {
+      "src": "/contact",
+      "dest": "/contact.html"
+    },
+    {
+      "src": "/events",
+      "dest": "/events.html"
+    },
+    {
+      "src": "/resources",
+      "dest": "/resources.html"
+    },
+    {
+      "src": "/acm-chapter",
+      "dest": "/acm-chapter.html"
     }
   ]
 }
